@@ -9,42 +9,18 @@
  */
 {
   "sections": {
+    "headline_tdWgPB": {
+      "type": "headline",
+      "name": "Newspaper Headline Logo",
+      "settings": {
+        "custom_logo": "{{ shop.brand.logo }}"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image": "shopify://shop_images/casa-julian-2_0012_Capa_2_copia.jpg",
+        "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "bottom-center",
@@ -74,51 +50,21 @@
       "block_order": [
         "button_Grmze4"
       ],
+      "name": "Botones",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "image_banner_cX9NJX": {
+    "image_banner_PH89dE": {
       "type": "image-banner",
-      "blocks": {
-        "heading_PetGkJ": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text_aCjyQr": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "buttons_LCWHTb": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_PetGkJ",
-        "text_aCjyQr",
-        "buttons_LCWHTb"
-      ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image": "shopify://shop_images/casa-julian_0001_Capa_9.jpg",
+        "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "bottom-center",
@@ -128,6 +74,60 @@
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": false
+      }
+    },
+    "multicolumn_KqFYRm": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_UGxDw3": {
+          "type": "column",
+          "settings": {
+            "title": "Carta",
+            "text": "<p>PanMantequilla</p><p>Jamón ibérico</p><p>Cecina</p><p>Charcutería</p><p>Puerro</p><p>Espárrago</p><p>………………………………………………</p><p>Txuleta</p><p>………………………………………………</p><p>Pimiento Piquillo</p><p>Ensalada</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YKkhCh": {
+          "type": "column",
+          "settings": {
+            "title": "Postres",
+            "text": "<p>Tarta de Queso</p><p>Tarta de chocolate</p><p>FlanQuesos</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EcN9BB": {
+          "type": "column",
+          "settings": {
+            "title": "Fuera de carta",
+            "text": "<p>Tartar de solomillo</p><p>Molleja</p><p>Guisante lágrima</p><p>Alcachofa</p><p>Espárrago brasa</p><p>Setas</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_UGxDw3",
+        "column_YKkhCh",
+        "column_EcN9BB"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text_Ez6qfg": {
@@ -136,61 +136,68 @@
         "heading_cqaEUk": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "Carta",
             "heading_size": "h1"
           }
         },
         "text_JNC3ia": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>PanMantequilla</p><p>Jamón ibérico</p><p>Cecina</p><p>Charcutería</p><p>Puerro</p><p>Espárrago</p><p>………………………………………………</p><p>Txuleta</p><p>………………………………………………</p><p>Pimiento Piquillo</p><p>Ensalada</p>"
+          }
+        },
+        "heading_gEAFGe": {
+          "type": "heading",
+          "name": "Postre",
+          "settings": {
+            "heading": "Postre",
+            "heading_size": "h1"
+          }
+        },
+        "text_X6tLbg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tarta de Queso</p><p>Tarta de chocolate</p><p>FlanQuesos</p>"
+          }
+        },
+        "heading_pe8rLF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fuera de carta",
+            "heading_size": "h1"
+          }
+        },
+        "text_PwGWzq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tartar de solomillo</p><p>Molleja</p><p>Guisante lágrima</p><p>Alcachofa</p><p>Espárrago brasa</p><p>Setas</p>"
           }
         }
       },
       "block_order": [
         "heading_cqaEUk",
-        "text_JNC3ia"
+        "text_JNC3ia",
+        "heading_gEAFGe",
+        "text_X6tLbg",
+        "heading_pe8rLF",
+        "text_PwGWzq"
       ],
+      "disabled": true,
+      "name": "Carta",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "rich_text_dNxWyt": {
-      "type": "rich-text",
-      "blocks": {
-        "button_hU4QQn": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "button_hU4QQn"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "image_banner_PH89dE": {
+    "image_banner_cX9NJX": {
       "type": "image-banner",
       "settings": {
-        "image_overlay_opacity": 40,
+        "image": "shopify://shop_images/casa-julian-2_0003_Capa_8.jpg",
+        "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "bottom-center",
@@ -202,67 +209,66 @@
         "show_text_below": false
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
+    "reviews_4NGAjn": {
+      "type": "reviews",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "review_CEPw6t": {
+          "type": "review",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "review_text": "Una crítica destacada que habla maravillas.",
+            "author": "Autor/a Ejemplo",
+            "media": "Medio Ejemplo"
           }
         },
-        "column2": {
-          "type": "column",
+        "review_QKDDwr": {
+          "type": "review",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "review_text": "Una crítica destacada que habla maravillas.",
+            "author": "Autor/a Ejemplo",
+            "media": "Medio Ejemplo"
           }
         },
-        "column3": {
-          "type": "column",
+        "review_NCqqw3": {
+          "type": "review",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "review_text": "Una crítica destacada que habla maravillas.",
+            "author": "Autor/a Ejemplo",
+            "media": "Medio Ejemplo"
+          }
+        },
+        "review_w6WQjM": {
+          "type": "review",
+          "settings": {
+            "review_text": "Una crítica destacada que habla maravillas.",
+            "author": "Autor/a Ejemplo",
+            "media": "Medio Ejemplo"
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "review_CEPw6t",
+        "review_QKDDwr",
+        "review_NCqqw3",
+        "review_w6WQjM"
       ],
+      "name": "Carrusel con autoplay",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
+        "title": "Marmarrak",
+        "heading_size": "h2",
         "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "enable_autoplay": false,
+        "autoplay_interval": 2000
       }
     }
   },
   "order": [
+    "headline_tdWgPB",
     "image_banner",
     "rich_text",
-    "image_banner_cX9NJX",
-    "rich_text_Ez6qfg",
-    "rich_text_dNxWyt",
     "image_banner_PH89dE",
-    "multicolumn"
+    "multicolumn_KqFYRm",
+    "rich_text_Ez6qfg",
+    "image_banner_cX9NJX",
+    "reviews_4NGAjn"
   ]
 }

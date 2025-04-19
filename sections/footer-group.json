@@ -11,35 +11,105 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "footer": {
-      "type": "footer",
+    "timetable_ELCKGp": {
+      "type": "timetable",
       "blocks": {
-        "footer-0": {
-          "type": "link_list",
+        "lunes_7XPWFW": {
+          "type": "lunes",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "time_slot_1": "13:00 → 15:30",
+            "time_slot_2": "20:00 → 22:30",
+            "closed": true
           }
         },
-        "footer-1": {
-          "type": "link_list",
+        "martes_E6mFmF": {
+          "type": "martes",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
+            "time_slot_1": "13:00 → 15:30",
+            "time_slot_2": "20:00 → 22:30",
+            "closed": false
           }
         },
-        "footer-2": {
-          "type": "text",
+        "miercoles_UgfCJj": {
+          "type": "miercoles",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+            "time_slot_1": "13:00 → 15:30",
+            "time_slot_2": "20:00 → 22:30",
+            "closed": false
+          }
+        },
+        "jueves_Jgaqb6": {
+          "type": "jueves",
+          "settings": {
+            "time_slot_1": "13:00 → 15:30",
+            "time_slot_2": "20:00 → 22:30",
+            "closed": false
+          }
+        },
+        "viernes_GyHwVp": {
+          "type": "viernes",
+          "settings": {
+            "time_slot_1": "13:00 → 15:30",
+            "time_slot_2": "20:00 → 22:30",
+            "closed": false
+          }
+        },
+        "sabado_Lp4Bpf": {
+          "type": "sabado",
+          "settings": {
+            "time_slot_1": "13:00 → 15:30",
+            "time_slot_2": "20:00 → 22:30",
+            "closed": false
+          }
+        },
+        "domingo_9T9iqk": {
+          "type": "domingo",
+          "settings": {
+            "time_slot_1": "13:00 → 15:30",
+            "time_slot_2": "20:00 → 22:30",
+            "closed": false
           }
         }
       },
       "block_order": [
-        "footer-0",
-        "footer-1",
-        "footer-2"
+        "lunes_7XPWFW",
+        "martes_E6mFmF",
+        "miercoles_UgfCJj",
+        "jueves_Jgaqb6",
+        "viernes_GyHwVp",
+        "sabado_Lp4Bpf",
+        "domingo_9T9iqk"
+      ],
+      "name": "Weekly Schedule",
+      "settings": {
+        "address_block": "<p>Santa Klara Kalea 6,<br/>Tolosa, Gipuzkoa, 20400<br/><a href=\"mailto:reservas@casajulianmg.com\">reservas@casajulianmg.com</a><br/>+34 943 671 417</p>",
+        "address_title": "DIRECCIÓN",
+        "schedule_title": "HORARIOS"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "image_QKxzAJ": {
+          "type": "image",
+          "settings": {
+            "image": "{{ shop.brand.square_logo }}",
+            "image_width": 100,
+            "alignment": ""
+          }
+        },
+        "image_jMR4mw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/parrilla_casajulian.png",
+            "image_width": 100,
+            "alignment": "right"
+          }
+        }
+      },
+      "block_order": [
+        "image_QKxzAJ",
+        "image_jMR4mw"
       ],
       "settings": {
         "color_scheme": "scheme-1",
@@ -48,7 +118,7 @@
         "enable_follow_on_shop": false,
         "show_social": false,
         "enable_country_selector": false,
-        "enable_language_selector": true,
+        "enable_language_selector": false,
         "payment_enable": false,
         "show_policy": false,
         "margin_top": 0,
@@ -58,6 +128,7 @@
     }
   },
   "order": [
+    "timetable_ELCKGp",
     "footer"
   ]
 }
