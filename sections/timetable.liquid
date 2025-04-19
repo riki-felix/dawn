@@ -1,0 +1,262 @@
+{{ 'timetable.css' | asset_url | stylesheet_tag }}
+
+<div class="footer-schedule page-width">
+  <div class="footer-schedule__content">
+	<div class="footer-schedule__address">
+	  <div class="footer-schedule__title">
+	  	<h3>{{ section.settings.address_title }}</h3>
+	  </div>
+	  <div class="footer-schedule__text">{{ section.settings.address_block }}</div>
+	</div>
+	<div class="footer-schedule__table">
+	  <div class="footer-schedule__title">
+	  	<h3>{{ section.settings.schedule_title }}</h3>
+	  </div>
+	  <div class="schedule-grid">
+		{% assign day_order = "lunes,martes,miercoles,jueves,viernes,sabado,domingo" | split: "," %}
+		{% assign day_labels = "LUN,MAR,MIÉ,JUE,VIE,SÁB,DOM" | split: "," %}
+		
+		  {% for i in (0..6) %}
+			{% assign day_type = day_order[i] %}
+			{% assign day_label = day_labels[i] %}
+			{% assign block = null %}
+			{% for b in section.blocks %}
+			  {% if b.type == day_type %}
+				{% assign block = b %}
+			  {% endif %}
+			{% endfor %}
+		
+			<div class="schedule-day">
+			  <div class="day-label">{{ day_label }}</div>
+			  <div class="day-hours">
+				{% if block %}
+				  {% if block.settings.closed %}
+					<span class="closed">Cerrado</span>
+				  {% else %}
+					<span>{{ block.settings.time_slot_1 }}</span>
+					{% if block.settings.time_slot_2 != blank %}
+					  <span>{{ block.settings.time_slot_2 }}</span>
+					{% endif %}
+				  {% endif %}
+				{% else %}
+				  <div>—</div>
+				{% endif %}
+			  </div>
+			</div>
+		  {% endfor %}
+	  </div>
+	</div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Weekly Schedule",
+  "tag": "section",
+  "class": "footer__schedule",
+  "settings": [
+	{
+	  "type": "richtext",
+	  "id": "address_block",
+	  "label": "Dirección",
+	  "default": "<p>Santa Klara Kalea 6,<br>Tolosa, Gipuzkoa, 20400<br><a href='mailto:reservas@casajulianmg.com'>reservas@casajulianmg.com</a><br>+34 943 671 417</p>"
+	},
+	{
+	  "type": "text",
+	  "id": "address_title",
+	  "label": "Título dirección",
+	  "default": "DIRECCIÓN"
+	},
+	{
+	  "type": "text",
+	  "id": "schedule_title",
+	  "label": "Título horario",
+	  "default": "HORARIOS"
+	}
+  ],
+  "blocks": [
+	{
+	  "type": "lunes",
+	  "name": "Lunes",
+	  "limit": 1,
+	  "settings": [
+		{
+		  "type": "text",
+		  "id": "time_slot_1",
+		  "label": "Primer horario",
+		  "default": "13:00 → 15:30"
+		},
+		{
+		  "type": "text",
+		  "id": "time_slot_2",
+		  "label": "Segundo horario",
+		  "default": "20:00 → 22:30"
+		},
+		{
+		  "type": "checkbox",
+		  "id": "closed",
+		  "label": "Cerrado",
+		  "default": false
+		}
+	  ]
+	},
+	{
+	  "type": "martes",
+	  "name": "Martes",
+	  "limit": 1,
+	  "settings": [
+		{
+		  "type": "text",
+		  "id": "time_slot_1",
+		  "label": "Primer horario",
+		  "default": "13:00 → 15:30"
+		},
+		{
+		  "type": "text",
+		  "id": "time_slot_2",
+		  "label": "Segundo horario",
+		  "default": "20:00 → 22:30"
+		},
+		{
+		  "type": "checkbox",
+		  "id": "closed",
+		  "label": "Cerrado",
+		  "default": false
+		}
+	  ]
+	},
+	{
+	  "type": "miercoles",
+	  "name": "Miércoles",
+	  "limit": 1,
+	  "settings": [
+		{
+		  "type": "text",
+		  "id": "time_slot_1",
+		  "label": "Primer horario",
+		  "default": "13:00 → 15:30"
+		},
+		{
+		  "type": "text",
+		  "id": "time_slot_2",
+		  "label": "Segundo horario",
+		  "default": "20:00 → 22:30"
+		},
+		{
+		  "type": "checkbox",
+		  "id": "closed",
+		  "label": "Cerrado",
+		  "default": false
+		}
+	  ]
+	},
+	{
+	  "type": "jueves",
+	  "name": "Jueves",
+	  "limit": 1,
+	  "settings": [
+		{
+		  "type": "text",
+		  "id": "time_slot_1",
+		  "label": "Primer horario",
+		  "default": "13:00 → 15:30"
+		},
+		{
+		  "type": "text",
+		  "id": "time_slot_2",
+		  "label": "Segundo horario",
+		  "default": "20:00 → 22:30"
+		},
+		{
+		  "type": "checkbox",
+		  "id": "closed",
+		  "label": "Cerrado",
+		  "default": false
+		}
+	  ]
+	},
+	{
+	  "type": "viernes",
+	  "name": "Viernes",
+	  "limit": 1,
+	  "settings": [
+		{
+		  "type": "text",
+		  "id": "time_slot_1",
+		  "label": "Primer horario",
+		  "default": "13:00 → 15:30"
+		},
+		{
+		  "type": "text",
+		  "id": "time_slot_2",
+		  "label": "Segundo horario",
+		  "default": "20:00 → 22:30"
+		},
+		{
+		  "type": "checkbox",
+		  "id": "closed",
+		  "label": "Cerrado",
+		  "default": false
+		}
+	  ]
+	},
+	{
+	  "type": "sabado",
+	  "name": "Sábado",
+	  "limit": 1,
+	  "settings": [
+		{
+		  "type": "text",
+		  "id": "time_slot_1",
+		  "label": "Primer horario",
+		  "default": "13:00 → 15:30"
+		},
+		{
+		  "type": "text",
+		  "id": "time_slot_2",
+		  "label": "Segundo horario",
+		  "default": "20:00 → 22:30"
+		},
+		{
+		  "type": "checkbox",
+		  "id": "closed",
+		  "label": "Cerrado",
+		  "default": false
+		}
+	  ]
+	},
+	{
+	  "type": "domingo",
+	  "name": "Domingo",
+	  "limit": 1,
+	  "settings": [
+		{
+		  "type": "text",
+		  "id": "time_slot_1",
+		  "label": "Primer horario",
+		  "default": "13:00 → 15:30"
+		},
+		{
+		  "type": "text",
+		  "id": "time_slot_2",
+		  "label": "Segundo horario",
+		  "default": "20:00 → 22:30"
+		},
+		{
+		  "type": "checkbox",
+		  "id": "closed",
+		  "label": "Cerrado",
+		  "default": false
+		}
+	  ]
+	}
+  ],
+  "presets": [
+	{
+	  "name": "Weekly Schedule"
+	}
+  ]
+}
+{% endschema %}

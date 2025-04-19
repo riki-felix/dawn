@@ -1,0 +1,229 @@
+{% comment %}
+  Sección: Reseñas de medios con autoplay y diseño responsivo mejorado
+{% endcomment %}
+
+<style>
+ #Slider-{{ section.id }} {
+   /* ya incluido */
+   display: flex;
+   gap: var(--grid-desktop-horizontal-spacing);
+   scroll-snap-type: x mandatory;
+   overflow-x: auto;
+   scroll-behavior: smooth;
+   -webkit-overflow-scrolling: touch;
+   touch-action: pan-y;
+ 
+   /* ✨ ocultamos scrollbar visual */
+   scrollbar-width: none; /* Firefox */
+   -ms-overflow-style: none; /* IE 10+ */
+ }
+ 
+ #Slider-{{ section.id }}::-webkit-scrollbar {
+   display: none; /* Chrome, Safari, Opera */
+ }
+
+  #Slider-{{ section.id }} .slider__slide {
+	flex: 0 0 calc(33.333% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
+	scroll-snap-align: start;
+  }
+  
+
+  @media screen and (max-width: 749px) {
+	#Slider-{{ section.id }} .slider__slide {
+	  flex: 0 0 85%;
+	}
+  }
+</style>
+
+<div class="media-reviews color-{{ section.settings.color_scheme }}">
+  <div class="page-width isolate">
+	{% if section.settings.title != blank %}
+	  <h2 class="{{ section.settings.heading_size }}">
+		{{ section.settings.title | escape }}
+	  </h2>
+	{% endif %}
+
+	<slider-component
+	  class="slider-mobile-gutter"
+	  id="SliderComponent-{{ section.id }}"
+	  data-autoplay="{{ section.settings.enable_autoplay }}"
+	  data-interval="{{ section.settings.autoplay_interval }}"
+	  data-blocks="{{ section.blocks.size }}"
+	>
+	  <ul id="Slider-{{ section.id }}" class="slider slider--mobile" role="list">
+		{% for block in section.blocks %}
+		  <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="slider__slide" {{ block.shopify_attributes }}>
+			<div class="media-review-card card card--outline card--media ratio">
+			  <blockquote class="rte">{{ block.settings.review_text }}</blockquote>
+			  {% if block.settings.author != blank or block.settings.media != blank %}
+				<p class="caption-with-letter-spacing">
+				  {% if block.settings.author != blank %}
+					<strong>{{ block.settings.author }}</strong>
+				  {% endif %}
+				  {% if block.settings.media != blank %}
+					{% if block.settings.author != blank %} — {% endif %}
+					<em>{{ block.settings.media }}</em>
+				  {% endif %}
+				</p>
+			  {% endif %}
+			</div>
+		  </li>
+		{% endfor %}
+	  </ul>
+
+	  {% if section.blocks.size > 3 %}
+		<div class="slider-buttons no-js-hidden">
+		  <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">
+			<svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon icon-caret" width="10" height="6" aria-hidden="true" focusable="false">
+			  <path d="M9 1L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		  </button>
+		  <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">
+			<svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon icon-caret" width="10" height="6" aria-hidden="true" focusable="false">
+			  <path d="M9 1L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		  </button>
+		</div>
+	  {% endif %}
+	</slider-component>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+	const slider = document.querySelector('#SliderComponent-{{ section.id }}');
+	const track = slider?.querySelector('ul.slider');
+	const slides = track?.querySelectorAll('.slider__slide');
+	const nextButton = slider?.querySelector('.slider-button--next');
+	const prevButton = slider?.querySelector('.slider-button--prev');
+
+	const autoplayEnabled = slider?.dataset.autoplay === 'true';
+	const blockCount = parseInt(slider?.dataset.blocks || '0', 10);
+	const interval = parseInt(slider?.dataset.interval || '5000', 10);
+
+	if (!slider || !track || !slides || slides.length < 2 || !autoplayEnabled || !nextButton) return;
+
+	let autoplayTimer = null;
+	let pauseTimer = null;
+
+	function startAutoplay() {
+	  if (autoplayTimer) clearInterval(autoplayTimer);
+	  autoplayTimer = setInterval(() => {
+		nextButton.click();
+	  }, interval);
+	}
+
+	function pauseAutoplayTemporarily() {
+	  if (autoplayTimer) clearInterval(autoplayTimer);
+	  if (pauseTimer) clearTimeout(pauseTimer);
+	  pauseTimer = setTimeout(() => {
+		startAutoplay();
+	  }, 6000); // vuelve a empezar después de 6s sin interacción
+	}
+
+	// Eventos para pausa temporal
+	nextButton.addEventListener('click', pauseAutoplayTemporarily);
+	prevButton?.addEventListener('click', pauseAutoplayTemporarily);
+
+	slides.forEach((slide) => {
+	  slide.addEventListener('mouseover', pauseAutoplayTemporarily);
+	  slide.addEventListener('touchstart', pauseAutoplayTemporarily, { passive: true });
+	});
+
+	startAutoplay();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Reviews",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+	{
+	  "type": "text",
+	  "id": "title",
+	  "label": "Título de la sección",
+	  "default": "Hablan de nosotros"
+	},
+	{
+	  "type": "select",
+	  "id": "heading_size",
+	  "label": "Tamaño del título",
+	  "default": "h2",
+	  "options": [
+		{ "value": "h1", "label": "H1" },
+		{ "value": "h2", "label": "H2" },
+		{ "value": "h3", "label": "H3" },
+		{ "value": "h4", "label": "H4" },
+		{ "value": "h5", "label": "H5" },
+		{ "value": "h6", "label": "H6" }
+	  ]
+	},
+	{
+	  "type": "color_scheme",
+	  "id": "color_scheme",
+	  "label": "Esquema de color",
+	  "default": "background-1"
+	},
+	{
+	  "type": "checkbox",
+	  "id": "enable_autoplay",
+	  "label": "Activar autoplay",
+	  "default": true
+	},
+	{
+	  "type": "range",
+	  "id": "autoplay_interval",
+	  "label": "Intervalo entre reseñas (milisegundos)",
+	  "min": 2000,
+	  "max": 9000,
+	  "step": 500,
+	  "unit": "ms",
+	  "default": 5000
+	}
+  ],
+  "blocks": [
+	{
+	  "type": "review",
+	  "name": "Reseña",
+	  "settings": [
+		{
+		  "type": "textarea",
+		  "id": "review_text",
+		  "label": "Texto de la reseña",
+		  "default": "Una opinión increíble sobre nuestro trabajo."
+		},
+		{
+		  "type": "text",
+		  "id": "author",
+		  "label": "Autor/a",
+		  "default": "Nombre del autor"
+		},
+		{
+		  "type": "text",
+		  "id": "media",
+		  "label": "Medio de prensa",
+		  "default": "Nombre del medio"
+		}
+	  ]
+	}
+  ],
+  "max_blocks": 6,
+  "presets": [
+	{
+	  "name": "Reviews",
+	  "blocks": [
+		{
+		  "type": "review",
+		  "settings": {
+			"review_text": "Una crítica destacada que habla maravillas.",
+			"author": "Autor/a Ejemplo",
+			"media": "Medio Ejemplo"
+		  }
+		}
+	  ]
+	}
+  ]
+}
+{% endschema %}

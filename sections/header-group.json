@@ -37,7 +37,7 @@
       }
     },
     "header": {
-      "type": "header",
+      "type": "header-custom",
       "settings": {
         "logo_position": "middle-left",
         "mobile_logo_position": "left",

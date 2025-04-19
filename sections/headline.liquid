@@ -1,0 +1,44 @@
+{% style %}
+.headline-logo-section {
+	background: transparent; text-align: center; max-width: var(--page-width); margin: calc(var(--page-width-margin) - 0.8rem) auto var(--page-width-margin) auto;
+}
+.logo-wrapper {
+	max-width: auto; margin: 0 auto;
+}
+.logo-wrapper img {
+	width: 100%; height: auto; object-fit: contain; display: block; margin: 0 auto;
+}
+{% endstyle %}
+<section class="headline-logo-section">
+  <div class="logo-wrapper">
+	{% if section.settings.custom_logo != blank %}
+	  <img
+		src="{{ section.settings.custom_logo | image_url }}"
+		alt="{{ section.settings.custom_logo.alt | escape }}"
+	  >
+	{% else %}
+	  <h1>{{ shop.name }}</h1>
+	{% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Headline Logo",
+  "tag": "section",
+  "class": "headline-logo-section",
+  "settings": [
+	{
+	  "type": "image_picker",
+	  "id": "custom_logo",
+	  "label": "Logo",
+	  "info": "Sube el logotipo para esta sección. El logo predeterminado del tema no está disponible aquí."
+	}
+  ],
+  "presets": [
+	{
+	  "name": "Headline Logo"
+	}
+  ]
+}
+{% endschema %}

@@ -128,8 +128,8 @@
         --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
 
         --page-width: {{ settings.page_width | divided_by: 10 }}rem;
-        --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
-
+        --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}2.4{% endif %}rem;
+        --page-border: 3px solid rgb(var(--color-foreground));
         --product-card-image-padding: {{ settings.card_image_padding | divided_by: 10.0 }}rem;
         --product-card-corner-radius: {{ settings.card_corner_radius | divided_by: 10.0 }}rem;
         --product-card-text-alignment: {{ settings.card_text_alignment }};
@@ -303,6 +303,7 @@
     </script>
     <link rel="preconnect" href="https://cdn.fonts.net">
     <link href="https://cdn.fonts.net/kit/42a559d6-fd22-47bc-b44b-dbec77913e26/42a559d6-fd22-47bc-b44b-dbec77913e26.css" rel="stylesheet" />
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
