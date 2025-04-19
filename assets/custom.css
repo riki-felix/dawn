@@ -31,3 +31,7 @@ footer .footer-block__image-wrapper {
 footet .footer__content-bottom {
 	border-top: 0;
 }
+
+a {
+	color: #BA9840;
+}

@@ -4,7 +4,7 @@
 	grid-template-columns: auto 1fr;
 	gap: 0;
 	p {
-    	padding: var(--page-width-margin);
+		padding: var(--page-width-margin);
 		margin: 0;
 	}
 }
@@ -23,7 +23,7 @@
   grid-template-columns: auto 1fr;
   gap: 0;
   .footer-schedule__title {
-  	border-right: var(--page-border);
+	  border-right: var(--page-border);
   }
 
 }
@@ -66,7 +66,7 @@
 }
 @media screen and (min-width: 768px) {
   .footer-schedule__content {
- 	 grid-template-columns: 2fr 5fr;
+	  grid-template-columns: 2fr 5fr;
   }
   .footer-schedule__table {
 	  border-top: 0;
@@ -81,4 +81,19 @@
 	flex-direction: column;
 	align-items: center;
   }
+}
+
+
+/* Color Scheme Support */
+.color-background-1 {
+  background-color: var(--color-background-1);
+  color: var(--color-foreground-1);
+}
+.color-background-2 {
+  background-color: var(--color-background-2);
+  color: var(--color-foreground-2);
+}
+.color-inverse {
+  background-color: var(--color-foreground-1);
+  color: var(--color-background-1);
 }

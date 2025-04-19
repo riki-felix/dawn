@@ -1,16 +1,16 @@
 {{ 'timetable.css' | asset_url | stylesheet_tag }}
 
-<div class="footer-schedule page-width">
+<div class="footer-schedule page-width color-{{ section.settings.color_scheme }}">
   <div class="footer-schedule__content">
 	<div class="footer-schedule__address">
 	  <div class="footer-schedule__title">
-	  	<h3>{{ section.settings.address_title }}</h3>
+		  <h3>{{ section.settings.address_title }}</h3>
 	  </div>
 	  <div class="footer-schedule__text">{{ section.settings.address_block }}</div>
 	</div>
 	<div class="footer-schedule__table">
 	  <div class="footer-schedule__title">
-	  	<h3>{{ section.settings.schedule_title }}</h3>
+		  <h3>{{ section.settings.schedule_title }}</h3>
 	  </div>
 	  <div class="schedule-grid">
 		{% assign day_order = "lunes,martes,miercoles,jueves,viernes,sabado,domingo" | split: "," %}
@@ -74,6 +74,11 @@
 	  "id": "schedule_title",
 	  "label": "Título horario",
 	  "default": "HORARIOS"
+	},
+	{
+	  "type": "color_scheme",
+	  "id": "color_scheme",
+	  "label": "Esquema de color"
 	}
   ],
   "blocks": [
@@ -99,7 +104,12 @@
 		  "id": "closed",
 		  "label": "Cerrado",
 		  "default": false
-		}
+		},
+	{
+	  "type": "color_scheme",
+	  "id": "color_scheme",
+	  "label": "Esquema de color"
+	}
 	  ]
 	},
 	{
@@ -124,7 +134,12 @@
 		  "id": "closed",
 		  "label": "Cerrado",
 		  "default": false
-		}
+		},
+	{
+	  "type": "color_scheme",
+	  "id": "color_scheme",
+	  "label": "Esquema de color"
+	}
 	  ]
 	},
 	{
@@ -149,7 +164,12 @@
 		  "id": "closed",
 		  "label": "Cerrado",
 		  "default": false
-		}
+		},
+	{
+	  "type": "color_scheme",
+	  "id": "color_scheme",
+	  "label": "Esquema de color"
+	}
 	  ]
 	},
 	{
@@ -174,7 +194,12 @@
 		  "id": "closed",
 		  "label": "Cerrado",
 		  "default": false
-		}
+		},
+	{
+	  "type": "color_scheme",
+	  "id": "color_scheme",
+	  "label": "Esquema de color"
+	}
 	  ]
 	},
 	{
@@ -199,7 +224,12 @@
 		  "id": "closed",
 		  "label": "Cerrado",
 		  "default": false
-		}
+		},
+	{
+	  "type": "color_scheme",
+	  "id": "color_scheme",
+	  "label": "Esquema de color"
+	}
 	  ]
 	},
 	{
@@ -224,7 +254,12 @@
 		  "id": "closed",
 		  "label": "Cerrado",
 		  "default": false
-		}
+		},
+	{
+	  "type": "color_scheme",
+	  "id": "color_scheme",
+	  "label": "Esquema de color"
+	}
 	  ]
 	},
 	{
@@ -249,7 +284,12 @@
 		  "id": "closed",
 		  "label": "Cerrado",
 		  "default": false
-		}
+		},
+	{
+	  "type": "color_scheme",
+	  "id": "color_scheme",
+	  "label": "Esquema de color"
+	}
 	  ]
 	}
   ],
