@@ -11,6 +11,8 @@
 .footer-schedule {
   padding: 0;
   border: var(--page-border);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 .footer-schedule__content {
   display: grid;

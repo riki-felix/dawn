@@ -19,7 +19,8 @@
           "settings": {
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
-            "closed": true
+            "closed": true,
+            "color_scheme": ""
           }
         },
         "martes_E6mFmF": {
@@ -27,7 +28,8 @@
           "settings": {
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
-            "closed": false
+            "closed": false,
+            "color_scheme": ""
           }
         },
         "miercoles_UgfCJj": {
@@ -35,7 +37,8 @@
           "settings": {
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
-            "closed": false
+            "closed": false,
+            "color_scheme": ""
           }
         },
         "jueves_Jgaqb6": {
@@ -43,7 +46,8 @@
           "settings": {
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
-            "closed": false
+            "closed": false,
+            "color_scheme": ""
           }
         },
         "viernes_GyHwVp": {
@@ -51,7 +55,8 @@
           "settings": {
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
-            "closed": false
+            "closed": false,
+            "color_scheme": ""
           }
         },
         "sabado_Lp4Bpf": {
@@ -59,7 +64,8 @@
           "settings": {
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
-            "closed": false
+            "closed": false,
+            "color_scheme": ""
           }
         },
         "domingo_9T9iqk": {
@@ -67,7 +73,8 @@
           "settings": {
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
-            "closed": false
+            "closed": false,
+            "color_scheme": ""
           }
         }
       },
@@ -80,11 +87,11 @@
         "sabado_Lp4Bpf",
         "domingo_9T9iqk"
       ],
-      "name": "Weekly Schedule",
       "settings": {
         "address_block": "<p>Santa Klara Kalea 6,<br/>Tolosa, Gipuzkoa, 20400<br/><a href=\"mailto:reservas@casajulianmg.com\">reservas@casajulianmg.com</a><br/>+34 943 671 417</p>",
         "address_title": "DIRECCIÓN",
-        "schedule_title": "HORARIOS"
+        "schedule_title": "HORARIOS",
+        "color_scheme": "scheme-1"
       }
     },
     "footer": {

@@ -11,7 +11,6 @@
   "sections": {
     "headline_tdWgPB": {
       "type": "headline",
-      "name": "Newspaper Headline Logo",
       "settings": {
         "custom_logo": "{{ shop.brand.logo }}"
       }
@@ -50,7 +49,6 @@
       "block_order": [
         "button_Grmze4"
       ],
-      "name": "Botones",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -112,7 +110,6 @@
         "column_YKkhCh",
         "column_EcN9BB"
       ],
-      "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
         "heading_size": "h0",
@@ -148,7 +145,6 @@
         },
         "heading_gEAFGe": {
           "type": "heading",
-          "name": "Postre",
           "settings": {
             "heading": "Postre",
             "heading_size": "h1"
@@ -183,7 +179,6 @@
         "text_PwGWzq"
       ],
       "disabled": true,
-      "name": "Carta",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -251,7 +246,6 @@
         "review_NCqqw3",
         "review_w6WQjM"
       ],
-      "name": "Carrusel con autoplay",
       "settings": {
         "title": "Marmarrak",
         "heading_size": "h2",
