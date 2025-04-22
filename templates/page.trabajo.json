@@ -1,0 +1,106 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "headline_JDCVyf": {
+      "type": "headline",
+      "settings": {
+        "custom_logo": "{{ shop.brand.logo }}"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_JHCUFi": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pbVGWP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Taldea!",
+            "heading_size": "h1"
+          }
+        },
+        "text_HbfPGd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Envíanos tu curriculum y carta de presentación si quieres trabajar o hacer prácticas en Casa Julian.</p>"
+          }
+        },
+        "heading_9KCFcW": {
+          "type": "heading",
+          "settings": {
+            "heading": "ASESORÍA Y COLABORACIONES",
+            "heading_size": "h1"
+          }
+        },
+        "text_7Jxwnd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Envíanos tu curriculum y carta de presentación si quieres trabajar o hacer prácticas en Casa Julian.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pbVGWP",
+        "text_HbfPGd",
+        "heading_9KCFcW",
+        "text_7Jxwnd"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1745076455b86b974a": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_3xdhMT": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "433835",
+            "text_color": "{{ shop.brand.colors.primary[0].background }}",
+            "button_background_color": "{{ shop.brand.colors.secondary[1].background }}",
+            "button_label_color": "{{ shop.brand.colors.primary[0].background }}",
+            "links_color": "#ba9840",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_3xdhMT"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "headline_JDCVyf",
+    "main",
+    "rich_text_JHCUFi",
+    "1745076455b86b974a"
+  ]
+}
