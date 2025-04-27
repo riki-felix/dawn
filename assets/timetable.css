@@ -1,11 +1,11 @@
 .footer-schedule__address {
   display: grid;
   padding: 0 var(--page-width-margin);
-	grid-template-columns: auto 1fr;
+	grid-template-columns: 1fr;
 	gap: 0;
 	p {
-		padding: var(--page-width-margin);
-		margin: 0;
+		padding: 0;
+		margin: 0 0 1.6rem 0;
 	}
 }
 .footer-schedule {
@@ -19,27 +19,23 @@
   grid-template-columns: 1fr;
   gap: 0;
 }
+
 .footer-schedule__table {
   border-top: var(--page-border);
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr;
   gap: 0;
   .footer-schedule__title {
-	  border-right: var(--page-border);
+    padding: var(--page-width-margin);
   }
 
 }
 .footer-schedule__title {
-  padding: var(--page-width-margin) 0;
+  padding: 1.6rem 0;
   h3 {
-	writing-mode: vertical-rl;
-	  transform: rotate(180deg);
-	  text-align: left;
-	  letter-spacing: 0.1em;   /* opcional */
-	  margin: 0.6rem 0.8rem;
-		font-family: var(--font-body);
-		font-size: 1.2rem;
-	}
+	font-family: var(--font-body);
+	font-size: 1.6rem;
+  }
 }
 .day-hours span {
   font-size: 1.2rem;
@@ -50,15 +46,15 @@
 .schedule-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 0;
 }
 .schedule-day {
   display: flex;
   justify-content: space-between;
-  padding: var(--page-width-margin) 0.8rem;
-  border-right: var(--page-border);
-  &:last-child {
-	  border-right: 0;
+  padding: 0.8rem var(--page-width-margin);
+  border-top: var(--page-border);
+  &:first-child {
+    border-top: 0;
   }
 }
 .day-label {
@@ -67,11 +63,32 @@
   color: #944;
 }
 @media screen and (min-width: 768px) {
+  .footer-schedule__address {
+    grid-template-columns: auto 1fr;
+    p {
+      padding: var(--page-width-margin);
+    }
+  }
   .footer-schedule__content {
 	  grid-template-columns: 2fr 5fr;
   }
   .footer-schedule__table {
 	  border-top: 0;
+    grid-template-columns: auto 1fr;
+      .footer-schedule__title {
+        border-right: var(--page-border);
+      }
+  }
+  .footer-schedule__title {
+    padding: var(--page-width-margin) 0;
+    h3 {
+    writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      text-align: left;
+      letter-spacing: 0.1em;   /* opcional */
+      margin: 0.6rem 0.8rem;
+      font-size: 1.2rem;
+    }
   }
   .schedule-grid {
 	display: grid;
@@ -82,6 +99,11 @@
   .schedule-day {
 	flex-direction: column;
 	align-items: center;
+    border-right: var(--page-border);
+    border-top: 0;
+    &:last-child {
+      border-right: 0;
+    }
   }
 }
 

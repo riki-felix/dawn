@@ -1,0 +1,166 @@
+{%- style -%}
+#shopify-section-{{ section.id }} {
+	margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+	margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+  #shopify-section-{{ section.id }} {
+	margin-top: {{ section.settings.margin_top }}px;
+	margin-bottom: {{ section.settings.margin_bottom }}px;
+  }}
+  
+.menu-collections.page-width {
+	border: var(--page-border);
+	border-radius: 3px;
+}
+.menu-custom {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu-custom__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.0rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* MOBILE: scroll horizontal solo en móviles */
+@media screen and (max-width: 749px) {
+  .menu-custom__list {
+	flex-wrap: nowrap;
+	scroll-snap-type: x mandatory;
+  }
+
+  .menu-custom__item {
+	flex: 0 0 auto;
+	scroll-snap-align: start;
+  }
+}
+
+.menu-custom__item {
+  /* Desktop: que permita saltar de línea */
+  flex: 0 1 auto;
+  &.active {
+	 .menu-custom__link {
+	   color: white;
+	 } 
+  }
+}
+
+.menu-custom__link {
+  display: block;
+  padding: 0.8rem 0;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: var(--font-heading-family);
+  text-transform: uppercase;
+  font-size: 6.0rem;
+  font-weight: 300;
+}
+{%- endstyle -%}
+
+<div class="menu-collections{% unless section.settings.full_width %} page-width{% endunless %} color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+	{% if section.settings.menu != blank %}
+	<nav class="menu-custom" role="navigation" aria-label="Menú personalizado">
+	<ul class="menu-custom__list" role="list">
+		{% for link in linklists[section.settings.menu].links %}
+		<li class="menu-custom__item{% if link.url == request.path %} active{% endif %}">
+			<a href="{{ link.url }}" class="menu-custom__link">{{ link.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+	</nav>
+	{% else %}
+	<p>No se ha seleccionado ningún menú.</p>
+	{% endif %}
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const menuLinks = document.querySelectorAll('.menu-custom__link');
+
+  // Guardar scroll antes de salir
+  menuLinks.forEach(link => {
+	link.addEventListener('click', function(event) {
+	  sessionStorage.setItem('scrollPosition', window.scrollY);
+	});
+  });
+
+  // Restaurar scroll al cargar la nueva página
+  const savedScroll = sessionStorage.getItem('scrollPosition');
+  if (savedScroll !== null) {
+	window.scrollTo(0, parseInt(savedScroll));
+	sessionStorage.removeItem('scrollPosition'); // limpia para siguientes páginas
+  }
+});
+</script>
+{% schema %}
+{
+  "name": "Menu colecciones",
+  "tag": "section",
+  "class": "menu-collections-section",
+  "settings": [
+	{
+	  "type": "link_list",
+	  "id": "menu",
+	  "label": "Seleccionar menú"
+	},
+	{
+	  "type": "range",
+	  "id": "margin_top",
+	  "label": "Margen superior",
+	  "min": 0,
+	  "max": 200,
+	  "step": 4,
+	  "default": 0
+	},
+	{
+	  "type": "range",
+	  "id": "margin_bottom",
+	  "label": "Margen inferior",
+	  "min": 0,
+	  "max": 200,
+	  "step": 4,
+	  "default": 0
+	},
+	{
+	  "type": "range",
+	  "id": "padding_top",
+	  "label": "Padding superior",
+	  "min": 0,
+	  "max": 200,
+	  "step": 4,
+	  "default": 0
+	},
+	{
+	  "type": "range",
+	  "id": "padding_bottom",
+	  "label": "Padding inferior",
+	  "min": 0,
+	  "max": 200,
+	  "step": 4,
+	  "default": 0
+	},
+	{
+	  "type": "color_scheme",
+	  "id": "color_scheme",
+	  "label": "t:sections.all.colors.label",
+	  "default": "scheme-1"
+	}, 
+	{
+	  "type": "checkbox",
+	  "id": "full_width",
+	  "label": "Ancho completo",
+	  "default": false
+	}
+  ],
+  "presets": [
+	{
+	  "name": "Menu Colecciones"
+	}
+  ]
+}
+{% endschema %}
+

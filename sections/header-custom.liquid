@@ -172,8 +172,8 @@
     background-color: rgb(var(--color-background));
   }
   .header:not(.drawer-menu).page-width {
-    padding: 0 var(--page-width-margin);
-    margin: 0 auto;
+    padding: 1.6rem var(--page-width-margin);
+    margin: 0 0.8rem;
   }
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
@@ -187,9 +187,17 @@
   }
 
   @media screen and (min-width: 990px) {
+    .header:not(.drawer-menu).page-width {
+      padding: 0 var(--page-width-margin);
+    }
     .header {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  @media screen and (min-width:1400px) {
+    .header:not(.drawer-menu).page-width {
+      margin: 0 auto;
     }
   }
 {%- endstyle -%}

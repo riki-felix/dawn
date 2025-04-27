@@ -3,11 +3,17 @@
 	background: transparent; text-align: center; max-width: var(--page-width); margin: calc(var(--page-width-margin) - 0.8rem) auto var(--page-width-margin) auto;
 }
 .logo-wrapper {
-	max-width: auto; margin: 0 auto;
+	max-width: unset;
+	margin: 0 0.8rem;
 }
 .logo-wrapper img {
 	width: 100%; height: auto; object-fit: contain; display: block; margin: 0 auto;
 }
+ @media screen and (min-width: 1400px) {
+	.logo-wrapper {
+		margin: 0 auto;
+	} 
+ }
 {% endstyle %}
 <section class="headline-logo-section">
   <div class="logo-wrapper">
