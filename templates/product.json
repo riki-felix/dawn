@@ -37,7 +37,7 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "swatch_shape": "none"
+            "swatch_shape": "circle"
           }
         },
         "quantity_selector": {
@@ -123,8 +123,8 @@
         "enable_sticky_info": true,
         "color_scheme": "",
         "media_size": "large",
-        "constrain_to_viewport": true,
-        "media_fit": "cover",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
         "gallery_layout": "stacked",
         "mobile_thumbnails": "hide",
         "media_position": "left",
@@ -133,49 +133,6 @@
         "enable_video_looping": false,
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column-0": {
-          "type": "column",
-          "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column-0",
-        "column-1"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 40,
-        "padding_bottom": 40
       }
     },
     "related-products": {
@@ -196,12 +153,58 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "multicolumn_custom_3WgPYb": {
+      "type": "multicolumn-custom",
+      "blocks": {
+        "column_XJ3xJQ": {
+          "type": "column",
+          "settings": {
+            "title": "Kalitatea",
+            "text": "<p>En cada pedido te enviamos toda la información sobre tus productos y consejos para disfrutar al máximo de toda su calidad.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_dJhNVz": {
+          "type": "column",
+          "settings": {
+            "title": "Envío seguro",
+            "text": "<p>Todos nuestros productos se envían con transporte especializado para conservar la cadena de frío.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_XJ3xJQ",
+        "column_dJhNVz"
+      ],
+      "name": "Custom Multicolumn",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Etiqueta de botón",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "margin_top": 32,
+        "margin_bottom": 32,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "headline_Gi3BCE",
     "main",
-    "multicolumn",
-    "related-products"
+    "related-products",
+    "multicolumn_custom_3WgPYb"
   ]
 }

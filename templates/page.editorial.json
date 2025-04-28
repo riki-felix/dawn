@@ -31,10 +31,10 @@
         "show_text_below": true
       }
     },
-    "rich_text_VeAyeM": {
-      "type": "rich-text",
+    "custom_rich_text_qw4zkF": {
+      "type": "custom-rich-text",
       "blocks": {
-        "text_yAdAfH": {
+        "text_FeUWrq": {
           "type": "text",
           "settings": {
             "text": "{{ page.metafields.custom[\"page-intro\"] | metafield_tag }}"
@@ -42,15 +42,18 @@
         }
       },
       "block_order": [
-        "text_yAdAfH"
+        "text_FeUWrq"
       ],
+      "name": "Intro",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     },
     "image_banner_wggzn6": {
@@ -63,17 +66,17 @@
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
-        "show_text_box": true,
+        "show_text_box": false,
         "color_scheme": "",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
       }
     },
-    "rich_text_kgMYCH": {
-      "type": "rich-text",
+    "custom_rich_text_BVhBCc": {
+      "type": "custom-rich-text",
       "blocks": {
-        "text_9XEPc4": {
+        "text_4KzCw9": {
           "type": "text",
           "settings": {
             "text": "{{ page.content }}"
@@ -81,42 +84,18 @@
         }
       },
       "block_order": [
-        "text_9XEPc4"
+        "text_4KzCw9"
       ],
+      "name": "Contenido",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_QnifwE": {
-      "type": "rich-text",
-      "blocks": {
-        "button_HrRQWk": {
-          "type": "button",
-          "settings": {
-            "button_label": "Reservar",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "Regalar",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "button_HrRQWk"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     },
     "main": {
@@ -126,15 +105,43 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "rich_text_9JQ3rf": {
+      "type": "rich-text",
+      "blocks": {
+        "button_Xj9h4d": {
+          "type": "button",
+          "settings": {
+            "button_label": "Regalar",
+            "button_link": "shopify://products/menu-regalo",
+            "button_style_secondary": false,
+            "button_label_2": "Reservar",
+            "button_link_2": "shopify://pages/reservas",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_Xj9h4d"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
     "headline_zBqV6Y",
     "image_banner_PGkjqB",
-    "rich_text_VeAyeM",
+    "custom_rich_text_qw4zkF",
     "image_banner_wggzn6",
-    "rich_text_kgMYCH",
-    "rich_text_QnifwE",
-    "main"
+    "custom_rich_text_BVhBCc",
+    "main",
+    "rich_text_9JQ3rf"
   ]
 }
