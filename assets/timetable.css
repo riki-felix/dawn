@@ -1,8 +1,8 @@
 .footer-schedule__address {
   display: grid;
-  padding: 0 var(--page-width-margin);
+  padding: 1.6rem;
 	grid-template-columns: 1fr;
-	gap: 0;
+	gap: 1rem;
 	p {
 		padding: 0;
 		margin: 0 0 1.6rem 0;
@@ -26,22 +26,37 @@
   grid-template-columns: 1fr;
   gap: 0;
   .footer-schedule__title {
-    padding: var(--page-width-margin);
+    padding: 1.6rem;
   }
 
 }
 .footer-schedule__title {
-  padding: 1.6rem 0;
+  padding: 0;
   h3 {
 	font-family: var(--font-body);
 	font-size: 1.6rem;
   }
 }
+.day-label {
+  margin-bottom: 0.8rem;
+}
+.day-hours span:first-child {
+    &:before {
+      content: "";
+    }
+}
+
 .day-hours span {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-variant-numeric: lining-nums;
   font-feature-settings: "lnum";
   display: inline-block;
+  margin: 0;
+  padding: 0;
+  
+  &:before {
+    content: "/";
+  }
 }
 .schedule-grid {
   display: grid;
@@ -50,6 +65,7 @@
 }
 .schedule-day {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-between;
   padding: 0.8rem var(--page-width-margin);
   border-top: var(--page-border);
@@ -62,27 +78,29 @@
 .closed {
   color: #944;
 }
+
 @media screen and (min-width: 768px) {
   .footer-schedule__address {
     grid-template-columns: auto 1fr;
+    padding: 0.8rem;
     p {
-      padding: var(--page-width-margin);
+      padding: 0 0 var(--page-width-margin) var(--page-width-margin);
     }
   }
-  .footer-schedule__content {
-	  grid-template-columns: 2fr 5fr;
-  }
+
   .footer-schedule__table {
-	  border-top: 0;
+	  border-top: var(--page-border);
     grid-template-columns: auto 1fr;
       .footer-schedule__title {
         border-right: var(--page-border);
+        padding: 0.8rem;
       }
   }
   .footer-schedule__title {
-    padding: var(--page-width-margin) 0;
+    padding: 0;
+    
     h3 {
-    writing-mode: vertical-rl;
+      writing-mode: vertical-rl;
       transform: rotate(180deg);
       text-align: left;
       letter-spacing: 0.1em;   /* opcional */
@@ -101,12 +119,25 @@
 	align-items: center;
     border-right: var(--page-border);
     border-top: 0;
+    padding: 0.8rem;
     &:last-child {
       border-right: 0;
     }
   }
+  .day-hours span {
+   &:before {
+      content: "";
+    }
+  }
 }
-
+@media screen and (min-width: 1200px) {
+  .footer-schedule__content {
+    grid-template-columns: 2fr 5fr;
+  }
+  .footer-schedule__table {
+    border-top: 0;
+  }
+}
 
 /* Color Scheme Support */
 .color-background-1 {

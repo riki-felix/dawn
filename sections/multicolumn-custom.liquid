@@ -6,49 +6,49 @@
 	margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
 	margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
   }
-  .custom-multicolumn {
-	  border: var(--page-border);
-	  border-radius: 3px;
-	  margin-left: 0.8rem;
-	  margin-right: 0.8rem;
-		padding: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px 0;
-		.multicolumn-list {
-			padding: 0;
-		}
-		.multicolumn-card {
-		  padding-left: var(--page-width-margin);
-		  padding-right: var(--page-width-margin);
-		}
-		.multicolumn-card__info {
-			padding: 0;
-		}
-		h3 {
-			line-height: 1;
-		}
+  .section-{{ section.id }}-padding  {
+	padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+	padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+	margin-left: 0.8rem;
+	margin-right: 0.8rem;
+	.multicolumn-card {
+	  
+	}
+	.multicolumn-card__info {
+		padding: 0;
+	}
+	h3 {
+		line-height: 1;
+	}
   }
-  @media screen and (max-width: 749px) {
-	  .custom-multicolumn:not(.slider) {
-		  padding-left: var(--page-width-margin);
-		  padding-right: var(--page-width-margin);
-	  }
-  }
+	.background-none .multicolumn-list .multicolumn-card__info {
+		padding-left: 0;
+		padding-right: 0;
+		
+	}
+
   @media screen and (min-width: 750px) {
 	#shopify-section-{{ section.id }} {
 	  margin-top: {{ section.settings.margin_top }}px;
 	  margin-bottom: {{ section.settings.margin_bottom }}px;
 	}
-	.custom-multicolumn {
-		padding: {{ section.settings.padding_top }}px 0;
+	.section-{{ section.id }}-padding {
+		padding-top: {{ section.settings.padding_top }}px;
+		padding-bottom: {{ section.settings.padding_bottom }}px;
 		.multicolumn-card__info {
-				padding: 0 ;
-			}
+			padding: 0 ;
+		}
 	}  
   }
+  
   @media screen and (min-width: 1400px) {
-	.custom-multicolumn {
+	.section-{{ section.id }}-padding {
 		margin-left: auto;
 		margin-right: auto;
 	}  
+  }
+  .multicolumn-card__image-wrapper--third-width {
+	  max-width: 6.4rem;
   }
 {%- endstyle -%}
 
@@ -60,27 +60,101 @@
   endif
 -%}
 
-<div class="custom-multicolumn multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
-  {%- if section.settings.title != blank -%}
-	<h2 class="title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
-  {%- endif -%}
-  {%- if section.settings.text != blank -%}
-	<div class="rte">{{ section.settings.text }}</div>
-  {%- endif -%}
+<div class="custom-multicolumn multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+  <div
+	class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+	{% if settings.animations_reveal_on_scroll %}
+	  data-cascade
+	{% endif %}
+  >
+	{%- unless section.settings.title == blank -%}
+	  <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
+		<h2 class="title inline-richtext {{ section.settings.heading_size }}">
+		  {{ section.settings.title }}
+		</h2>
+		{%- if section.settings.button_label != blank and show_mobile_slider -%}
+		  <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">
+			{{- section.settings.button_label | escape -}}
+		  </a>
+		{%- endif -%}
+	  </div>
+	{%- endunless -%}
+	<slider-component class="slider-mobile-gutter">
+	  <ul
+		class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}"
+		id="Slider-{{ section.id }}"
+		role="list"
+	  >
+		{%- liquid
+		  assign highest_ratio = 0
+		  for block in section.blocks
+			if block.settings.image.aspect_ratio > highest_ratio
+			  assign highest_ratio = block.settings.image.aspect_ratio
+			endif
+		  endfor
+		-%}
+		{%- for block in section.blocks -%}
+		  {%- assign empty_column = '' -%}
+		  {%- if block.settings.image == blank
+			and block.settings.title == blank
+			and block.settings.text == blank
+			and block.settings.link_label == blank
+		  -%}
+			{%- assign empty_column = ' multicolumn-list__item--empty' -%}
+		  {%- endif -%}
+		{%- case block.type -%}
+			{%- when 'column' -%}
 
-  <div class="multicolumn-list {% if show_mobile_slider %}slider slider--mobile{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
-	{%- for block in section.blocks -%}
-	  {%- case block.type -%}
-		{%- when 'column' -%}
-		  <div id="Slide-{{ section.id }}-{{ forloop.index }}" class="multicolumn-list__item grid__item" {{ block.shopify_attributes }}>
+		  <li
+			id="Slide-{{ section.id }}-{{ forloop.index }}"
+			class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+			{{ block.shopify_attributes }}
+			{% if settings.animations_reveal_on_scroll %}
+			  data-cascade
+			  style="--animation-order: {{ forloop.index }};"
+			{% endif %}
+		  >
 			<div class="multicolumn-card content-container">
 			  {%- if block.settings.image != blank -%}
-				<div class="media media--transparent media--{{ block.settings.image_ratio }}">
-				  {{ block.settings.image | image_url: width: 750 | image_tag:
-					loading: 'lazy',
-					width: block.settings.image.width,
-					height: block.settings.image.height,
-					alt: block.settings.image.alt | escape }}
+				{% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
+				  {% assign spaced_image = true %}
+				{% endif %}
+				<div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
+				  <div
+					class="media media--transparent media--{{ section.settings.image_ratio }}"
+					{% if section.settings.image_ratio == 'adapt' %}
+					  style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+					{% endif %}
+				  >
+					{%- liquid
+					  assign number_of_columns = section.settings.columns_desktop
+					  assign number_of_columns_mobile = section.settings.columns_mobile
+					  assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+					  assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+					  assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
+					  if section.settings.image_width == 'half'
+						assign image_width = 0.5
+					  elsif section.settings.image_width == 'third'
+						assign image_width = 0.15
+					  else
+						assign image_width = 1
+					  endif
+					-%}
+					{% capture sizes %}
+					  (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
+					  (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
+					  (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
+					  calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
+					{% endcapture %}
+					{{
+					  block.settings.image
+					  | image_url: width: 3200
+					  | image_tag:
+						widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+						sizes: sizes,
+						class: 'multicolumn-card__image'
+					}}
+				  </div>
 				</div>
 			  {%- endif -%}
 			  <div class="multicolumn-card__info">
@@ -90,17 +164,83 @@
 				{%- if block.settings.text != blank -%}
 				  <div class="rte">{{ block.settings.text }}</div>
 				{%- endif -%}
+				{%- if block.settings.link_label != blank -%}
+				  <a
+					class="link animate-arrow"
+					{% if block.settings.link == blank %}
+					  role="link" aria-disabled="true"
+					{% else %}
+					  href="{{ block.settings.link }}"
+					{% endif %}
+				  >
+					{{- block.settings.link_label | escape -}}
+					<span class="svg-wrapper"
+					  ><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span
+					>
+				  </a>
+				{%- endif -%}
 			  </div>
 			</div>
+		  </li>
+		  {%- when '@app' -%}
+				<div class="multicolumn-list__item grid__item app" {{ block.shopify_attributes }}>
+				  {% render block %}
+				</div>
+			{%- endcase -%}
+		{%- endfor -%}
+	  </ul>
+
+	  {%- if show_mobile_slider -%}
+		<div class="slider-buttons large-up-hide">
+		  <button
+			type="button"
+			class="slider-button slider-button--prev"
+			name="previous"
+			aria-label="{{ 'general.slider.previous_slide' | t }}"
+		  >
+			<span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+		  </button>
+		  <div class="slider-counter caption">
+			<span class="slider-counter--current">1</span>
+			<span aria-hidden="true"> / </span>
+			<span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+			<span class="slider-counter--total">{{ section.blocks.size }}</span>
 		  </div>
-		{%- when '@app' -%}
-		  <div class="multicolumn-list__item grid__item app" {{ block.shopify_attributes }}>
-			{% render block %}
-		  </div>
-	  {%- endcase -%}
-	{%- endfor -%}
+		  <button
+			type="button"
+			class="slider-button slider-button--next"
+			name="next"
+			aria-label="{{ 'general.slider.next_slide' | t }}"
+		  >
+			<span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+		  </button>
+		</div>
+	  {%- endif -%}
+	</slider-component>
+	<div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
+	  {%- if section.settings.button_label != blank -%}
+		<a
+		  class="button button--primary"
+		  {% if section.settings.button_link == blank %}
+			role="link" aria-disabled="true"
+		  {% else %}
+			href="{{ section.settings.button_link }}"
+		  {% endif %}
+		>
+		  {{ section.settings.button_label | escape }}
+		</a>
+	  {%- endif -%}
+	</div>
+		
   </div>
 </div>
+
+
+
+		  
+
+
+
 
 {% schema %}
 {

@@ -1,30 +1,32 @@
 {{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .custom-rich-text {
+  #shopify-section-{{ section.id }} {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
   }
-  .rich-text__blocks {
+  .section-{{ section.id }}-padding  {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+
   @media screen and (min-width: 750px) {
-    .custom-rich-text {
+    #shopify-section-{{ section.id }} {
       margin-top: {{ section.settings.margin_top }}px;
       margin-bottom: {{ section.settings.margin_bottom }}px;
     }
-    .rich-text__blocks {
+    .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
+    }  
   }
+
 {%- endstyle -%}
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
-  <div class="custom-rich-text rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
-    <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
+  <div class="custom-rich-text rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}">
+    <div class="rich-text__wrapper section-{{ section.id }}-padding rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}

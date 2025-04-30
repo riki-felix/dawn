@@ -1,25 +1,55 @@
 .header--has-menu {
 	overflow: hidden;
 }
+
+header .header__icons {
+	padding-right: 0;
+	min-height: 4rem;
+}
 header .header__heading-link {
 	overflow: visible;
 }
-
-header .header__icon, .header__icon--cart .icon {
+header .header__icon--cart .icon {
+	height: 3.2rem;
+	width: 3.2rem;
+	margin: 0.4rem auto;
+}
+header .mobile-trigger {
+	padding-right: calc(var(--page-width-margin) / 2);
+}
+header .header__icon {
 	height: auto;
 	width: auto;
+	margin: 0;
+	position: relative;
 	
 	.svg-wrapper {
-		border-left: var(--page-border);
-		margin-left: var(--page-width-margin);
-		padding-left: var(--page-width-margin);
+		overflow: hidden;
+		border-right: var(--page-border);
+		padding: 0 calc(var(--page-width-margin) / 2) 0 0 ;
+		margin: 0 calc(var(--page-width-margin) / 2) 0 0 ;
 		height: 100%;
-		width: 4.4rem;
-		path {
-			height: 2.4rem;
-			width: 2.4rem;
-			min-width: 2.4rem;
-		}
+		width: auto;
+	}
+	.cart-count-bubble {
+		position: absolute;
+		background-color: transparent;
+		color: rgb(var(--color-background));
+		height: 100%;
+		width: 3.2rem;
+		border-radius: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 3.0rem;
+		font-family: var(--font-heading-family);
+		bottom: 0;
+		right: unset;
+		line-height: 1;
+		text-decoration: none;
+		font-weight: 600;
+		text-align: center;
+		left: 0;
 	}
 }
 div:has(> .product) {
@@ -27,6 +57,26 @@ div:has(> .product) {
 	padding: 0;
 	border-radius: 3px;
 	margin: 0 0.8rem;
+}
+@media screen and (min-width: 750px) {
+	header .header__icon--cart .icon {
+		height: 3.8rem;
+		width: 3.8rem;
+	}
+	header .header__icon {
+		.svg-wrapper {
+			border-left: var(--page-border);
+			border-right: 0;
+			padding: 0 0 0 var(--page-width-margin);
+			margin: 0 0 0 var(--page-width-margin);
+		}
+		.cart-count-bubble {
+			right: 0;
+			left: unset;
+			font-size: 4.0rem;
+			width: 3.8rem;
+		}
+	}
 }
 @media screen and (min-width: 1400px) {
 	div:has(> .product) {
@@ -114,7 +164,7 @@ h2, .h2 {
 	font-weight: 300;
 }
 h3, .h3 {
-	font-size: 4.0rem;
+	font-size: 6.0rem;
 	margin: 0;
 	line-height: 1;
 	font-weight: 300;
@@ -232,4 +282,21 @@ variant-selects {
 .card__heading {
 	font-size: 5.0rem;
 	text-transform: uppercase;
+}
+
+#menu-drawer {
+	.menu-drawer__navigation {
+		padding: var(--page-width-margin);
+	}
+	.list-menu__item {
+		font-size: 6.0rem;
+	}
+	.menu-drawer__menu-item--active {
+		background-color: unset;
+		color: white;
+	}
+}
+
+.cart__login-title {
+	margin-top: 3.2rem;
 }

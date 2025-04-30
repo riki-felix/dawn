@@ -12,6 +12,7 @@
 
 
 <style>
+
   header-drawer {
     justify-self: start;
     margin-left: -1.2rem;
@@ -172,7 +173,7 @@
     background-color: rgb(var(--color-background));
   }
   .header:not(.drawer-menu).page-width {
-    padding: 1.6rem var(--page-width-margin);
+    padding: 0 calc(var(--page-width-margin) / 2);
     margin: 0 0.8rem;
   }
   .section-header {
@@ -181,6 +182,10 @@
   }
 
   @media screen and (min-width: 750px) {
+    .header:not(.drawer-menu).page-width {
+      padding: 0 var(--page-width-margin);
+      margin: 0 0.8rem;
+    }
     .section-header {
       margin-bottom: {{ section.settings.margin_bottom }}px;
     }
