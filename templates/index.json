@@ -106,7 +106,7 @@
             "button_link": "shopify://pages/reservas",
             "button_style_secondary": false,
             "button_label_2": "Regala",
-            "button_link_2": "shopify://products/tarjeta-regalo",
+            "button_link_2": "shopify://products/menu-regalo",
             "button_style_secondary_2": false
           }
         }
@@ -140,121 +140,63 @@
         "show_text_below": false
       }
     },
-    "multicolumn_custom_Mbxr4G": {
+    "multicolumn_custom_qHrkHF": {
       "type": "multicolumn-custom",
       "blocks": {
-        "column_EYNPaM": {
+        "column_eLgNGh": {
           "type": "column",
           "settings": {
-            "title": "Carta",
-            "text": "<p>Pan</p><p>Mantequilla</p><p>Jamón ibérico</p><p>Cecina</p><p>Charcutería</p><p>Puerro</p><p>Espárrago</p><p>………………………………………………</p><p>Txuleta</p><p>………………………………………………</p><p>Pimiento Piquillo</p><p>Ensalada</p>",
+            "image": "shopify://shop_images/sello-web_txuleta_cj_2.png",
+            "title": "CARTA",
+            "text": "<p>Pan y Mantequilla</p><p>………………………………………………</p><p>Jamón ibérico</p><p>Cecina</p><p>Charcutería</p><p>Puerro</p><p>Espárrago</p><p>………………………………………………</p><p>Txuleta</p><p>………………………………………………</p><p>Pimiento Piquillo</p><p>Ensalada</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_geLhCJ": {
+        "column_gtRyek": {
           "type": "column",
           "settings": {
-            "title": "Fuera de carta",
+            "image": "shopify://shop_images/sello-web_alcachofa_cj_2.png",
+            "title": "FUERA DE CARTA",
             "text": "<p>Tartar de solomillo</p><p>Molleja</p><p>Guisante lágrima</p><p>Alcachofa</p><p>Espárrago brasa</p><p>Setas</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_a7HL6c": {
+        "column_yTFfgP": {
           "type": "column",
           "settings": {
-            "title": "Postre",
-            "text": "<p>Tarta de Queso</p><p>Tarta de chocolate</p><p>FlanQuesos</p>",
+            "image": "shopify://shop_images/sello-web_flan_cj_2.png",
+            "title": "POSTRES",
+            "text": "<p>Tarta de Queso</p><p>Tarta de chocolate</p><p>Flan</p><p>Quesos</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_EYNPaM",
-        "column_geLhCJ",
-        "column_a7HL6c"
+        "column_eLgNGh",
+        "column_gtRyek",
+        "column_yTFfgP"
       ],
-      "name": "Carta",
+      "name": "CARTA",
       "settings": {
         "title": "",
         "heading_size": "h1",
-        "image_width": "full",
+        "image_width": "third",
         "image_ratio": "adapt",
-        "button_label": "Etiqueta de botón",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
+        "column_alignment": "center",
+        "background_style": "none",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "margin_top": 40,
-        "margin_bottom": 40,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_Ez6qfg": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_cqaEUk": {
-          "type": "heading",
-          "settings": {
-            "heading": "Carta",
-            "heading_size": "h1"
-          }
-        },
-        "text_JNC3ia": {
-          "type": "text",
-          "settings": {
-            "text": "<p>PanMantequilla</p><p>Jamón ibérico</p><p>Cecina</p><p>Charcutería</p><p>Puerro</p><p>Espárrago</p><p>………………………………………………</p><p>Txuleta</p><p>………………………………………………</p><p>Pimiento Piquillo</p><p>Ensalada</p>"
-          }
-        },
-        "heading_gEAFGe": {
-          "type": "heading",
-          "settings": {
-            "heading": "Postre",
-            "heading_size": "h1"
-          }
-        },
-        "text_X6tLbg": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Tarta de Queso</p><p>Tarta de chocolate</p><p>FlanQuesos</p>"
-          }
-        },
-        "heading_pe8rLF": {
-          "type": "heading",
-          "settings": {
-            "heading": "Fuera de carta",
-            "heading_size": "h1"
-          }
-        },
-        "text_PwGWzq": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Tartar de solomillo</p><p>Molleja</p><p>Guisante lágrima</p><p>Alcachofa</p><p>Espárrago brasa</p><p>Setas</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_cqaEUk",
-        "text_JNC3ia",
-        "heading_gEAFGe",
-        "text_X6tLbg",
-        "heading_pe8rLF",
-        "text_PwGWzq"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "margin_top": 8,
+        "margin_bottom": 0,
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "image_banner_cX9NJX": {
@@ -316,10 +258,10 @@
         "review_w6WQjM"
       ],
       "settings": {
-        "title": "Marmarrak",
+        "title": "",
         "heading_size": "h2",
         "color_scheme": "scheme-1",
-        "enable_autoplay": true,
+        "enable_autoplay": false,
         "autoplay_interval": 2000
       }
     }
@@ -331,8 +273,7 @@
     "image_banner",
     "rich_text",
     "image_banner_PH89dE",
-    "multicolumn_custom_Mbxr4G",
-    "rich_text_Ez6qfg",
+    "multicolumn_custom_qHrkHF",
     "image_banner_cX9NJX",
     "reviews_4NGAjn"
   ]
