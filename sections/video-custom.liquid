@@ -7,22 +7,27 @@
 .custom-video-section {
   position: relative;
   width: 100vw;
+  max-width: var(--page-width);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background: var(--background, transparent);
   max-height: calc(100vh - var(--header-height, 0px));
+  margin: 0 auto;
+  
 }
 
 .custom-video-section .video-wrapper {
+	
+  border: var(--page-border);
   position: relative;
   width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(70vh - var(--header-height, 0px));
+  /* min-height: calc(70vh - var(--header-height, 0px)); */
   height: auto;
   .deferred-media {
 	  width: 100%;
@@ -64,7 +69,7 @@
   position: absolute;
   z-index: 2;
   width: calc(100% - 1.6rem);
-  top: 0;
+  top: 0.4rem;
   max-width: var(--page-width, 1400px);
   padding-top: var(--headline-padding-top, 2rem);
   padding-bottom: var(--headline-padding-bottom, 2rem);
@@ -75,7 +80,6 @@
 }
 @media screen and (min-width: 1400px) {
 	.headline-block {
-    	width: 100%;
 	}
 }
 .logo-wrapper img {

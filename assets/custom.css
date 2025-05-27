@@ -90,7 +90,7 @@ div:has(> .product) {
 	}
 }
 .multicolumn .isolate {
-	border: var(--page-border);
+	/* border: var(--page-border); */
 	border-radius: 3px;
 }
 
@@ -299,4 +299,13 @@ variant-selects {
 
 .cart__login-title {
 	margin-top: 3.2rem;
+}
+
+.multicolumn-card__info ul {
+	list-style: outside;
+	margin: 0 0 0 1.5rem;
+	padding: 0;
+	li {
+		margin-bottom: 1rem;
+	}
 }
