@@ -26,7 +26,7 @@
           "type": "headline",
           "settings": {
             "custom_logo": "{{ shop.brand.logo }}",
-            "padding_top": 0,
+            "padding_top": 20,
             "padding_bottom": 0
           }
         },
@@ -41,9 +41,9 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Reservar",
-            "button_link_1": "",
+            "button_link_1": "shopify://pages/reservas",
             "button_label_2": "Regalar",
-            "button_link_2": "",
+            "button_link_2": "shopify://products/menu-regalo",
             "margin_top": 40,
             "margin_bottom": 40,
             "color_scheme": "scheme-1"
@@ -60,126 +60,400 @@
         "color_scheme": ""
       }
     },
-    "video_t9GUYx": {
-      "type": "video",
-      "disabled": true,
-      "custom_css": [
-        ".video-section {max-height: 60rem;}"
-      ],
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": true,
-        "video": "shopify://files/videos/4 - Casa Julian -  Parrilla.mov",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": true,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "image_banner": {
-      "type": "image-banner",
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/casa-julian-2_0012_Capa_2_copia.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "image_behavior": "fixed",
-        "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
+    "image_banner_custom_Ki4fy7": {
+      "type": "image-banner-custom",
       "blocks": {
-        "button_Grmze4": {
-          "type": "button",
+        "heading_rDz6mA": {
+          "type": "heading",
           "settings": {
-            "button_label": "Reserva",
-            "button_link": "shopify://pages/reservas",
-            "button_style_secondary": false,
-            "button_label_2": "Regala",
-            "button_link_2": "shopify://products/menu-regalo",
-            "button_style_secondary_2": false
+            "heading": "CARTA",
+            "heading_size": "h2"
+          }
+        },
+        "richtext_a64cq7": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>URDAIAZPIKO IBERIKOA\t<strong>32 </strong></p><p>ZEZINA\t<strong>36</strong></p><p>TXULETA TARTAR-A\t<strong>30</strong></p><p>TXARKUTERIA\t<strong>34</strong></p><p>PORRUA\t<strong>18</strong></p><p>ZAINZURIAK\t<strong>18</strong></p><p>……………………………………………………………</p><p>TXULETA\t<strong>90</strong>€/kg</p><p>TXULETA SELECCIÓN\t<strong>100</strong>€/kg</p><p>PIKILLO PIPERRAK\t<strong>16</strong></p><p>ENTSALADA\t<strong>4</strong></p><p></p>",
+            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "button_Grmze4"
+        "heading_rDz6mA",
+        "richtext_a64cq7"
       ],
-      "disabled": true,
+      "name": "CARTA",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 80,
-        "padding_bottom": 80
+        "image": "shopify://shop_images/DSCF0157.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "ambient",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "scheme-2",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
       }
     },
-    "image_banner_PH89dE": {
-      "type": "image-banner",
+    "image_with_text_QiNGEp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rymjfp": {
+          "type": "heading",
+          "settings": {
+            "heading": "ORIGEN",
+            "heading_size": "hxl"
+          }
+        },
+        "caption_fkDTqN": {
+          "type": "caption",
+          "settings": {
+            "caption": "TOLOSA, PAÍS VASCO, AÑO 1951",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        },
+        "text_C84hpH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>JULIÁN EN BÚSQUEDA DE DOMINAR EL FUEGO CREARÍA LA PARRILLA INCLINADA.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rymjfp",
+        "caption_fkDTqN",
+        "text_C84hpH"
+      ],
+      "disabled": true,
+      "name": "ORIGEN",
       "settings": {
-        "image": "shopify://shop_images/4R0A2514.jpg",
+        "image": "shopify://shop_images/4R0A239622.jpg",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "bottom",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "editorial_jb4ML6": {
+      "type": "editorial",
+      "blocks": {
+        "text_block_86B4gV": {
+          "type": "text_block",
+          "settings": {
+            "text": "<h2><strong>ORIGEN</strong></h2>"
+          }
+        },
+        "text_block_J3iRBk": {
+          "type": "text_block",
+          "settings": {
+            "text": "<p>JULIÁN EN BÚSQUEDA DE DOMINAR EL FUEGO CREARÍA LA PARRILLA INCLINADA.</p>"
+          }
+        },
+        "text_block_A36zdk": {
+          "type": "text_block",
+          "settings": {
+            "text": "<p>EL LEGADO CONTIUNARÍA DE LA MANO DE MATÍAS Y XABIER, SELECCIONANDO LAS TXULETAS CON EL CRITERIO PCON LA LLAMA VIVA DE ESOS COMIENZOS QUE AÚN PERDURAN, EVOLUCIONAMOS PARA PODER LLEVAR NUESTRA ESENCIA A LA MESA CON PRODUCTOS DE CALIDAD Y TEMPORADA.</p>"
+          }
+        },
+        "text_block_LTdf3t": {
+          "type": "text_block",
+          "settings": {
+            "text": "<p>CON LA LLAMA VIVA DE ESOS COMIENZOS QUE AÚN PERDURAN, EVOLUCIONAMOS PARA PODER LLEVAR NUESTRA ESENCIA A LA MESA CON PRODUCTOS DE CALIDAD Y TEMPORADA.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_86B4gV",
+        "text_block_J3iRBk",
+        "text_block_A36zdk",
+        "text_block_LTdf3t"
+      ],
+      "name": "Editorial",
+      "settings": {
+        "image": "shopify://shop_images/4R0A239622.jpg",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "image_banner_custom_BjPaN7": {
+      "type": "image-banner-custom",
+      "blocks": {
+        "heading_yiUkFC": {
+          "type": "heading",
+          "settings": {
+            "heading": "TOLOSA",
+            "heading_size": "hxl"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yiUkFC"
+      ],
+      "name": "TOLOSA",
+      "settings": {
+        "image": "shopify://shop_images/tolosa_casa-julian.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "adapt",
+        "image_height": "medium",
+        "image_behavior": "fixed",
+        "desktop_content_position": "top-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-2",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "multicolumn_custom_g78qfK": {
+      "type": "multicolumn-custom",
+      "blocks": {
+        "column_zMPBVd": {
+          "type": "column",
+          "settings": {
+            "title": "COCHE",
+            "text": "<p>Te aconsejamos que vengas con tiempo ya que suele ser complicado encontrar sitio para aparcar, sobre todo los fines de semana. Ten en cuenta que la mayoría del aparcamiento de Tolosa es bajo OTA.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4UHhBV": {
+          "type": "column",
+          "settings": {
+            "title": "AUTOBÚS",
+            "text": "<p>La línea directa que une Donosti con Tolosa es la BU08 de Turraldebus con 30-45 minutos de duración. También está la línea BUO7 con parada en la mayoría de los pueblos, que tarda un poco más. Consulta los horarios, recorridos y demás información en la pagina oficial de Iurraldebus.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fYGCex": {
+          "type": "column",
+          "settings": {
+            "title": "TREN",
+            "text": "<p>El servicio de cercanías de RENFE tiene dos estaciones en Tolosa. Para llegar al asador recomendamos bajarse en la del centro. Consulta los horarios en la página oficial de Renfe Cercanías Donostia-San Sebastián.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_qJ6UUH": {
+          "type": "column",
+          "settings": {
+            "title": "TAXI",
+            "text": "<p>Si queréis venir en taxi desde la capital tendréis que dirigiros a una parada o bien llamar por teléfono o pedirlo mediante la app JoinUp taxi. Podéis consultar la página web del ayuntamiento de Donostia-San Sebastián para más información.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_zMPBVd",
+        "column_4UHhBV",
+        "column_fYGCex",
+        "column_qJ6UUH"
+      ],
+      "name": "LLEGAR",
+      "settings": {
+        "title": "CÓMO LLEGAR",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_custom_FQcAU3": {
+      "type": "multicolumn-custom",
+      "blocks": {
+        "column_fQbQdE": {
+          "type": "column",
+          "settings": {
+            "title": "AUTOBÚS / TREN",
+            "text": "<p>Durante el dia se pueden utilizar los mismos medios de transporte que para llegar. No obstante, si la velada es nocturna, consultad con antelación los horarios de tren y autobús, ya que los últimos pasan relativamente pronto. También existe una línea de autobús nocturna a Donostia-San Sebastián durante la noche. Es la BU47G solamente disponible los viernes, sábados, y visperas de festivos. </p>",
+            "link_label": "Horarios Lurraldebus",
+            "link": ""
+          }
+        },
+        "column_HPNRzK": {
+          "type": "column",
+          "settings": {
+            "title": "TAXI",
+            "text": "<p>En el caso de necesitar un taxi para volver a su alojamiento o vivienda nosotros os podemos ayudar contactando al taxista, lo único que necesitanos es que nos lo hagais saber una vez lleguéis al asador.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_axJrFz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/DSCF0157.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "VER MAPA",
+            "link": "https://www.google.es/maps?q=CASA+JULIAN,+Bar,Tolosa,2400"
+          }
+        }
+      },
+      "block_order": [
+        "column_fQbQdE",
+        "column_HPNRzK",
+        "column_axJrFz"
+      ],
+      "name": "VOLVER",
+      "settings": {
+        "title": "VOLVER",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "circle",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "image_banner_R9rH9w": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_gwtFw3": {
+          "type": "heading",
+          "name": "RESERVA",
+          "settings": {
+            "heading": "RESERVA",
+            "heading_size": "hxl"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gwtFw3"
+      ],
+      "name": "RESERVA",
+      "settings": {
+        "image": "shopify://shop_images/restaurante_casa-julian.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
         "image_behavior": "none",
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": false
       }
     },
-    "multicolumn_custom_qHrkHF": {
+    "multicolumn_custom_eCpAgF": {
       "type": "multicolumn-custom",
       "blocks": {
-        "column_eLgNGh": {
+        "column_mt884h": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/sello-web_txuleta_cj_2.png",
-            "title": "CARTA",
-            "text": "<p>Pan y Mantequilla</p><p>………………………………………………</p><p>Jamón ibérico</p><p>Cecina</p><p>Charcutería</p><p>Puerro</p><p>Espárrago</p><p>………………………………………………</p><p>Txuleta</p><p>………………………………………………</p><p>Pimiento Piquillo</p><p>Ensalada</p>",
+            "image": "shopify://shop_images/Union.svg",
+            "title": "",
+            "text": "<p>Por motivos de espacio, no aceptamos carritos de bebé.</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_gtRyek": {
+        "column_7WVbfg": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/sello-web_alcachofa_cj_2.png",
-            "title": "FUERA DE CARTA",
-            "text": "<p>Tartar de solomillo</p><p>Molleja</p><p>Guisante lágrima</p><p>Alcachofa</p><p>Espárrago brasa</p><p>Setas</p>",
+            "image": "shopify://shop_images/Union.svg",
+            "title": "",
+            "text": "<p>Para reservas de 7 o más comensales funcionamos con un menú cerrado. Para más información pónganse en contacto con nosotros.</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_yTFfgP": {
+        "column_iWPgjM": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/sello-web_flan_cj_2.png",
-            "title": "POSTRES",
-            "text": "<p>Tarta de Queso</p><p>Tarta de chocolate</p><p>Flan</p><p>Quesos</p>",
+            "image": "shopify://shop_images/Union.svg",
+            "title": "",
+            "text": "<p>En el caso de disponer de un MENÚ TRADICIÓN pónganse en contacto con nosotros.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Gny4UB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Union.svg",
+            "title": "",
+            "text": "<p>No se ofrecen platos que no estén incluidos en la carta</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_CnLRdL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Union.svg",
+            "title": "",
+            "text": "<p>No contamos con menú infantil.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xEdUNy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Union.svg",
+            "title": "",
+            "text": "<p>No aceptamos mascotas.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_iCWqLE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Union.svg",
+            "title": "",
+            "text": "<p>Solo se podrán hacer reservas con un máximo de 6 meses de antelación.</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_eLgNGh",
-        "column_gtRyek",
-        "column_yTFfgP"
+        "column_mt884h",
+        "column_7WVbfg",
+        "column_iWPgjM",
+        "column_Gny4UB",
+        "column_CnLRdL",
+        "column_xEdUNy",
+        "column_iCWqLE"
       ],
-      "name": "CARTA",
+      "name": "RESERVAR",
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -187,94 +461,167 @@
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "center",
+        "columns_desktop": 4,
+        "column_alignment": "left",
         "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "1",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "margin_top": 8,
+        "margin_top": 0,
         "margin_bottom": 0,
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
-    "image_banner_cX9NJX": {
-      "type": "image-banner",
+    "custom_liquid_eqVWiQ": {
+      "type": "custom-liquid",
+      "name": "RESERVA",
       "settings": {
-        "image": "shopify://shop_images/4R0A5242.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "image_behavior": "zoom-in",
-        "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
+        "custom_liquid": "<iframe src=\"https://widget.thefork.com/es/27605b34-4520-4f04-b566-f85e89f0cd64?utm\" style=\"background:transparent; width: 100%; display: flex; min-height:400px; overflow: auto;border:none;\"scroll=\"yes\"></iframe>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "reviews_4NGAjn": {
-      "type": "reviews",
+    "image_banner_custom_r6VG7a": {
+      "type": "image-banner-custom",
       "blocks": {
-        "review_CEPw6t": {
-          "type": "review",
+        "heading_CKrm6r": {
+          "type": "heading",
           "settings": {
-            "review_text": "Una crítica destacada que habla maravillas.",
-            "author": "",
-            "media": ""
-          }
-        },
-        "review_QKDDwr": {
-          "type": "review",
-          "settings": {
-            "review_text": "Una crítica destacada que habla maravillas.",
-            "author": "Autor/a Ejemplo",
-            "media": "Medio Ejemplo"
-          }
-        },
-        "review_NCqqw3": {
-          "type": "review",
-          "settings": {
-            "review_text": "Una crítica destacada que habla maravillas.",
-            "author": "Autor/a Ejemplo",
-            "media": "Medio Ejemplo"
-          }
-        },
-        "review_w6WQjM": {
-          "type": "review",
-          "settings": {
-            "review_text": "Una crítica destacada que habla maravillas.",
-            "author": "Autor/a Ejemplo",
-            "media": "Medio Ejemplo"
+            "heading": "TRABAJO",
+            "heading_size": "hxl"
           }
         }
       },
       "block_order": [
-        "review_CEPw6t",
-        "review_QKDDwr",
-        "review_NCqqw3",
-        "review_w6WQjM"
+        "heading_CKrm6r"
       ],
+      "name": "Custom banner",
+      "settings": {
+        "image": "shopify://shop_images/1007021_1_COPOI.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "zoom-in",
+        "desktop_content_position": "top-right",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "multicolumn_custom_G7ELzR": {
+      "type": "multicolumn-custom",
+      "blocks": {
+        "column_EDwBje": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<h3>¿Quieres formar parte de nuestro equipo o estás interesado en llevar a cabo algún proyecto con nosotros?</h3><p><strong>Envíanos tu CV o tu propuesta rellenando el formulario.</strong></p><h6>*No se admiten reservas desde este formulario.</h6>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "forms_inline_B48mrd": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "433835",
+            "text_color": "{{ shop.brand.colors.primary[0].background }}",
+            "button_background_color": "{{ shop.brand.colors.secondary[1].background }}",
+            "button_label_color": "#ffffff",
+            "links_color": "{{ shop.brand.colors.secondary[0].background }}",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "column_EDwBje",
+        "forms_inline_B48mrd"
+      ],
+      "name": "TRABAJO",
       "settings": {
         "title": "",
-        "heading_size": "h2",
-        "color_scheme": "scheme-1",
-        "enable_autoplay": false,
-        "autoplay_interval": 2000
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_zkKFDt": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_HerX8d": {
+          "type": "heading",
+          "settings": {
+            "heading": "Regala",
+            "heading_size": "hxl"
+          }
+        },
+        "buttons_KmXFh6": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Comprar Menú Tradición",
+            "button_link_1": "shopify://products/menu-regalo",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HerX8d",
+        "buttons_KmXFh6"
+      ],
+      "name": "REGALA",
+      "settings": {
+        "image": "shopify://shop_images/restaurante_casa-julian.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "top-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
       }
     }
   },
   "order": [
     "headline_tdWgPB",
     "video_custom_RWpPfq",
-    "video_t9GUYx",
-    "image_banner",
-    "rich_text",
-    "image_banner_PH89dE",
-    "multicolumn_custom_qHrkHF",
-    "image_banner_cX9NJX",
-    "reviews_4NGAjn"
+    "image_banner_custom_Ki4fy7",
+    "image_with_text_QiNGEp",
+    "editorial_jb4ML6",
+    "image_banner_custom_BjPaN7",
+    "multicolumn_custom_g78qfK",
+    "multicolumn_custom_FQcAU3",
+    "image_banner_R9rH9w",
+    "multicolumn_custom_eCpAgF",
+    "custom_liquid_eqVWiQ",
+    "image_banner_custom_r6VG7a",
+    "multicolumn_custom_G7ELzR",
+    "image_banner_zkKFDt"
   ]
 }

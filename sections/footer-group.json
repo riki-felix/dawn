@@ -88,13 +88,58 @@
         "domingo_9T9iqk"
       ],
       "settings": {
-        "margin_top": 8,
+        "margin_top": 40,
         "padding_top": 0,
         "padding_bottom": 0,
         "address_block": "<p>Santa Klara Kalea 6,<br/>Tolosa, Gipuzkoa, 20400<br/><a href=\"mailto:reservas@casajulianmg.com\">reservas@casajulianmg.com</a><br/>+34 943 671 417</p>",
         "address_title": "DIRECCIÓN",
         "schedule_title": "HORARIOS",
         "color_scheme": "scheme-1"
+      }
+    },
+    "reviews_WDz6i7": {
+      "type": "reviews",
+      "blocks": {
+        "review_nEh4Vy": {
+          "type": "review",
+          "settings": {
+            "review_image": "shopify://shop_images/tapas_df380346-4144-44fd-984d-5e24ab8fa582.png",
+            "review_text": "",
+            "author": "",
+            "media": ""
+          }
+        },
+        "review_exr7PL": {
+          "type": "review",
+          "settings": {
+            "review_image": "shopify://shop_images/tapas_df380346-4144-44fd-984d-5e24ab8fa582.png",
+            "review_text": "",
+            "author": "",
+            "media": ""
+          }
+        },
+        "review_DRzrrb": {
+          "type": "review",
+          "settings": {
+            "review_image": "shopify://shop_images/tapas_df380346-4144-44fd-984d-5e24ab8fa582.png",
+            "review_text": "",
+            "author": "",
+            "media": ""
+          }
+        }
+      },
+      "block_order": [
+        "review_nEh4Vy",
+        "review_exr7PL",
+        "review_DRzrrb"
+      ],
+      "name": "Reviews",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "color_scheme": "",
+        "enable_autoplay": true,
+        "autoplay_interval": 5000
       }
     },
     "footer": {
@@ -139,6 +184,7 @@
   },
   "order": [
     "timetable_ELCKGp",
+    "reviews_WDz6i7",
     "footer"
   ]
 }

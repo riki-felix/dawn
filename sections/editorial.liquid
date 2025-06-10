@@ -1,0 +1,233 @@
+{% style %}
+.editorial-section {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+.editorial-section__inner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0;
+}
+.editorial__media {
+  flex: 1 1 50%;
+  position: relative;
+}
+.editorial__media-inner {
+  position: sticky;
+  top: var(--header-height, 0);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.editorial__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.editorial__blocks {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.editorial__block {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  opacity: 0.25;
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
+  padding: 2.4rem;
+}
+.editorial__block.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.section-padding {
+  padding-top: var(--padding-top, 36px);
+  padding-bottom: var(--padding-bottom, 36px);
+}
+@media screen and (max-width: 749px) {
+  .editorial-section {
+	flex-direction: column;
+  }
+  .editorial-section__inner {
+	flex-direction: column;
+  }
+  .editorial__media,
+  .editorial__blocks {
+	flex-basis: 100%;
+	max-width: 100%;
+  }
+  .editorial__media-inner {
+	position: static;
+	height: 50vw;
+	min-height: 200px;
+	max-height: 60vh;
+  }
+  .editorial__block {
+	min-height: 40vh;
+  }
+}
+{% endstyle %}
+
+{%- assign padding_top = section.settings.padding_top | default: 36 -%}
+{%- assign padding_bottom = section.settings.padding_bottom | default: 36 -%}
+
+<section
+  class="
+	section
+	editorial-section
+	color-{{ section.settings.color_scheme }}
+	section-padding
+  "
+  style="--padding-top: {{ padding_top }}px; --padding-bottom: {{ padding_bottom }}px;"
+  data-editorial-section
+  id="Section-{{ section.id }}"
+>
+  <div class="editorial-section__inner page-width">
+	<div class="editorial__media">
+	  <div class="editorial__media-inner">
+		{% if section.settings.image != blank %}
+		  {{
+			section.settings.image
+			| image_url: width: 1600
+			| image_tag: 
+			  loading: 'lazy',
+			  class: 'editorial__image',
+			  sizes: '(min-width: 750px) 50vw, 100vw',
+			  widths: '375, 550, 750, 1100, 1500, 1600'
+		  }}
+		{% endif %}
+	  </div>
+	</div>
+	<div class="editorial__blocks">
+	  {% for block in section.blocks %}
+		<div class="editorial__block{% if forloop.first %} is-active{% endif %}" id="block-{{ section.id }}-{{ forloop.index }}">
+		  {% if block.settings.text != blank %}
+			<div class="editorial__block-text">{{ block.settings.text }}</div>
+		  {% endif %}
+		</div>
+	  {% endfor %}
+	</div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var section = document.querySelector('[data-editorial-section]');
+  if (!section) return;
+
+  var header = document.querySelector('.site-header');
+  var headerHeight = header ? header.offsetHeight : 0;
+
+  var blocks = section.querySelectorAll('.editorial__block');
+  var sectionTop = section.offsetTop;
+
+  function activateBlockOnScroll() {
+	var scrollY = window.scrollY || window.pageYOffset;
+	var viewportHeight = window.innerHeight;
+	var sectionRect = section.getBoundingClientRect();
+	var sectionAbsTop = sectionRect.top + scrollY;
+	var activeIdx = 0;
+
+	blocks.forEach(function(block, idx) {
+	  var blockRect = block.getBoundingClientRect();
+	  var blockAbsTop = blockRect.top + scrollY;
+	  var blockAbsBottom = blockAbsTop + blockRect.height;
+	  if (
+		scrollY + headerHeight >= blockAbsTop - 20 &&
+		scrollY + headerHeight < blockAbsBottom - 40
+	  ) {
+		activeIdx = idx;
+	  }
+	});
+	blocks.forEach(function(block, idx) {
+	  block.classList.toggle('is-active', idx === activeIdx);
+	});
+  }
+
+  // Ajustar sticky según header
+  var mediaInner = section.querySelector('.editorial__media-inner');
+  if (mediaInner) {
+	mediaInner.style.top = (headerHeight || 0) + 'px';
+  }
+
+  window.addEventListener('scroll', activateBlockOnScroll);
+  window.addEventListener('resize', function() {
+	headerHeight = header ? header.offsetHeight : 0;
+	if (mediaInner) mediaInner.style.top = (headerHeight || 0) + 'px';
+	activateBlockOnScroll();
+  });
+  activateBlockOnScroll();
+});
+</script>
+
+{% schema %}
+{
+  "name": "Editorial scrollytelling",
+  "tag": "section",
+  "class": "section section-editorial",
+  "settings": [
+	{
+	  "type": "image_picker",
+	  "id": "image",
+	  "label": "Imagen principal"
+	},
+	{
+	  "type": "color_scheme",
+	  "id": "color_scheme",
+	  "label": "Esquema de color",
+	  "default": "background-1"
+	},
+	{
+	  "type": "range",
+	  "id": "padding_top",
+	  "min": 0,
+	  "max": 100,
+	  "step": 4,
+	  "unit": "px",
+	  "label": "Espaciado superior",
+	  "default": 36
+	},
+	{
+	  "type": "range",
+	  "id": "padding_bottom",
+	  "min": 0,
+	  "max": 100,
+	  "step": 4,
+	  "unit": "px",
+	  "label": "Espaciado inferior",
+	  "default": 36
+	}
+  ],
+  "blocks": [
+	{
+	  "type": "text_block",
+	  "name": "Bloque de texto",
+	  "settings": [
+		{
+		  "type": "richtext",
+		  "id": "text",
+		  "label": "Texto del bloque"
+		}
+	  ]
+	}
+  ],
+  "presets": [
+	{
+	  "name": "Editorial scrollytelling",
+	  "category": "Imagen"
+	}
+  ]
+}
+{% endschema %}

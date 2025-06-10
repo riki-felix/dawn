@@ -92,10 +92,15 @@ div:has(> .product) {
 .multicolumn .isolate {
 	/* border: var(--page-border); */
 	border-radius: 3px;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 footer.footer {
 	border-top: 0;
+}
+footer.footer p {
+	font-size: 1.5rem;
 }
 footer.footer .grid{
 	display: flex;
@@ -147,7 +152,6 @@ a {
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	color: rgb(var(--color-foreground));
 }
 
 

@@ -91,16 +91,22 @@
 }
 
 .button-block {
+position: fixed;
   margin-top: var(--buttons-margin-top, 2rem);
   margin-bottom: var(--buttons-margin-bottom, 2rem);
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: 100%;
+  width: auto;
   display: flex;
   justify-content: center;
   gap: 1rem;
   max-width: var(--page-width, 1200px);
+  z-index: 999;
+  bottom: 0;
+  padding: 1.6rem;
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.15); 
 }
 {% endstyle %}
 
@@ -143,23 +149,23 @@
 		</div>
 	  {% endif %}
 	{% endfor %}
+	{% for block in section.blocks %}
+		{% if block.type == 'buttons' %}
+		<div class="button-block color-{{ block.settings.color_scheme }}" style="--buttons-margin-top: {{ block.settings.margin_top | default: 20 }}px; --buttons-margin-bottom: {{ block.settings.margin_bottom | default: 20 }}px;">
+			{% for i in (1..2) %}
+			{% assign label_id = 'button_label_' | append: i %}
+			{% assign link_id = 'button_link_' | append: i %}
+			{% assign label = block.settings[label_id] %}
+			{% assign link = block.settings[link_id] %}
+			{% if label != blank %}
+				<a href="{{ link }}" class="button button--primary">{{ label }}</a>
+			{% endif %}
+			{% endfor %}
+		</div>
+		{% endif %}
+	{% endfor %}
   </div>
 
-  {% for block in section.blocks %}
-	{% if block.type == 'buttons' %}
-	  <div class="button-block color-{{ block.settings.color_scheme }}" style="--buttons-margin-top: {{ block.settings.margin_top | default: 20 }}px; --buttons-margin-bottom: {{ block.settings.margin_bottom | default: 20 }}px;">
-		{% for i in (1..2) %}
-		  {% assign label_id = 'button_label_' | append: i %}
-		  {% assign link_id = 'button_link_' | append: i %}
-		  {% assign label = block.settings[label_id] %}
-		  {% assign link = block.settings[link_id] %}
-		  {% if label != blank %}
-			<a href="{{ link }}" class="button button--primary">{{ label }}</a>
-		  {% endif %}
-		{% endfor %}
-	  </div>
-	{% endif %}
-  {% endfor %}
 </section>
 
 {% schema %}
