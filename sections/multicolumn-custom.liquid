@@ -11,9 +11,6 @@
 	padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
 	margin-left: 0.8rem;
 	margin-right: 0.8rem;
-	.multicolumn-card {
-	  
-	}
 	.multicolumn-card__info {
 		padding: 0;
 	}
@@ -47,11 +44,11 @@
 		margin-right: auto;
 	}  
   }
-  #shopify-section-{{ section.id }}  .background-none .multicolumn-card__image-wrapper,
-  .multicolumn-card__image-wrapper--third-width {
+  #shopify-section-{{ section.id }} .multicolumn-card__image-wrapper--third-width {
 	  max-width: 2.4rem;
 	  margin: 0;
   }
+
 {%- endstyle -%}
 
 {%- liquid
