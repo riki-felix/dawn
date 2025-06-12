@@ -33,7 +33,7 @@
         "video_DYwArj": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/julian_optimizado.mp4",
+            "video": "shopify://files/videos/opt-julian-intro.mp4",
             "autoplay": true
           }
         },
@@ -73,7 +73,7 @@
         "richtext_a64cq7": {
           "type": "richtext",
           "settings": {
-            "text": "<p>URDAIAZPIKO IBERIKOA\t<strong>32 </strong></p><p>ZEZINA\t<strong>36</strong></p><p>TXULETA TARTAR-A\t<strong>30</strong></p><p>TXARKUTERIA\t<strong>34</strong></p><p>PORRUA\t<strong>18</strong></p><p>ZAINZURIAK\t<strong>18</strong></p><p>……………………………………………………………</p><p>TXULETA\t<strong>90</strong>€/kg</p><p>TXULETA SELECCIÓN\t<strong>100</strong>€/kg</p><p>PIKILLO PIPERRAK\t<strong>16</strong></p><p>ENTSALADA\t<strong>4</strong></p><p></p>",
+            "text": "<p>JAMÓN IBÉRICO\t<strong>32 </strong></p><p>CECINA\t<strong>36</strong></p><p>TXULETA TARTAR  <strong>30</strong></p><p>CHARCUTERÍA\t<strong>34</strong></p><p>PUERRO\t<strong>18</strong></p><p>ESPÁRRAGO\t<strong>18</strong></p><p>……………………………………………………………</p><p>TXULETA\t<strong>90</strong>/kg</p><p>TXULETA SELECCIÓN\t<strong>100</strong>/kg</p><p>PIMIENTOS DEL PIQUILLO\t<strong>16</strong></p><p>ENSALADA <strong>4</strong></p><p>……………………………………………………………</p><p>FLAN <strong>8</strong></p><p>TARTA DE QUESO <strong>9 </strong></p><p>QUESOS <strong>20</strong></p><p>FRESAS Y YOGUR <strong>8</strong></p>",
             "text_style": "body"
           }
         }
@@ -97,31 +97,80 @@
         "show_text_below": true
       }
     },
+    "image_with_text_QiNGEp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rymjfp": {
+          "type": "heading",
+          "settings": {
+            "heading": "ORIGEN",
+            "heading_size": "hxxl"
+          }
+        },
+        "caption_fkDTqN": {
+          "type": "caption",
+          "settings": {
+            "caption": "TOLOSA, PAÍS VASCO, AÑO 1951",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        },
+        "text_C84hpH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>JULIÁN EN BÚSQUEDA DE DOMINAR EL FUEGO CREARÍA LA PARRILLA INCLINADA.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rymjfp",
+        "caption_fkDTqN",
+        "text_C84hpH"
+      ],
+      "disabled": true,
+      "name": "ORIGEN",
+      "settings": {
+        "image": "shopify://shop_images/4R0A239622.jpg",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "bottom",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "editorial_jb4ML6": {
       "type": "editorial",
       "blocks": {
         "text_block_86B4gV": {
           "type": "text_block",
           "settings": {
-            "text": "<h2><strong>ORIGEN</strong></h2>"
+            "text": "<h1><strong>TOLOSA.</strong></h1><h1><strong>PAÍS VASCO. </strong></h1><h1><strong>AÑO 1951.</strong></h1>"
           }
         },
         "text_block_J3iRBk": {
           "type": "text_block",
           "settings": {
-            "text": "<p>JULIÁN EN BÚSQUEDA DE DOMINAR EL FUEGO CREARÍA LA PARRILLA INCLINADA.</p>"
+            "text": "<h3><strong>Julíán en búsqueda de dominar el fuego crearía la parrilla inclinada.</strong></h3>"
           }
         },
         "text_block_A36zdk": {
           "type": "text_block",
           "settings": {
-            "text": "<p>EL LEGADO CONTIUNARÍA DE LA MANO DE MATÍAS Y XABIER, SELECCIONANDO LAS TXULETAS CON EL CRITERIO PCON LA LLAMA VIVA DE ESOS COMIENZOS QUE AÚN PERDURAN, EVOLUCIONAMOS PARA PODER LLEVAR NUESTRA ESENCIA A LA MESA CON PRODUCTOS DE CALIDAD Y TEMPORADA.</p>"
+            "text": "<h3><strong>El legado continuaría de la mano de Matías y Xabier, seleccionando las Txuletas con el criterio propio de maestros y transformando así el manejo del fuego y las brasas en una experiencia gastronómica que transporta en el tiempo.</strong></h3>"
           }
         },
         "text_block_LTdf3t": {
           "type": "text_block",
           "settings": {
-            "text": "<p>CON LA LLAMA VIVA DE ESOS COMIENZOS QUE AÚN PERDURAN, EVOLUCIONAMOS PARA PODER LLEVAR NUESTRA ESENCIA A LA MESA CON PRODUCTOS DE CALIDAD Y TEMPORADA.</p>"
+            "text": "<h3><strong>Con la llama viva de esos comienzos que aún perduran, evolucionamos para poder llevar nuestra esencia a la mesa con productos de calidad y temporada.</strong></h3>"
           }
         }
       },
@@ -131,9 +180,9 @@
         "text_block_A36zdk",
         "text_block_LTdf3t"
       ],
-      "name": "ORIGEN",
+      "name": "Editorial",
       "settings": {
-        "image": "shopify://shop_images/mati_casajulian.jpg",
+        "image": "shopify://shop_images/4R0A239622.jpg",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 40
@@ -153,7 +202,6 @@
       "block_order": [
         "heading_yiUkFC"
       ],
-      "disabled": true,
       "name": "TOLOSA",
       "settings": {
         "image": "shopify://shop_images/tolosa_casa-julian.jpg",
@@ -163,36 +211,7 @@
         "desktop_content_position": "top-left",
         "desktop_content_alignment": "left",
         "show_text_box": false,
-        "color_scheme": "scheme-2",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
-      }
-    },
-    "image_banner_custom_g4kfjp": {
-      "type": "image-banner-custom",
-      "blocks": {
-        "heading_UhQfja": {
-          "type": "heading",
-          "settings": {
-            "heading": "TOLOSA",
-            "heading_size": "hxl"
-          }
-        }
-      },
-      "block_order": [
-        "heading_UhQfja"
-      ],
-      "name": "Custom banner",
-      "settings": {
-        "image": "shopify://shop_images/tolosa_casa-julian.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "top-left",
-        "desktop_content_alignment": "left",
-        "show_text_box": false,
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": false
@@ -205,7 +224,7 @@
           "type": "column",
           "settings": {
             "title": "COCHE",
-            "text": "<p>Te aconsejamos que vengas con tiempo ya que suele ser complicado encontrar sitio para aparcar, sobre todo los fines de semana. Ten en cuenta que la mayoría del aparcamiento de Tolosa es bajo OTA.</p>",
+            "text": "<p>Ven con tiempo. Suele ser complicado aparcar, sobre todo los fines de semana. Ten en cuenta que la mayoría del aparcamiento de Tolosa es bajo OTA.</p>",
             "link_label": "",
             "link": ""
           }
@@ -214,27 +233,27 @@
           "type": "column",
           "settings": {
             "title": "AUTOBÚS",
-            "text": "<p>La línea directa que une Donosti con Tolosa es la BU08 de Turraldebus con 30-45 minutos de duración. También está la línea BUO7 con parada en la mayoría de los pueblos, que tarda un poco más. Consulta los horarios, recorridos y demás información en la pagina oficial de Iurraldebus.</p>",
-            "link_label": "",
-            "link": ""
+            "text": "<p>Para venir desde Donosti existe la línea BU08 de Lurraldebus.</p>",
+            "link_label": "Ver horarios",
+            "link": "https://cdn.shopify.com/s/files/1/0938/2454/9204/files/BU08_Tolosa_Donostia_Zuzenekoa_Directo_11062025.pdf?v=1749650970"
           }
         },
         "column_fYGCex": {
           "type": "column",
           "settings": {
             "title": "TREN",
-            "text": "<p>El servicio de cercanías de RENFE tiene dos estaciones en Tolosa. Para llegar al asador recomendamos bajarse en la del centro. Consulta los horarios en la página oficial de Renfe Cercanías Donostia-San Sebastián.</p>",
-            "link_label": "",
-            "link": ""
+            "text": "<p>El tren tiene dos paradas en Tolosa. Bájate en la estación \"Tolosa Centro\".</p>",
+            "link_label": "Ver horarios",
+            "link": "https://www.renfe.com/es/es/cercanias/cercanias-san-sebastian/horarios"
           }
         },
         "column_qJ6UUH": {
           "type": "column",
           "settings": {
             "title": "TAXI",
-            "text": "<p>Si queréis venir en taxi desde la capital tendréis que dirigiros a una parada o bien llamar por teléfono o pedirlo mediante la app JoinUp taxi. Podéis consultar la página web del ayuntamiento de Donostia-San Sebastián para más información.</p>",
-            "link_label": "",
-            "link": ""
+            "text": "<p>Para venir en taxi desde Donosti tendréis que dirigiros a una parada o bien llamar por teléfono.</p>",
+            "link_label": "Ver teléfonos",
+            "link": "https://www.donostia.eus/ataria/es/web/info/taxia"
           }
         }
       },
@@ -270,17 +289,17 @@
         "column_fQbQdE": {
           "type": "column",
           "settings": {
-            "title": "AUTOBÚS / TREN",
-            "text": "<p>Durante el dia se pueden utilizar los mismos medios de transporte que para llegar. No obstante, si la velada es nocturna, consultad con antelación los horarios de tren y autobús, ya que los últimos pasan relativamente pronto. También existe una línea de autobús nocturna a Donostia-San Sebastián durante la noche. Es la BU47G solamente disponible los viernes, sábados, y visperas de festivos. </p>",
-            "link_label": "Horarios Lurraldebus",
-            "link": ""
+            "title": "AUTOBÚS | TREN",
+            "text": "<p>Si la velada es nocturna, tened en cuenta que los últimos pasan relativamente pronto. </p>",
+            "link_label": "Ver horarios",
+            "link": "https://cdn.shopify.com/s/files/1/0938/2454/9204/files/BU08_Tolosa_Donostia_Zuzenekoa_Directo_11062025.pdf?v=1749650970"
           }
         },
         "column_HPNRzK": {
           "type": "column",
           "settings": {
             "title": "TAXI",
-            "text": "<p>En el caso de necesitar un taxi para volver a su alojamiento o vivienda nosotros os podemos ayudar contactando al taxista, lo único que necesitanos es que nos lo hagais saber una vez lleguéis al asador.</p>",
+            "text": "<p>En el caso de necesitar un taxi para volver a al alojamiento o vivienda nosotros os podemos ayudar contactando al taxista. Necesitaremos que nos lo hagas saber una vez llegues al asador.</p>",
             "link_label": "",
             "link": ""
           }
@@ -303,7 +322,7 @@
       ],
       "name": "VOLVER",
       "settings": {
-        "title": "VOLVER",
+        "title": "CÓMO VOLVER",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "circle",
@@ -321,11 +340,12 @@
         "padding_bottom": 40
       }
     },
-    "image_banner_custom_fUncPY": {
-      "type": "image-banner-custom",
+    "image_banner_R9rH9w": {
+      "type": "image-banner",
       "blocks": {
-        "heading_FJhXDC": {
+        "heading_gwtFw3": {
           "type": "heading",
+          "name": "RESERVA",
           "settings": {
             "heading": "RESERVA",
             "heading_size": "hxl"
@@ -333,15 +353,15 @@
         }
       },
       "block_order": [
-        "heading_FJhXDC"
+        "heading_gwtFw3"
       ],
-      "name": "Custom banner",
+      "name": "RESERVA",
       "settings": {
-        "image": "shopify://shop_images/DSCF0157.jpg",
+        "image": "shopify://shop_images/restaurante_casa-julian.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_behavior": "none",
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
         "color_scheme": "",
@@ -357,8 +377,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Union.svg",
-            "title": "",
-            "text": "<h5><strong>BEBÉS</strong></h5><p>Por motivos de espacio, no aceptamos carritos de bebé.</p>",
+            "title": "BEBÉS",
+            "text": "<p>Por motivos de espacio, no aceptamos carritos de bebé.</p>",
             "link_label": "",
             "link": ""
           }
@@ -367,7 +387,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Union.svg",
-            "title": "",
+            "title": "GRUPOS",
             "text": "<p>Para reservas de 7 o más comensales funcionamos con un menú cerrado. Para más información pónganse en contacto con nosotros.</p>",
             "link_label": "",
             "link": ""
@@ -377,7 +397,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Union.svg",
-            "title": "",
+            "title": "MENÚ TRADICIÓN",
             "text": "<p>En el caso de disponer de un MENÚ TRADICIÓN pónganse en contacto con nosotros.</p>",
             "link_label": "",
             "link": ""
@@ -387,8 +407,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Union.svg",
-            "title": "",
-            "text": "<p>No se ofrecen platos que no estén incluidos en la carta</p>",
+            "title": "CARTA",
+            "text": "<p>No se ofrecen platos que no estén incluidos en la carta.</p>",
             "link_label": "",
             "link": ""
           }
@@ -397,7 +417,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Union.svg",
-            "title": "",
+            "title": "MENÚ INFANTIL",
             "text": "<p>No contamos con menú infantil.</p>",
             "link_label": "",
             "link": ""
@@ -407,7 +427,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Union.svg",
-            "title": "",
+            "title": "MASCOTAS",
             "text": "<p>No aceptamos mascotas.</p>",
             "link_label": "",
             "link": ""
@@ -417,7 +437,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Union.svg",
-            "title": "",
+            "title": "ANTELACIÓN MÁXIMA",
             "text": "<p>Solo se podrán hacer reservas con un máximo de 6 meses de antelación.</p>",
             "link_label": "",
             "link": ""
@@ -592,12 +612,12 @@
     "headline_tdWgPB",
     "video_custom_RWpPfq",
     "image_banner_custom_Ki4fy7",
+    "image_with_text_QiNGEp",
     "editorial_jb4ML6",
     "image_banner_custom_BjPaN7",
-    "image_banner_custom_g4kfjp",
     "multicolumn_custom_g78qfK",
     "multicolumn_custom_FQcAU3",
-    "image_banner_custom_fUncPY",
+    "image_banner_R9rH9w",
     "multicolumn_custom_eCpAgF",
     "custom_liquid_eqVWiQ",
     "image_banner_custom_r6VG7a",
