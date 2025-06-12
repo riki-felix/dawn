@@ -97,55 +97,6 @@
         "show_text_below": true
       }
     },
-    "image_with_text_QiNGEp": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_rymjfp": {
-          "type": "heading",
-          "settings": {
-            "heading": "ORIGEN",
-            "heading_size": "hxl"
-          }
-        },
-        "caption_fkDTqN": {
-          "type": "caption",
-          "settings": {
-            "caption": "TOLOSA, PAÍS VASCO, AÑO 1951",
-            "text_style": "subtitle",
-            "text_size": "large"
-          }
-        },
-        "text_C84hpH": {
-          "type": "text",
-          "settings": {
-            "text": "<p>JULIÁN EN BÚSQUEDA DE DOMINAR EL FUEGO CREARÍA LA PARRILLA INCLINADA.</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_rymjfp",
-        "caption_fkDTqN",
-        "text_C84hpH"
-      ],
-      "disabled": true,
-      "name": "ORIGEN",
-      "settings": {
-        "image": "shopify://shop_images/4R0A239622.jpg",
-        "height": "large",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "bottom",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "editorial_jb4ML6": {
       "type": "editorial",
       "blocks": {
@@ -180,9 +131,9 @@
         "text_block_A36zdk",
         "text_block_LTdf3t"
       ],
-      "name": "Editorial",
+      "name": "ORIGEN",
       "settings": {
-        "image": "shopify://shop_images/4R0A239622.jpg",
+        "image": "shopify://shop_images/mati_casajulian.jpg",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 40
@@ -202,6 +153,7 @@
       "block_order": [
         "heading_yiUkFC"
       ],
+      "disabled": true,
       "name": "TOLOSA",
       "settings": {
         "image": "shopify://shop_images/tolosa_casa-julian.jpg",
@@ -212,6 +164,35 @@
         "desktop_content_alignment": "left",
         "show_text_box": false,
         "color_scheme": "scheme-2",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "image_banner_custom_g4kfjp": {
+      "type": "image-banner-custom",
+      "blocks": {
+        "heading_UhQfja": {
+          "type": "heading",
+          "settings": {
+            "heading": "TOLOSA",
+            "heading_size": "hxl"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UhQfja"
+      ],
+      "name": "Custom banner",
+      "settings": {
+        "image": "shopify://shop_images/tolosa_casa-julian.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "top-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-4",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": false
@@ -340,12 +321,11 @@
         "padding_bottom": 40
       }
     },
-    "image_banner_R9rH9w": {
-      "type": "image-banner",
+    "image_banner_custom_fUncPY": {
+      "type": "image-banner-custom",
       "blocks": {
-        "heading_gwtFw3": {
+        "heading_FJhXDC": {
           "type": "heading",
-          "name": "RESERVA",
           "settings": {
             "heading": "RESERVA",
             "heading_size": "hxl"
@@ -353,15 +333,15 @@
         }
       },
       "block_order": [
-        "heading_gwtFw3"
+        "heading_FJhXDC"
       ],
-      "name": "RESERVA",
+      "name": "Custom banner",
       "settings": {
-        "image": "shopify://shop_images/restaurante_casa-julian.jpg",
+        "image": "shopify://shop_images/DSCF0157.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_behavior": "none",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
         "color_scheme": "",
@@ -378,7 +358,7 @@
           "settings": {
             "image": "shopify://shop_images/Union.svg",
             "title": "",
-            "text": "<p>Por motivos de espacio, no aceptamos carritos de bebé.</p>",
+            "text": "<h5><strong>BEBÉS</strong></h5><p>Por motivos de espacio, no aceptamos carritos de bebé.</p>",
             "link_label": "",
             "link": ""
           }
@@ -612,12 +592,12 @@
     "headline_tdWgPB",
     "video_custom_RWpPfq",
     "image_banner_custom_Ki4fy7",
-    "image_with_text_QiNGEp",
     "editorial_jb4ML6",
     "image_banner_custom_BjPaN7",
+    "image_banner_custom_g4kfjp",
     "multicolumn_custom_g78qfK",
     "multicolumn_custom_FQcAU3",
-    "image_banner_R9rH9w",
+    "image_banner_custom_fUncPY",
     "multicolumn_custom_eCpAgF",
     "custom_liquid_eqVWiQ",
     "image_banner_custom_r6VG7a",
