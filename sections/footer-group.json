@@ -133,7 +133,6 @@
         "review_exr7PL",
         "review_DRzrrb"
       ],
-      "name": "Reviews",
       "settings": {
         "title": "",
         "heading_size": "h2",
@@ -147,6 +146,7 @@
       "blocks": {
         "image_QKxzAJ": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "{{ shop.brand.square_logo }}",
             "image_width": 100,
@@ -166,6 +166,7 @@
         "image_QKxzAJ",
         "image_jMR4mw"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": false,

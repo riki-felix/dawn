@@ -55,7 +55,6 @@
         "video_DYwArj",
         "buttons_mhFWaN"
       ],
-      "name": "Custom Video Section",
       "settings": {
         "color_scheme": ""
       }
@@ -82,7 +81,6 @@
         "heading_rDz6mA",
         "richtext_a64cq7"
       ],
-      "name": "CARTA",
       "settings": {
         "image": "shopify://shop_images/DSCF0157.jpg",
         "image_overlay_opacity": 0,
@@ -129,7 +127,6 @@
         "text_C84hpH"
       ],
       "disabled": true,
-      "name": "ORIGEN",
       "settings": {
         "image": "shopify://shop_images/4R0A239622.jpg",
         "height": "large",
@@ -158,19 +155,19 @@
         "text_block_J3iRBk": {
           "type": "text_block",
           "settings": {
-            "text": "<h3><strong>Julíán en búsqueda de dominar el fuego crearía la parrilla inclinada.</strong></h3>"
+            "text": "<p>Julíán en búsqueda de dominar el fuego crearía la parrilla inclinada.</p>"
           }
         },
         "text_block_A36zdk": {
           "type": "text_block",
           "settings": {
-            "text": "<h3><strong>El legado continuaría de la mano de Matías y Xabier, seleccionando las Txuletas con el criterio propio de maestros y transformando así el manejo del fuego y las brasas en una experiencia gastronómica que transporta en el tiempo.</strong></h3>"
+            "text": "<p>El legado continuaría de la mano de Matías y Xabier, seleccionando las Txuletas con el criterio propio de maestros y transformando así el manejo del fuego y las brasas en una experiencia gastronómica que transporta en el tiempo.</p>"
           }
         },
         "text_block_LTdf3t": {
           "type": "text_block",
           "settings": {
-            "text": "<h3><strong>Con la llama viva de esos comienzos que aún perduran, evolucionamos para poder llevar nuestra esencia a la mesa con productos de calidad y temporada.</strong></h3>"
+            "text": "<p>Con la llama viva de esos comienzos que aún perduran, evolucionamos para poder llevar nuestra esencia a la mesa con productos de calidad y temporada.</p>"
           }
         }
       },
@@ -180,9 +177,8 @@
         "text_block_A36zdk",
         "text_block_LTdf3t"
       ],
-      "name": "Editorial",
       "settings": {
-        "image": "shopify://shop_images/4R0A239622.jpg",
+        "image": "shopify://shop_images/mati_casajulian.jpg",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 40
@@ -202,7 +198,6 @@
       "block_order": [
         "heading_yiUkFC"
       ],
-      "name": "TOLOSA",
       "settings": {
         "image": "shopify://shop_images/tolosa_casa-julian.jpg",
         "image_overlay_opacity": 0,
@@ -233,7 +228,7 @@
           "type": "column",
           "settings": {
             "title": "AUTOBÚS",
-            "text": "<p>Para venir desde Donosti existe la línea BU08 de Lurraldebus.</p>",
+            "text": "<p>Para venir desde Donosti coge la línea BU08 de Lurraldebus.</p>",
             "link_label": "Ver horarios",
             "link": "https://cdn.shopify.com/s/files/1/0938/2454/9204/files/BU08_Tolosa_Donostia_Zuzenekoa_Directo_11062025.pdf?v=1749650970"
           }
@@ -251,7 +246,7 @@
           "type": "column",
           "settings": {
             "title": "TAXI",
-            "text": "<p>Para venir en taxi desde Donosti tendréis que dirigiros a una parada o bien llamar por teléfono.</p>",
+            "text": "<p>Para venir en taxi desde Donosti tendrás que dirigirte a una parada o bien llamar por teléfono.</p>",
             "link_label": "Ver teléfonos",
             "link": "https://www.donostia.eus/ataria/es/web/info/taxia"
           }
@@ -263,10 +258,9 @@
         "column_fYGCex",
         "column_qJ6UUH"
       ],
-      "name": "LLEGAR",
       "settings": {
         "title": "CÓMO LLEGAR",
-        "heading_size": "h1",
+        "heading_size": "h0",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
@@ -274,7 +268,7 @@
         "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "none",
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "margin_top": 0,
@@ -290,7 +284,7 @@
           "type": "column",
           "settings": {
             "title": "AUTOBÚS | TREN",
-            "text": "<p>Si la velada es nocturna, tened en cuenta que los últimos pasan relativamente pronto. </p>",
+            "text": "<p>Si la velada es nocturna, ten en cuenta que los últimos pasan relativamente pronto. </p>",
             "link_label": "Ver horarios",
             "link": "https://cdn.shopify.com/s/files/1/0938/2454/9204/files/BU08_Tolosa_Donostia_Zuzenekoa_Directo_11062025.pdf?v=1749650970"
           }
@@ -299,7 +293,7 @@
           "type": "column",
           "settings": {
             "title": "TAXI",
-            "text": "<p>En el caso de necesitar un taxi para volver a al alojamiento o vivienda nosotros os podemos ayudar contactando al taxista. Necesitaremos que nos lo hagas saber una vez llegues al asador.</p>",
+            "text": "<p>En el caso de necesitar un taxi para volver, te podemos ayudar contactando al taxista. Para ello, necesitaremos que nos lo hagas saber una vez llegues al asador.</p>",
             "link_label": "",
             "link": ""
           }
@@ -307,7 +301,7 @@
         "column_axJrFz": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/DSCF0157.jpg",
+            "image": "shopify://shop_images/mapa_casajuian.png",
             "title": "",
             "text": "",
             "link_label": "VER MAPA",
@@ -320,7 +314,6 @@
         "column_HPNRzK",
         "column_axJrFz"
       ],
-      "name": "VOLVER",
       "settings": {
         "title": "CÓMO VOLVER",
         "heading_size": "h1",
@@ -345,7 +338,6 @@
       "blocks": {
         "heading_gwtFw3": {
           "type": "heading",
-          "name": "RESERVA",
           "settings": {
             "heading": "RESERVA",
             "heading_size": "hxl"
@@ -355,7 +347,6 @@
       "block_order": [
         "heading_gwtFw3"
       ],
-      "name": "RESERVA",
       "settings": {
         "image": "shopify://shop_images/restaurante_casa-julian.jpg",
         "image_overlay_opacity": 0,
@@ -377,8 +368,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Union.svg",
-            "title": "BEBÉS",
-            "text": "<p>Por motivos de espacio, no aceptamos carritos de bebé.</p>",
+            "title": "",
+            "text": "<h5>NIÑOS</h5><p>Por motivos de espacio, no aceptamos carritos de bebé.</p><p>··························</p><p>No contamos con menú infantil.</p>",
             "link_label": "",
             "link": ""
           }
@@ -386,19 +377,19 @@
         "column_7WVbfg": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Union.svg",
-            "title": "GRUPOS",
-            "text": "<p>Para reservas de 7 o más comensales funcionamos con un menú cerrado. Para más información pónganse en contacto con nosotros.</p>",
-            "link_label": "",
+            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_16.svg",
+            "title": "",
+            "text": "<h5>GRUPOS</h5><p>Para reservas de 7 o más comensales funcionamos con un menú cerrado. Para más información pónganse en contacto con nosotros.</p>",
+            "link_label": "Ver menú",
             "link": ""
           }
         },
         "column_iWPgjM": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Union.svg",
-            "title": "MENÚ TRADICIÓN",
-            "text": "<p>En el caso de disponer de un MENÚ TRADICIÓN pónganse en contacto con nosotros.</p>",
+            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_20.svg",
+            "title": "",
+            "text": "<h5>MENÚ TRADICIÓN</h5><p>En el caso de disponer de un MENÚ TRADICIÓN pónganse en contacto con nosotros.</p>",
             "link_label": "",
             "link": ""
           }
@@ -406,9 +397,9 @@
         "column_Gny4UB": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Union.svg",
-            "title": "CARTA",
-            "text": "<p>No se ofrecen platos que no estén incluidos en la carta.</p>",
+            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_19.svg",
+            "title": "",
+            "text": "<h5>CARTA</h5><p>No se ofrecen platos que no estén incluidos en la carta.</p>",
             "link_label": "",
             "link": ""
           }
@@ -417,18 +408,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Union.svg",
-            "title": "MENÚ INFANTIL",
-            "text": "<p>No contamos con menú infantil.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_xEdUNy": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Union.svg",
-            "title": "MASCOTAS",
-            "text": "<p>No aceptamos mascotas.</p>",
+            "title": "",
+            "text": "<h5>Nº de COMENSALES</h5><p>Hay que indicar el número total de comensales al hacer la reserva (niños incluidos) de lo contrario nos reservamos el derecho de admisión.</p>",
             "link_label": "",
             "link": ""
           }
@@ -436,9 +417,29 @@
         "column_iCWqLE": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Union.svg",
-            "title": "ANTELACIÓN MÁXIMA",
-            "text": "<p>Solo se podrán hacer reservas con un máximo de 6 meses de antelación.</p>",
+            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_18.svg",
+            "title": "",
+            "text": "<h5>ANTELACIÓN MÁXIMA</h5><p>Solo se podrán hacer reservas con un máximo de 6 meses de antelación.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_VRDtNG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_18.svg",
+            "title": "",
+            "text": "<h5>VEGANOS</h5><p>No contamos con opciones veganas.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xEdUNy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_15.svg",
+            "title": "",
+            "text": "<h5>MASCOTAS</h5><p>No aceptamos mascotas.</p>",
             "link_label": "",
             "link": ""
           }
@@ -450,10 +451,10 @@
         "column_iWPgjM",
         "column_Gny4UB",
         "column_CnLRdL",
-        "column_xEdUNy",
-        "column_iCWqLE"
+        "column_iCWqLE",
+        "column_VRDtNG",
+        "column_xEdUNy"
       ],
-      "name": "RESERVAR",
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -475,7 +476,6 @@
     },
     "custom_liquid_eqVWiQ": {
       "type": "custom-liquid",
-      "name": "RESERVA",
       "settings": {
         "custom_liquid": "<iframe src=\"https://widget.thefork.com/es/27605b34-4520-4f04-b566-f85e89f0cd64?utm\" style=\"background:transparent; width: 100%; display: flex; min-height:400px; overflow: auto;border:none;\"scroll=\"yes\"></iframe>",
         "color_scheme": "",
@@ -497,12 +497,11 @@
       "block_order": [
         "heading_CKrm6r"
       ],
-      "name": "Custom banner",
       "settings": {
-        "image": "shopify://shop_images/1007021_1_COPOI.jpg",
+        "image": "shopify://shop_images/casa-julian-2_0010_Capa_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
-        "image_behavior": "zoom-in",
+        "image_behavior": "ambient",
         "desktop_content_position": "top-right",
         "desktop_content_alignment": "center",
         "show_text_box": false,
@@ -519,7 +518,7 @@
           "type": "column",
           "settings": {
             "title": "",
-            "text": "<h3>¿Quieres formar parte de nuestro equipo o estás interesado en llevar a cabo algún proyecto con nosotros?</h3><p><strong>Envíanos tu CV o tu propuesta rellenando el formulario.</strong></p><h6>*No se admiten reservas desde este formulario.</h6>",
+            "text": "<h2>¿Quieres formar parte de nuestro equipo o estás interesado en llevar a cabo algún proyecto con nosotros?</h2><p>____________________________________________________</p><p></p><h5><strong>ENVÍANOS TU CV O TU PROPUESTA  RELLENANDO EL FORMULARIO.<br/></strong>························································<br/>*No se admiten reservas desde este formulario.<br/>························································</h5>",
             "link_label": "",
             "link": ""
           }
@@ -546,7 +545,6 @@
         "column_EDwBje",
         "forms_inline_B48mrd"
       ],
-      "name": "TRABAJO",
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -566,22 +564,29 @@
         "padding_bottom": 36
       }
     },
-    "image_banner_zkKFDt": {
-      "type": "image-banner",
+    "image_banner_custom_bYh6MG": {
+      "type": "image-banner-custom",
       "blocks": {
-        "heading_HerX8d": {
+        "heading_nNCWba": {
           "type": "heading",
           "settings": {
-            "heading": "Regala",
+            "heading": "REGALA",
             "heading_size": "hxl"
           }
         },
-        "buttons_KmXFh6": {
+        "richtext_zchKQa": {
+          "type": "richtext",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "buttons_rAY8d4": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Comprar Menú Tradición",
+            "button_label_1": "COMPRAR MENÚ TRADICIÓN",
             "button_link_1": "shopify://products/menu-regalo",
-            "button_style_secondary_1": false,
+            "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -589,22 +594,23 @@
         }
       },
       "block_order": [
-        "heading_HerX8d",
-        "buttons_KmXFh6"
+        "heading_nNCWba",
+        "richtext_zchKQa",
+        "buttons_rAY8d4"
       ],
-      "name": "REGALA",
       "settings": {
         "image": "shopify://shop_images/restaurante_casa-julian.jpg",
+        "image_2": "shopify://shop_images/casa-julian-2_0003_Capa_8.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "top-left",
-        "desktop_content_alignment": "left",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
+        "image_height": "large",
+        "image_behavior": "zoom-in",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "right",
+        "show_text_box": true,
+        "color_scheme": "",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
-        "show_text_below": false
+        "show_text_below": true
       }
     }
   },
@@ -622,6 +628,6 @@
     "custom_liquid_eqVWiQ",
     "image_banner_custom_r6VG7a",
     "multicolumn_custom_G7ELzR",
-    "image_banner_zkKFDt"
+    "image_banner_custom_bYh6MG"
   ]
 }
