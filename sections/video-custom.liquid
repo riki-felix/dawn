@@ -1,3 +1,5 @@
+{% comment %} Custom Video Section refinada - el video prioriza altura del contenedor {% endcomment %}
+
 {{ 'video-section.css' | asset_url | stylesheet_tag }}
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
@@ -16,8 +18,7 @@
   
 }
 
-.custom-video-section .video-wrapper {
-	
+.custom-video-section .video-wrapper {	
   position: relative;
   width: 100%;
   overflow: hidden;
