@@ -20,13 +20,15 @@
 .editorial__media-inner {
   position: sticky;
   top: var(--header-height, 0);
-  height: 60vh;
+  height: calc(100vh - 8rem);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  aspect-ratio: 4/5;
+  aspect-ratio: 2/5;
+  border-radius: 4px;
+  overflow: hidden;
 }
 .editorial__image {
   width: 100%;
@@ -44,7 +46,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  opacity: 0.25;
+  opacity: 0.8;
   transition: opacity 0.4s cubic-bezier(.4,0,.2,1);
   pointer-events: none;
   padding: 2.4rem;
@@ -74,7 +76,6 @@
   }
   .editorial__media-inner {
 	position: static;
-	height: 50vw;
 	min-height: 200px;
 	max-height: 60vh;
   }
@@ -117,8 +118,15 @@
 	<div class="editorial__blocks">
 	  {% for block in section.blocks %}
 		<div class="editorial__block{% if forloop.first %} is-active{% endif %}" id="block-{{ section.id }}-{{ forloop.index }}">
+		{%- if 'heading' -%}
+		<h2
+		  class="banner__heading inline-richtext {{ block.settings.heading_size }}"
+		  {{ block.shopify_attributes }}
+		>
+		  {{ block.settings.heading }}
+		</h2> {%- endif -%}
 		  {% if block.settings.text != blank %}
-			<div class="editorial__block-text">{{ block.settings.text }}</div>
+			<div {{ block.shopify_attributes }} class="{{ block.settings.text_style }}  editorial__block-text">{{ block.settings.text | strip | raw }}</div>
 		  {% endif %}
 		</div>
 	  {% endfor %}
@@ -133,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var header = document.querySelector('.site-header');
   var headerHeight = header ? header.offsetHeight : 0;
-
+  
   var blocks = section.querySelectorAll('.editorial__block');
   var sectionTop = section.offsetTop;
 
@@ -160,16 +168,21 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
   }
 
-  // Ajustar sticky según header
+  // Ajustar sticky según header con offset de 40px
   var mediaInner = section.querySelector('.editorial__media-inner');
+  var offset = 40;
+  
   if (mediaInner) {
-	mediaInner.style.top = (headerHeight || 0) + 'px';
+	mediaInner.style.top = ((headerHeight || 0) + offset) + 'px';
   }
-
+  
   window.addEventListener('scroll', activateBlockOnScroll);
+  
   window.addEventListener('resize', function() {
 	headerHeight = header ? header.offsetHeight : 0;
-	if (mediaInner) mediaInner.style.top = (headerHeight || 0) + 'px';
+	if (mediaInner) {
+	  mediaInner.style.top = ((headerHeight || 0) + offset) + 'px';
+	}
 	activateBlockOnScroll();
   });
   activateBlockOnScroll();
@@ -225,6 +238,47 @@ document.addEventListener('DOMContentLoaded', function() {
 		  "label": "Texto del bloque"
 		}
 	  ]
+	},
+ 	  {
+	   "type": "heading",
+	  "name": "t:sections.image-banner.blocks.heading.name",
+	  "limit": 1,
+	  "settings": [
+		{
+		  "type": "inline_richtext",
+		  "id": "heading",
+		  "default": "t:sections.image-banner.blocks.heading.settings.heading.default",
+		  "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+		},
+		{
+		  "type": "select",
+		  "id": "heading_size",
+		  "options": [
+			{
+			  "value": "h2",
+			  "label": "t:sections.all.heading_size.options__1.label"
+			},
+			{
+			  "value": "h1",
+			  "label": "t:sections.all.heading_size.options__2.label"
+			},
+			{
+			  "value": "h0",
+			  "label": "t:sections.all.heading_size.options__3.label"
+			},
+			{
+			  "value": "hxl",
+			  "label": "t:sections.all.heading_size.options__4.label"
+			},
+			{
+			  "value": "hxxl",
+			  "label": "t:sections.all.heading_size.options__5.label"
+			}
+		  ],
+		  "default": "h1",
+		  "label": "t:sections.all.heading_size.label"
+		}
+	  ]
 	}
   ],
   "presets": [
@@ -232,6 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	  "name": "Editorial scrollytelling",
 	  "category": "Imagen"
 	}
-  ]
+  ],
+ 
 }
 {% endschema %}

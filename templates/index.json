@@ -11,10 +11,8 @@
   "sections": {
     "headline_tdWgPB": {
       "type": "headline",
-      "disabled": true,
-      "custom_css": [
-        ".headline-logo-section {margin-bottom: -32rem; z-index: 1; position: relative;}"
-      ],
+      "custom_css": [],
+      "name": "LOGO",
       "settings": {
         "custom_logo": "{{ shop.brand.logo }}"
       }
@@ -24,6 +22,7 @@
       "blocks": {
         "headline_kCU6ea": {
           "type": "headline",
+          "disabled": true,
           "settings": {
             "custom_logo": "{{ shop.brand.logo }}",
             "padding_top": 20,
@@ -46,7 +45,7 @@
             "button_link_2": "shopify://products/menu-regalo",
             "margin_top": 40,
             "margin_bottom": 40,
-            "color_scheme": "scheme-1"
+            "color_scheme": "scheme-3"
           }
         }
       },
@@ -55,6 +54,7 @@
         "video_DYwArj",
         "buttons_mhFWaN"
       ],
+      "name": "VIDEO",
       "settings": {
         "color_scheme": ""
       }
@@ -81,6 +81,7 @@
         "heading_rDz6mA",
         "richtext_a64cq7"
       ],
+      "name": "CARTA",
       "settings": {
         "image": "shopify://shop_images/DSCF0157.jpg",
         "image_overlay_opacity": 0,
@@ -93,54 +94,6 @@
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
-      }
-    },
-    "image_with_text_QiNGEp": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_rymjfp": {
-          "type": "heading",
-          "settings": {
-            "heading": "ORIGEN",
-            "heading_size": "hxxl"
-          }
-        },
-        "caption_fkDTqN": {
-          "type": "caption",
-          "settings": {
-            "caption": "TOLOSA, PAÍS VASCO, AÑO 1951",
-            "text_style": "subtitle",
-            "text_size": "large"
-          }
-        },
-        "text_C84hpH": {
-          "type": "text",
-          "settings": {
-            "text": "<p>JULIÁN EN BÚSQUEDA DE DOMINAR EL FUEGO CREARÍA LA PARRILLA INCLINADA.</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_rymjfp",
-        "caption_fkDTqN",
-        "text_C84hpH"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/4R0A239622.jpg",
-        "height": "large",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "bottom",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "editorial_jb4ML6": {
@@ -177,6 +130,7 @@
         "text_block_A36zdk",
         "text_block_LTdf3t"
       ],
+      "name": "ORIGEN",
       "settings": {
         "image": "shopify://shop_images/mati_casajulian.jpg",
         "color_scheme": "",
@@ -198,6 +152,7 @@
       "block_order": [
         "heading_yiUkFC"
       ],
+      "name": "TOLOSA",
       "settings": {
         "image": "shopify://shop_images/tolosa_casa-julian.jpg",
         "image_overlay_opacity": 0,
@@ -258,6 +213,7 @@
         "column_fYGCex",
         "column_qJ6UUH"
       ],
+      "name": "LLEGAR",
       "settings": {
         "title": "CÓMO LLEGAR",
         "heading_size": "h0",
@@ -314,6 +270,7 @@
         "column_HPNRzK",
         "column_axJrFz"
       ],
+      "name": "VOLVER",
       "settings": {
         "title": "CÓMO VOLVER",
         "heading_size": "h1",
@@ -328,15 +285,15 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "margin_top": 0,
-        "margin_bottom": 0,
+        "margin_bottom": 60,
         "padding_top": 40,
         "padding_bottom": 40
       }
     },
-    "image_banner_R9rH9w": {
-      "type": "image-banner",
+    "image_banner_custom_JiGKY6": {
+      "type": "image-banner-custom",
       "blocks": {
-        "heading_gwtFw3": {
+        "heading_DPwqj6": {
           "type": "heading",
           "settings": {
             "heading": "RESERVA",
@@ -345,12 +302,13 @@
         }
       },
       "block_order": [
-        "heading_gwtFw3"
+        "heading_DPwqj6"
       ],
+      "name": "RESERVA BANNER",
       "settings": {
         "image": "shopify://shop_images/restaurante_casa-julian.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "small",
+        "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
@@ -358,7 +316,7 @@
         "color_scheme": "",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "multicolumn_custom_eCpAgF": {
@@ -407,7 +365,7 @@
         "column_CnLRdL": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Union.svg",
+            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_28.svg",
             "title": "",
             "text": "<h5>Nº de COMENSALES</h5><p>Hay que indicar el número total de comensales al hacer la reserva (niños incluidos) de lo contrario nos reservamos el derecho de admisión.</p>",
             "link_label": "",
@@ -427,7 +385,7 @@
         "column_VRDtNG": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_18.svg",
+            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_29.svg",
             "title": "",
             "text": "<h5>VEGANOS</h5><p>No contamos con opciones veganas.</p>",
             "link_label": "",
@@ -455,6 +413,7 @@
         "column_VRDtNG",
         "column_xEdUNy"
       ],
+      "name": "CONDICIONES RESERVA",
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -476,11 +435,12 @@
     },
     "custom_liquid_eqVWiQ": {
       "type": "custom-liquid",
+      "name": "The Fork",
       "settings": {
-        "custom_liquid": "<iframe src=\"https://widget.thefork.com/es/27605b34-4520-4f04-b566-f85e89f0cd64?utm\" style=\"background:transparent; width: 100%; display: flex; min-height:400px; overflow: auto;border:none;\"scroll=\"yes\"></iframe>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "custom_liquid": "<iframe class=\"page-width color-{{ section.settings.color_scheme }}\" src=\"https://widget.thefork.com/es/27605b34-4520-4f04-b566-f85e89f0cd64?utm\" style=\"background-color:unset; width: 100%; max-width:800px; display: flex; min-height:800px; margin: 0 auto; overflow: auto;border:none;\"scroll=\"yes\"></iframe>",
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "image_banner_custom_r6VG7a": {
@@ -497,6 +457,7 @@
       "block_order": [
         "heading_CKrm6r"
       ],
+      "name": "TRABAJO BANNER",
       "settings": {
         "image": "shopify://shop_images/casa-julian-2_0010_Capa_2.jpg",
         "image_overlay_opacity": 0,
@@ -545,6 +506,7 @@
         "column_EDwBje",
         "forms_inline_B48mrd"
       ],
+      "name": "FORM TRABAJO",
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -555,13 +517,13 @@
         "columns_desktop": 2,
         "column_alignment": "left",
         "background_style": "none",
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "margin_bottom": 60,
+        "padding_top": 40,
+        "padding_bottom": 60
       }
     },
     "image_banner_custom_bYh6MG": {
@@ -598,16 +560,16 @@
         "richtext_zchKQa",
         "buttons_rAY8d4"
       ],
+      "name": "REGALA",
       "settings": {
-        "image": "shopify://shop_images/restaurante_casa-julian.jpg",
         "image_2": "shopify://shop_images/casa-julian-2_0003_Capa_8.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
-        "image_behavior": "zoom-in",
+        "image_behavior": "ambient",
         "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "right",
+        "desktop_content_alignment": "center",
         "show_text_box": true,
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
@@ -618,12 +580,11 @@
     "headline_tdWgPB",
     "video_custom_RWpPfq",
     "image_banner_custom_Ki4fy7",
-    "image_with_text_QiNGEp",
     "editorial_jb4ML6",
     "image_banner_custom_BjPaN7",
     "multicolumn_custom_g78qfK",
     "multicolumn_custom_FQcAU3",
-    "image_banner_R9rH9w",
+    "image_banner_custom_JiGKY6",
     "multicolumn_custom_eCpAgF",
     "custom_liquid_eqVWiQ",
     "image_banner_custom_r6VG7a",

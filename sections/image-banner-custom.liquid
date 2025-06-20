@@ -2,6 +2,7 @@
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
+  
     @media screen and (max-width: 749px) {
       #Banner-{{ section.id }}::before,
       #Banner-{{ section.id }} .banner__media::before,
@@ -20,6 +21,7 @@
         display: block;
       }
     }
+   
   {%- endstyle -%}
 {%- endif -%}
 
@@ -33,6 +35,11 @@
     max-width:var(--page-width);
     margin: 0 auto;
     right: 0;
+  }
+  .banner__media {
+    
+    border-radius: 4px;
+    overflow: hidden;
   }
   #Banner-{{ section.id }} .banner__media {
     right: 0;
