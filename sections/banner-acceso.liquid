@@ -1,0 +1,220 @@
+{% comment %}
+  Sección: Banner de acceso (modal universal)
+  Uso: Solo en el header. Modal bloqueante con imagen, botón de cerrar, y dos botones adicionales.
+{% endcomment %}
+
+<style>
+  #modal-banner-{{ section.id }} {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+
+  #modal-banner-{{ section.id }}.hidden {
+	display: none;
+  }
+
+  .modal-banner__overlay {
+	position: absolute;
+	inset: 0;
+	background-color: rgba(var(--color-background), {{ section.settings.overlay_opacity | divided_by: 100.0 }});
+	pointer-events: auto;
+  }
+
+  .modal-banner__content {
+	position: relative;
+	background-color: rgb(var(--color-background));
+	color: rgb(var(--color-foreground));
+	padding: 2rem;
+	max-width: 600px;
+	width: 90%;
+	z-index: 10000;
+	border-radius: 0.5rem;
+	text-align: center;
+  }
+
+  .modal-banner__image {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
+	border-radius: 0.25rem;
+  }
+
+  .modal-banner__buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+  }
+
+  .modal-banner__close {
+	background-color: transparent;
+	border: 2px solid rgb(var(--color-foreground));
+	padding: 0.5rem 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	color: rgb(var(--color-foreground));
+  }
+
+  .modal-banner__block .modal-banner__text {
+	margin-bottom: 0.5rem;
+  }
+
+  .modal-banner__action {
+	background-color: rgb(var(--color-button));
+	color: rgb(var(--color-button-text));
+	padding: 0.75rem 1.5rem;
+	text-decoration: none;
+	border-radius: 0.25rem;
+	display: inline-block;
+  }
+
+  .modal-banner__action:hover {
+	opacity: 0.9;
+  }
+</style>
+
+<div id="modal-banner-{{ section.id }}" class="modal-banner__wrapper{% unless section.settings.enable_modal %} hidden{% endunless %}">
+  <div
+	class="modal-banner__overlay"
+	style="
+	  background-color: rgba(var(--color-background), {{ section.settings.overlay_opacity | divided_by: 100.0 }});
+	  backdrop-filter: blur({{ section.settings.overlay_blur }}px);
+	  -webkit-backdrop-filter: blur({{ section.settings.overlay_blur }}px);
+	">
+  </div>
+  <div class="modal-banner__content color-{{ section.settings.color_scheme }}">
+	{% if section.settings.header_image %}
+	  <img
+		src="{{ section.settings.header_image | image_url: width: 800 }}"
+		alt="Modal image"
+		class="modal-banner__image"
+		loading="lazy"
+		width="800"
+		height="auto"
+	  >
+	{% endif %}
+
+	<div class="modal-banner__buttons">
+	  <button class="modal-banner__close" onclick="closeBannerModal()" aria-label="Cerrar">
+		{{ section.settings.close_button_label }}
+	  </button>
+
+	  {% for block in section.blocks %}
+		<div class="modal-banner__block">
+		  {% if block.settings.text %}
+			<p class="modal-banner__text">{{ block.settings.text }}</p>
+		  {% endif %}
+		  <a href="{{ block.settings.link }}" class="modal-banner__action button">
+			{{ block.settings.label }}
+		  </a>
+		</div>
+	  {% endfor %}
+	</div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+	const modal = document.getElementById("modal-banner-{{ section.id }}");
+
+	if (localStorage.getItem("modalClosed-{{ section.id }}")) {
+	  modal.classList.add("hidden");
+	}
+  });
+
+  function closeBannerModal() {
+	const modal = document.getElementById("modal-banner-{{ section.id }}");
+	modal.classList.add("hidden");
+	localStorage.setItem("modalClosed-{{ section.id }}", "true");
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Banner de acceso",
+  "tag": "header",
+  "enabled_on": {
+	"groups": ["header"]
+  },
+  "settings": [
+	{
+	  "type": "checkbox",
+	  "id": "enable_modal",
+	  "label": "Activar banner modal",
+	  "default": true
+	},
+	{
+	  "type": "image_picker",
+	  "id": "header_image",
+	  "label": "Imagen de cabecera"
+	},
+	{
+	  "type": "text",
+	  "id": "close_button_label",
+	  "label": "Texto del botón de cierre",
+	  "default": "Cerrar"
+	},
+	{
+	  "type": "color_scheme",
+	  "id": "color_scheme",
+	  "label": "Esquema de color",
+	  "default": "background-1"
+	},
+	{
+	  "type": "range",
+	  "id": "overlay_opacity",
+	  "label": "Opacidad del fondo",
+	  "min": 0,
+	  "max": 100,
+	  "step": 5,
+	  "default": 60,
+	  "unit": "%"
+	},
+	{
+	  "type": "range",
+	  "id": "overlay_blur",
+	  "label": "Desenfoque del fondo (blur)",
+	  "min": 0,
+	  "max": 20,
+	  "step": 1,
+	  "default": 4,
+	  "unit": "px"
+	}
+  ],
+  "blocks": [
+	{
+	  "type": "button",
+	  "name": "Botón de acción",
+	  "settings": [
+		{
+		  "type": "text",
+		  "id": "text",
+		  "label": "Texto antes del botón"
+		},
+		{
+		  "type": "text",
+		  "id": "label",
+		  "label": "Texto del botón",
+		  "default": "Más información"
+		},
+		{
+		  "type": "url",
+		  "id": "link",
+		  "label": "Enlace del botón"
+		}
+	  ]
+	}
+  ],
+  "max_blocks": 2,
+  "presets": [
+	{
+	  "name": "Banner de acceso"
+	}
+  ]
+}
+{% endschema %}
