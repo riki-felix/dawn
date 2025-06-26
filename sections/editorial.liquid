@@ -119,12 +119,12 @@
 	  {% for block in section.blocks %}
 		<div class="editorial__block{% if forloop.first %} is-active{% endif %}" id="block-{{ section.id }}-{{ forloop.index }}">
 		{%- if 'heading' -%}
+		{%- assign heading_classes = block.settings.heading_size | append: " richtext" -%}
+		
 		<h2
-		  class="banner__heading inline-richtext {{ block.settings.heading_size }}"
-		  {{ block.shopify_attributes }}
-		>
-		  {{ block.settings.heading }}
-		</h2> {%- endif -%}
+		  class="banner__heading inline-richtext {{ heading_classes }}">
+		  {{ block.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}
+		</h2>{%- endif -%}
 		  {% if block.settings.text != blank %}
 			<div {{ block.shopify_attributes }} class="{{ block.settings.text_style }}  editorial__block-text">{{ block.settings.text | strip | raw }}</div>
 		  {% endif %}
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	  "limit": 1,
 	  "settings": [
 		{
-		  "type": "inline_richtext",
+		  "type": "richtext",
 		  "id": "heading",
 		  "default": "t:sections.image-banner.blocks.heading.settings.heading.default",
 		  "label": "t:sections.image-banner.blocks.heading.settings.heading.label"

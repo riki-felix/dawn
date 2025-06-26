@@ -18,10 +18,19 @@
 <section class="headline-logo-section">
   <div class="logo-wrapper">
 	{% if section.settings.custom_logo != blank %}
-	  <img
-		src="{{ section.settings.custom_logo | image_url }}"
-		alt="{{ section.settings.custom_logo.alt | escape }}"
-	  >
+	  {% if section.settings.link_to_home %}
+		<a href="{{ routes.root_url }}">
+		  <img
+			src="{{ section.settings.custom_logo | image_url }}"
+			alt="{{ section.settings.custom_logo.alt | escape }}"
+		  >
+		</a>
+	  {% else %}
+		<img
+		  src="{{ section.settings.custom_logo | image_url }}"
+		  alt="{{ section.settings.custom_logo.alt | escape }}"
+		>
+	  {% endif %}
 	{% else %}
 	  <h1>{{ shop.name }}</h1>
 	{% endif %}
@@ -39,6 +48,12 @@
 	  "id": "custom_logo",
 	  "label": "Logo",
 	  "info": "Sube el logotipo para esta sección. El logo predeterminado del tema no está disponible aquí."
+	},
+	{
+	  "type": "checkbox",
+	  "id": "link_to_home",
+	  "label": "Enlazar el logo a la página de inicio",
+	  "default": false
 	}
   ],
   "presets": [

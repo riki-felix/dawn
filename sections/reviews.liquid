@@ -21,6 +21,14 @@
 	.section-{{ section.id }}-padding {
 	  padding-top: {{ section.settings.padding_top }}px;
 	  padding-bottom: {{ section.settings.padding_bottom }}px;
+	  margin-left: 4.0rem;
+	  margin-right: 4.0rem;
+	}
+  }
+  @media screen and (min-width: 1400px) {
+	.section-{{ section.id }}-padding {
+	  margin-left: auto;
+	  margin-right: auto;
 	}
   }
   {% if slider_enabled %}
@@ -47,7 +55,7 @@
   {% else %}
 	#Slider-{{ section.id }} {
 		display: grid;
-		grid-template-columns: repeat(6, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 	  gap: 2rem;
 	  list-style: none;
 	  margin: 0;
@@ -69,8 +77,6 @@
 	border-bottom: var(--page-border);
 	border-left: var(--page-border);
 	border-right: var(--page-border);
-	margin: 0 auto;
-	max-width: var(--page-width);
   }
   .media-review-card {
 	display: flex;
@@ -101,8 +107,8 @@
   }
 {%- endstyle -%}
 
-<div class="media-reviews color-{{ section.settings.color_scheme }}">
-  <div class="section-{{ section.id }}-padding  page-width isolate">
+<div class="">
+  <div class="page-width media-reviews section-{{ section.id }}-padding isolate color-{{ section.settings.color_scheme }}">
 	{% if section.settings.title != blank %}
 	  <h2 class="{{ section.settings.heading_size }}">
 		{{ section.settings.title | escape }}
