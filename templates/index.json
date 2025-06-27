@@ -168,7 +168,7 @@
         "desktop_content_alignment": "right",
         "show_text_box": false,
         "color_scheme": "scheme-4",
-        "stack_images_on_mobile": true,
+        "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": false,
         "margin_top": 0,
@@ -284,9 +284,49 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "margin_top": 0,
-        "margin_bottom": 60,
+        "margin_bottom": 0,
         "padding_top": 40,
         "padding_bottom": 40
+      }
+    },
+    "image_with_text_gcx4za": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_YfGkiA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Parkings, trenes y autobuses. Todos los puntos de interés en un mismo mapa.</p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_jjTApw": {
+          "type": "button",
+          "settings": {
+            "button_label": "VER EN GOOGLE MAPS",
+            "button_link": "https://maps.app.goo.gl/Xx5RtsbxfKF73JMU7",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "text_YfGkiA",
+        "button_jjTApw"
+      ],
+      "name": "MAPA",
+      "settings": {
+        "image": "shopify://shop_images/mapa-tolosa_casa-julian.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "image_banner_custom_JiGKY6": {
@@ -296,7 +336,7 @@
           "type": "heading",
           "settings": {
             "heading": "RESERVA",
-            "heading_size": "hxl"
+            "heading_size": "hxxl"
           }
         }
       },
@@ -313,13 +353,13 @@
         "desktop_content_alignment": "center",
         "show_text_box": false,
         "color_scheme": "",
-        "stack_images_on_mobile": true,
+        "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
-        "show_text_below": true,
-        "margin_top": 0,
+        "show_text_below": false,
+        "margin_top": 40,
         "margin_bottom": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "multicolumn_custom_eCpAgF": {
@@ -440,7 +480,7 @@
       "type": "custom-liquid",
       "name": "The Fork",
       "settings": {
-        "custom_liquid": "<iframe class=\"page-width color-{{ section.settings.color_scheme }}\" src=\"https://widget.thefork.com/es/27605b34-4520-4f04-b566-f85e89f0cd64?utm\" style=\"background-color:unset; width: 100%; max-width:800px; display: flex; min-height:800px; margin: 0 auto; overflow: auto;border:none;\"scroll=\"yes\"></iframe>",
+        "custom_liquid": "<iframe class=\"page-width color-{{ section.settings.color_scheme }}\" src=\"https://widget.thefork.com/es/27605b34-4520-4f04-b566-f85e89f0cd64?utm\" style=\"background-color:unset; width: 100%; max-width:800px; display: flex; min-height:840px; margin: 0 auto; overflow: auto;border:none;\"scroll=\"yes\"></iframe>",
         "color_scheme": "scheme-1",
         "padding_top": 40,
         "padding_bottom": 40
@@ -595,6 +635,7 @@
     "image_banner_custom_BjPaN7",
     "multicolumn_custom_g78qfK",
     "multicolumn_custom_FQcAU3",
+    "image_with_text_gcx4za",
     "image_banner_custom_JiGKY6",
     "multicolumn_custom_eCpAgF",
     "custom_liquid_eqVWiQ",
