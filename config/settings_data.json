@@ -194,6 +194,17 @@
           "secondary_button_label": "{{ shop.brand.colors.primary[0].background }}",
           "shadow": "{{ shop.brand.colors.primary[0].foreground }}"
         }
+      },
+      "scheme-d2f450c7-7d99-409d-8b49-9866d047f277": {
+        "settings": {
+          "background": "rgba(0,0,0,0)",
+          "background_gradient": "",
+          "text": "{{ shop.brand.colors.primary[0].foreground }}",
+          "button": "#ba9840",
+          "button_label": "{{ shop.brand.colors.primary[0].foreground }}",
+          "secondary_button_label": "{{ shop.brand.colors.secondary[0].foreground }}",
+          "shadow": "rgba(0,0,0,0)"
+        }
       }
     }
   },

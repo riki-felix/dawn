@@ -36,24 +36,11 @@
             "video": "shopify://files/videos/opt-julian-intro.mp4",
             "autoplay": true
           }
-        },
-        "buttons_mhFWaN": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Reservar",
-            "button_link_1": "shopify://pages/reservas",
-            "button_label_2": "Regalar",
-            "button_link_2": "shopify://products/menu-regalo",
-            "margin_top": 40,
-            "margin_bottom": 40,
-            "color_scheme": "scheme-3"
-          }
         }
       },
       "block_order": [
         "headline_kCU6ea",
-        "video_DYwArj",
-        "buttons_mhFWaN"
+        "video_DYwArj"
       ],
       "name": "VIDEO",
       "settings": {
@@ -627,6 +614,27 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "buttons_floating_j399dJ": {
+      "type": "buttons-floating",
+      "name": "Botones flotantes",
+      "settings": {
+        "position": "fixed",
+        "relative_alignment": "center",
+        "fixed_position_desktop": "bottom-center",
+        "fixed_position_mobile": "bottom-center",
+        "padding_top": 20,
+        "padding_bottom": 80,
+        "color_scheme": "scheme-d2f450c7-7d99-409d-8b49-9866d047f277",
+        "button_text_1": "RESERVA",
+        "button_url_1": "shopify://pages/reservas",
+        "button_style_1": "fill",
+        "button_new_tab_1": false,
+        "button_text_2": "REGALA",
+        "button_url_2": "shopify://products/menu-tradicion",
+        "button_style_2": "fill",
+        "button_new_tab_2": false
+      }
     }
   },
   "order": [
@@ -643,6 +651,7 @@
     "custom_liquid_eqVWiQ",
     "image_banner_custom_r6VG7a",
     "multicolumn_custom_G7ELzR",
-    "image_banner_custom_bYh6MG"
+    "image_banner_custom_bYh6MG",
+    "buttons_floating_j399dJ"
   ]
 }
