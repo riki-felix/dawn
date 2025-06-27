@@ -55,10 +55,45 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "banner_acceso_zg6rNR": {
+      "type": "banner-acceso",
+      "blocks": {
+        "button_mYGFGh": {
+          "type": "button",
+          "settings": {
+            "text": "Cava Baja, 18",
+            "label": "Ir a Cava Baja",
+            "link": "https://cavabaja.juliandetolosa.com/"
+          }
+        },
+        "button_NPFmNx": {
+          "type": "button",
+          "settings": {
+            "text": "",
+            "label": "Ir a Calle Ibiza",
+            "link": "https://ibiza.juliandetolosa.com/"
+          }
+        }
+      },
+      "block_order": [
+        "button_mYGFGh",
+        "button_NPFmNx"
+      ],
+      "name": "Banner de acceso",
+      "settings": {
+        "enable_modal": true,
+        "header_image": "shopify://shop_images/mapa-spain_casa-julian.png",
+        "close_button_label": "QUÉDATE EN TOLOSA",
+        "color_scheme": "scheme-4",
+        "overlay_opacity": 80,
+        "overlay_blur": 8
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "banner_acceso_zg6rNR"
   ]
 }
