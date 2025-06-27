@@ -104,10 +104,11 @@
     "editorial_jb4ML6": {
       "type": "editorial",
       "blocks": {
-        "text_block_86B4gV": {
-          "type": "text_block",
+        "heading_9tgp4W": {
+          "type": "heading",
           "settings": {
-            "text": "<h1><strong>TOLOSA.</strong></h1><h1><strong>PAÍS VASCO. </strong></h1><h1><strong>AÑO 1951.</strong></h1>"
+            "heading": "<p>Tolosa<br/>País Vasco<br/>1951</p>",
+            "heading_size": "hxl"
           }
         },
         "text_block_J3iRBk": {
@@ -130,7 +131,7 @@
         }
       },
       "block_order": [
-        "text_block_86B4gV",
+        "heading_9tgp4W",
         "text_block_J3iRBk",
         "text_block_A36zdk",
         "text_block_LTdf3t"
