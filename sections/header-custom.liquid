@@ -224,7 +224,7 @@
     assign header_tag = 'sticky-header'
   endif
 %}
-
+{%- if cart != empty -%}
 <{{ header_tag }} {% if header_tag == 'sticky-header' %}data-sticky-type="{{ section.settings.sticky_header_type }}"{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   {%- liquid
     assign social_links = false
@@ -358,6 +358,7 @@
     </div>
   </header>
 </{{ header_tag }}>
+      {%- endif -%}
 
 {%- if settings.cart_type == "notification" -%}
   {%- render 'cart-notification', color_scheme: section.settings.color_scheme, desktop_menu_type: section.settings.menu_type_desktop -%}

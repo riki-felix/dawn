@@ -53,7 +53,6 @@ header .header__icon {
 	}
 }
 div:has(> .product) {
-	border: var(--page-border);
 	padding: 0;
 	border-radius: 3px;
 	margin: 0 0.8rem;
@@ -245,7 +244,6 @@ h5, .h5 {
 }
 
 .product-grid .grid__item {
-	border: var(--page-border);
 	border-radius: 3px;
 	.card__content {
 		.card__information {
@@ -262,7 +260,6 @@ h5, .h5 {
 }
 @media screen and (min-width: 990px) {
 .shopify-section .product--large:not(.product--no-media) .product__info-wrapper {
-	border-left: var(--page-border);
 	padding: 0;
 }
 	
