@@ -1,0 +1,79 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "headline_JDCVyf": {
+      "type": "headline",
+      "settings": {
+        "custom_logo": "{{ shop.brand.logo }}",
+        "link_to_home": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_custom_wcLYcC": {
+      "type": "multicolumn-custom",
+      "blocks": {
+        "column_CcV9Cp": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<h5>NIÑOS</h5><p>Por motivos de espacio, no aceptamos carritos de bebé.<br/>No contamos con menú infantil.</p><h5>GRUPOS</h5><p>Para reservas de 7 o más comensales funcionamos con un menú cerrado. Para más información pónganse en contacto con nosotros.</p><h5>MENÚ TRADICIÓN</h5><p>En el caso de disponer de un MENÚ TRADICIÓN pónganse en contacto con nosotros.</p><h5>CARTA</h5><p>No se ofrecen platos que no estén incluidos en la carta.</p><h5>Nº de COMENSALES</h5><p>Hay que indicar el número total de comensales al hacer la reserva (niños incluidos) de lo contrario nos reservamos el derecho de admisión.</p><h5>ANTELACIÓN MÁXIMA</h5><p>Solo se podrán hacer reservas con un máximo de 6 meses de antelación.</p><h5>VEGANOS</h5><p>No contamos con opciones veganas.<br/></p><h5>MASCOTAS</h5><p>No aceptamos mascotas.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MtQDQj": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "{{ page.content }}",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_CcV9Cp",
+        "column_MtQDQj"
+      ],
+      "name": "Custom Multicolumn",
+      "settings": {
+        "title": "RESERVAS",
+        "heading_size": "hxl",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "headline_JDCVyf",
+    "main",
+    "multicolumn_custom_wcLYcC"
+  ]
+}
