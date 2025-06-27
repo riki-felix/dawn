@@ -1,0 +1,226 @@
+{% stylesheet %}
+
+.button-floating--relative {
+  justify-content: var(--button-floating-align, center);
+  position: relative;
+}
+.button-floating--fixed {
+  position: fixed;
+  z-index: 99;
+}
+
+.button-floating--top-left    { top: 1rem; left: 1rem; }
+.button-floating--top-center  { top: 1rem; left: 50%; transform: translateX(-50%); }
+.button-floating--top-right   { top: 1rem; right: 1rem; }
+.button-floating--bottom-left  { bottom: 4rem; left: 1rem; }
+.button-floating--bottom-center { bottom: 4rem; left: 50%; transform: translateX(-50%); }
+.button-floating--bottom-right  { bottom: 4rem; right: 1rem; }
+
+@media screen and (max-width: 749px) {
+  .button-floating--mobile-top-left    { top: 1rem; left: 1rem; right: auto; transform: none; }
+  .button-floating--mobile-top-center  { top: 1rem; left: 50%; transform: translateX(-50%); }
+  .button-floating--mobile-top-right   { top: 1rem; right: 1rem; left: auto; transform: none; }
+  .button-floating--mobile-bottom-left  { bottom: 4rem; left: 1rem; right: auto; transform: none; }
+  .button-floating--mobile-bottom-center { bottom: 4rem; left: 50%; transform: translateX(-50%); }
+  .button-floating--mobile-bottom-right  { bottom: 4rem; right: 1rem; left: auto; transform: none; }
+}
+{% endstylesheet %}
+
+{% assign desktop_position = section.settings.fixed_position_desktop %}
+{% assign mobile_position = section.settings.fixed_position_mobile %}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+	padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+	padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+	{% if section.settings.position == 'relative' %}
+	  --button-floating-align: {{ section.settings.relative_alignment }};
+	{% endif %}
+	.button-floating__container {
+	  display: flex;
+	  gap: 2rem;
+	  flex-wrap: wrap;
+	  padding: 1rem 1.25rem;
+	  border-radius: 6px;
+	  overflow: hidden;
+	  background-color: rgba(0,0,0,0.25);
+	  .button-floating {
+		  font-size: 2rem;
+	  }
+	}
+  }
+{% endstyle %}
+
+<div
+  class="button-floating__container
+	{% if section.settings.position == 'fixed' %}
+	  button-floating--fixed button-floating--{{ desktop_position }} button-floating--mobile-{{ mobile_position }}
+	{% else %}
+	  button-floating--relative
+	{% endif %}
+	color-{{ section.settings.color_scheme }}"
+>
+  {% for i in (1..2) %}
+	{% assign btn_text_key = 'button_text_' | append: i %}
+	{% assign btn_url_key = 'button_url_' | append: i %}
+	{% assign btn_style_key = 'button_style_' | append: i %}
+	{% assign btn_new_tab_key = 'button_new_tab_' | append: i %}
+  
+	{% assign btn_text = section.settings[btn_text_key] %}
+	{% assign btn_url = section.settings[btn_url_key] %}
+	{% assign btn_style = section.settings[btn_style_key] %}
+	{% assign btn_new_tab = section.settings[btn_new_tab_key] %}
+  
+	{% if btn_text != blank %}
+	  <a
+		href="{{ btn_url | escape }}"
+		class="button-floating button{% if btn_style == 'outline' %} button--secondary{% endif %}"
+		{% if btn_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+	  >
+		{{ btn_text }}
+	  </a>
+	{% endif %}
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Botones flotantes",
+  "tag": "section",
+  "settings": [
+	{
+	  "type": "select",
+	  "id": "position",
+	  "label": "Posición",
+	  "options": [
+		{ "value": "relative", "label": "Relativa (flujo del contenido)" },
+		{ "value": "fixed", "label": "Fija (pantalla)" }
+	  ],
+	  "default": "relative"
+	},
+	{
+	  "type": "select",
+	  "id": "relative_alignment",
+	  "label": "Alineación (posición relativa)",
+	  "options": [
+		{ "value": "flex-start", "label": "Izquierda" },
+		{ "value": "center", "label": "Centro" },
+		{ "value": "flex-end", "label": "Derecha" }
+	  ],
+	  "default": "center"
+	},
+	{
+	  "type": "select",
+	  "id": "fixed_position_desktop",
+	  "label": "Posición fija en escritorio",
+	  "options": [
+		{ "value": "top-left", "label": "Arriba izquierda" },
+		{ "value": "top-center", "label": "Arriba centro" },
+		{ "value": "top-right", "label": "Arriba derecha" },
+		{ "value": "bottom-left", "label": "Abajo izquierda" },
+		{ "value": "bottom-center", "label": "Abajo centro" },
+		{ "value": "bottom-right", "label": "Abajo derecha" }
+	  ],
+	  "default": "bottom-right"
+	},
+	{
+	  "type": "select",
+	  "id": "fixed_position_mobile",
+	  "label": "Posición fija en móvil",
+	  "options": [
+		{ "value": "top-left", "label": "Arriba izquierda" },
+		{ "value": "top-center", "label": "Arriba centro" },
+		{ "value": "top-right", "label": "Arriba derecha" },
+		{ "value": "bottom-left", "label": "Abajo izquierda" },
+		{ "value": "bottom-center", "label": "Abajo centro" },
+		{ "value": "bottom-right", "label": "Abajo derecha" }
+	  ],
+	  "default": "bottom-right"
+	},
+	{
+	  "type": "range",
+	  "id": "padding_top",
+	  "label": "Espacio superior",
+	  "min": 0,
+	  "max": 100,
+	  "step": 4,
+	  "default": 20,
+	  "unit": "px"
+	},
+	{
+	  "type": "range",
+	  "id": "padding_bottom",
+	  "label": "Espacio inferior",
+	  "min": 0,
+	  "max": 100,
+	  "step": 4,
+	  "default": 20,
+	  "unit": "px"
+	},
+	{
+	  "type": "color_scheme",
+	  "id": "color_scheme",
+	  "label": "Esquema de color",
+	  "default": "scheme-1"
+	},
+	{
+	  "type": "text",
+	  "id": "button_text_1",
+	  "label": "Texto del botón 1"
+	},
+	{
+	  "type": "url",
+	  "id": "button_url_1",
+	  "label": "URL del botón 1"
+	},
+	{
+	  "type": "select",
+	  "id": "button_style_1",
+	  "label": "Estilo del botón 1",
+	  "options": [
+		{ "value": "fill", "label": "Relleno" },
+		{ "value": "outline", "label": "Contorno" }
+	  ],
+	  "default": "fill"
+	},
+	{
+	  "type": "checkbox",
+	  "id": "button_new_tab_1",
+	  "label": "Abrir botón 1 en nueva pestaña",
+	  "default": false
+	},
+	{
+	  "type": "text",
+	  "id": "button_text_2",
+	  "label": "Texto del botón 2"
+	},
+	{
+	  "type": "url",
+	  "id": "button_url_2",
+	  "label": "URL del botón 2"
+	},
+	{
+	  "type": "select",
+	  "id": "button_style_2",
+	  "label": "Estilo del botón 2",
+	  "options": [
+		{ "value": "fill", "label": "Relleno" },
+		{ "value": "outline", "label": "Contorno" }
+	  ],
+	  "default": "fill"
+	},
+	{
+	  "type": "checkbox",
+	  "id": "button_new_tab_2",
+	  "label": "Abrir botón 2 en nueva pestaña",
+	  "default": false
+	}
+  ],
+  "presets": [
+	{
+	  "name": "Botones flotantes",
+	  "category": "Botones"
+	}
+  ]
+}
+{% endschema %}
