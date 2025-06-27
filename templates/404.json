@@ -9,12 +9,21 @@
  */
 {
   "sections": {
+    "headline_WBff4J": {
+      "type": "headline",
+      "name": "Headline Logo",
+      "settings": {
+        "custom_logo": "shopify://shop_images/logo-light_casajulian.svg",
+        "link_to_home": true
+      }
+    },
     "main": {
       "type": "main-404",
       "settings": {}
     }
   },
   "order": [
+    "headline_WBff4J",
     "main"
   ]
 }

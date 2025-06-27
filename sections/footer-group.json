@@ -147,6 +147,7 @@
         "title": "",
         "heading_size": "h2",
         "color_scheme": "",
+        "enable_slider": false,
         "enable_autoplay": false,
         "autoplay_interval": 5000,
         "margin_top": 0,

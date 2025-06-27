@@ -158,23 +158,23 @@
       "block_order": [
         "heading_yiUkFC"
       ],
-      "name": "TOLOSA",
+      "name": "TOLOSA BANNER",
       "settings": {
         "image": "shopify://shop_images/tolosa_casa-julian.jpg",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 30,
         "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "top-right",
         "desktop_content_alignment": "right",
         "show_text_box": false,
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": false,
         "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "margin_bottom": 40,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "multicolumn_custom_g78qfK": {
@@ -249,10 +249,19 @@
         "column_fQbQdE": {
           "type": "column",
           "settings": {
-            "title": "AUTOBÚS | TREN",
+            "title": "AUTOBÚS",
             "text": "<p>Si la velada es nocturna, ten en cuenta que los últimos pasan relativamente pronto. </p>",
             "link_label": "Ver horarios",
             "link": "https://cdn.shopify.com/s/files/1/0938/2454/9204/files/BU08_Tolosa_Donostia_Zuzenekoa_Directo_11062025.pdf?v=1749650970"
+          }
+        },
+        "column_YLpyxH": {
+          "type": "column",
+          "settings": {
+            "title": "TREN",
+            "text": "<p>Vincula un texto con una imagen para atraer la atención hacia tu producto, colección o artículo de blog seleccionados. Agrega detalles sobre disponibilidad y estilo, o incluso ofrece una reseña.</p>",
+            "link_label": "",
+            "link": ""
           }
         },
         "column_HPNRzK": {
@@ -267,6 +276,7 @@
       },
       "block_order": [
         "column_fQbQdE",
+        "column_YLpyxH",
         "column_HPNRzK"
       ],
       "name": "VOLVER",
@@ -315,16 +325,16 @@
       "name": "MAPA",
       "settings": {
         "image": "shopify://shop_images/mapa-tolosa_casa-julian.png",
-        "height": "adapt",
+        "height": "medium",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -370,7 +380,7 @@
           "settings": {
             "image": "shopify://shop_images/Union.svg",
             "title": "",
-            "text": "<h5>NIÑOS</h5><p>Por motivos de espacio, no aceptamos carritos de bebé.</p><p>··························</p><p>No contamos con menú infantil.</p>",
+            "text": "<h5>NIÑOS</h5><p>Por motivos de espacio, no aceptamos carritos de bebé.</p><p>··············</p><p>No contamos con menú infantil.</p>",
             "link_label": "",
             "link": ""
           }
@@ -381,7 +391,7 @@
             "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_16.svg",
             "title": "",
             "text": "<h5>GRUPOS</h5><p>Para reservas de 7 o más comensales funcionamos con un menú cerrado. Para más información pónganse en contacto con nosotros.</p>",
-            "link_label": "Ver menú",
+            "link_label": "",
             "link": ""
           }
         },
@@ -481,7 +491,7 @@
       "name": "The Fork",
       "settings": {
         "custom_liquid": "<iframe class=\"page-width color-{{ section.settings.color_scheme }}\" src=\"https://widget.thefork.com/es/27605b34-4520-4f04-b566-f85e89f0cd64?utm\" style=\"background-color:unset; width: 100%; max-width:800px; display: flex; min-height:840px; margin: 0 auto; overflow: auto;border:none;\"scroll=\"yes\"></iframe>",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "padding_top": 40,
         "padding_bottom": 40
       }
@@ -580,21 +590,14 @@
           "type": "heading",
           "settings": {
             "heading": "REGALA",
-            "heading_size": "hxl"
-          }
-        },
-        "richtext_zchKQa": {
-          "type": "richtext",
-          "settings": {
-            "text": "",
-            "text_style": "body"
+            "heading_size": "hxxl"
           }
         },
         "buttons_rAY8d4": {
           "type": "buttons",
           "settings": {
             "button_label_1": "COMPRAR MENÚ TRADICIÓN",
-            "button_link_1": "shopify://products/menu-regalo",
+            "button_link_1": "shopify://products/menu-tradicion",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -604,26 +607,25 @@
       },
       "block_order": [
         "heading_nNCWba",
-        "richtext_zchKQa",
         "buttons_rAY8d4"
       ],
       "name": "REGALA",
       "settings": {
         "image_2": "shopify://shop_images/casa-julian-2_0003_Capa_8.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "large",
+        "image_height": "medium",
         "image_behavior": "ambient",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
         "color_scheme": "scheme-1",
-        "stack_images_on_mobile": true,
+        "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
-        "show_text_below": true,
+        "show_text_below": false,
         "margin_top": 0,
         "margin_bottom": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
