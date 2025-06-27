@@ -493,7 +493,7 @@
           "type": "heading",
           "settings": {
             "heading": "TRABAJO",
-            "heading_size": "hxl"
+            "heading_size": "hxxl"
           }
         }
       },
@@ -505,18 +505,18 @@
         "image": "shopify://shop_images/casa-julian-2_0010_Capa_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
-        "image_behavior": "ambient",
-        "desktop_content_position": "top-right",
-        "desktop_content_alignment": "center",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-right",
+        "desktop_content_alignment": "right",
         "show_text_box": false,
         "color_scheme": "",
-        "stack_images_on_mobile": true,
+        "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
-        "show_text_below": true,
+        "show_text_below": false,
         "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "margin_bottom": 40,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "multicolumn_custom_G7ELzR": {
@@ -525,8 +525,8 @@
         "column_EDwBje": {
           "type": "column",
           "settings": {
-            "title": "",
-            "text": "<h2>¿Quieres formar parte de nuestro equipo o estás interesado en llevar a cabo algún proyecto con nosotros?</h2><p>____________________________________________________</p><p></p><h5><strong>ENVÍANOS TU CV O TU PROPUESTA  RELLENANDO EL FORMULARIO.<br/></strong>························································<br/>*No se admiten reservas desde este formulario.<br/>························································</h5>",
+            "title": "TRABAJOS Y PROYECTOS",
+            "text": "<h5>¿Quieres formar parte de nuestro equipo o estás interesado en llevar a cabo algún proyecto con nosotros?</h5><h5>ENVÍANOS TU CV O PROPUESTA  RELLENANDO EL SIGUIENTE FORMULARIO.</h5>",
             "link_label": "",
             "link": ""
           }
