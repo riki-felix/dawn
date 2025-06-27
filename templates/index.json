@@ -151,7 +151,7 @@
           "type": "heading",
           "settings": {
             "heading": "TOLOSA",
-            "heading_size": "hxl"
+            "heading_size": "hxxl"
           }
         }
       },
@@ -162,12 +162,12 @@
       "settings": {
         "image": "shopify://shop_images/tolosa_casa-julian.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "fixed",
-        "desktop_content_position": "top-left",
-        "desktop_content_alignment": "left",
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "top-right",
+        "desktop_content_alignment": "right",
         "show_text_box": false,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-4",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": false,
@@ -225,7 +225,7 @@
       ],
       "name": "LLEGAR",
       "settings": {
-        "title": "CÓMO LLEGAR",
+        "title": "Cómo llegar",
         "heading_size": "h0",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -263,27 +263,16 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column_axJrFz": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/mapa_casajuian.png",
-            "title": "",
-            "text": "",
-            "link_label": "VER MAPA",
-            "link": "https://www.google.es/maps?q=CASA+JULIAN,+Bar,Tolosa,2400"
-          }
         }
       },
       "block_order": [
         "column_fQbQdE",
-        "column_HPNRzK",
-        "column_axJrFz"
+        "column_HPNRzK"
       ],
       "name": "VOLVER",
       "settings": {
-        "title": "CÓMO VOLVER",
-        "heading_size": "h1",
+        "title": "Cómo volver",
+        "heading_size": "h0",
         "image_width": "full",
         "image_ratio": "circle",
         "button_label": "",
@@ -291,7 +280,7 @@
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "none",
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "margin_top": 0,
