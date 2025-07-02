@@ -81,9 +81,48 @@
 	color: rgb(var(--color-button-text));
 	cursor: pointer;
   }
+  .modal-banner__close {
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 999px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
 
   .modal-banner__action:hover {
 	opacity: 0.9;
+  }
+  .modal-banner__image-wrapper {
+	position: relative;
+	width: 100%;
+	display: block;
+  }
+  
+  .modal-banner__image-wrapper img {
+	width: 100%;
+	height: auto;
+	display: block;
+  }
+  
+  .modal-banner__hotspot {
+	position: absolute;
+	background-color: rgba(186,152,64, 0.3);
+	border-radius: 50%;
+	pointer-events: auto;
+  }
+  #modal-buttons-container {
+	  flex-flow: row wrap;
+	  justify-content: center;
+	  align-items: center;
+	  gap: 2rem;
+  }
+  .city-selector {
+	  padding: 1rem 2rem;
+	  font-family: var(--font-body-family);
+	  font-size: 2.0rem;
   }
 </style>
 
@@ -96,41 +135,74 @@
 	  -webkit-backdrop-filter: blur({{ section.settings.overlay_blur }}px);
 	">
   </div>
-  <div class="modal-banner__content color-{{ section.settings.color_scheme }}">
+
+  <div class="modal-banner__content color-{{ section.settings.color_scheme }}" style="position: relative;">
+  <div class="modal-banner__image-wrapper">
 	{% if section.settings.header_image %}
 	  <img
-		src="{{ section.settings.header_image | image_url: width: 800 }}"
+		src="{{ section.settings.header_image | image_url: width: 1200 }}"
 		alt="Modal image"
 		class="modal-banner__image"
 		loading="lazy"
-		width="100%"
-		height="auto"
+		style="width: 100%; height: auto;"
 	  >
 	{% endif %}
 
-	<div class="modal-banner__buttons">
-	  <div class="banner-access_main">
-	  <h3 class="banner-access_heading">PAÍS VASCO</h3>
-		<button class="modal-banner__close modal-banner__action" onclick="closeBannerModal()" aria-label="Cerrar">
-			{{ section.settings.close_button_label }}
-		</button>
+	{% for block in section.blocks %}
+	  <a
+		href="{{ block.settings.link }}"
+		class="modal-banner__hotspot"
+		style="
+		  position: absolute;
+		  top: {{ block.settings.top }}%;
+		  left: {{ block.settings.left }}%;
+		  width: {{ block.settings.width }}px;
+		  height: {{ block.settings.height }}px;
+		  display: block;
+		  z-index: 10;
+		"
+		aria-label="{{ block.settings.label }}"
+	  >
+		<span class="visually-hidden">{{ block.settings.label }}</span>
+	  </a>
+	{% endfor %}
+  </div>
+  <div class="modal-banner__selector" style="padding: 2rem; text-align: center;">
+	{% if section.settings.modal_heading != blank %}
+	  <h2 style="margin-bottom: 1rem;">{{ section.settings.modal_heading }}</h2>
+	{% endif %}
+  
+	<select id="city-selector" class="city-selector">
+	  <option value="">Elige ciudad</option>
+	  <option value="tolosa">Tolosa</option>
+	  <option value="madrid">Madrid</option>
+	</select>
+  </div>
+  <div id="modal-buttons-container" style="display: none;">
+	{% for block in section.blocks %}
+	  <div class="modal-banner__block">
+		{% if block.settings.text != blank %}
+		  <p class="modal-banner__text">{{ block.settings.text }}</p>
+		{% endif %}
+		<a href="{{ block.settings.link }}" class="modal-banner__action">{{ block.settings.label }}</a>
 	  </div>
-	  <div class="banner-access_secondary">
-	  	<h3 class="banner-access_heading">MADRID</h3>
-		  <div class="buttons-group">
-			{% for block in section.blocks %}
-				<div class="modal-banner__block">
-					<a href="{{ block.settings.link }}" class="modal-banner__action">
-						{{ block.settings.label | raw }}
-					</a>
-					{% if block.settings.text %}
-						<p class="modal-banner__text">{{ block.settings.text }}</p>
-					{% endif %}
-				</div>
-			{% endfor %}
-		  </div>
-	  </div>
-	</div>
+	{% endfor %}
+  </div>
+
+	<button
+	  class="modal-banner__close modal-banner__action"
+	  onclick="closeBannerModal()"
+	  aria-label="Cerrar"
+	  style="
+		position: absolute;
+		top: {{ section.settings.close_top }}%;
+		left: {{ section.settings.close_left }}%;
+		width: {{ section.settings.close_width }}%;
+		height: {{ section.settings.close_height }}%;
+	  "
+	>
+	  {{ section.settings.close_button_label }}
+	</button>
   </div>
 </div>
 
@@ -148,6 +220,26 @@
 	modal.classList.add("hidden");
 	localStorage.setItem("modalClosed-{{ section.id }}", "true");
   }
+  document.addEventListener("DOMContentLoaded", function () {
+	const modal = document.getElementById("modal-banner-{{ section.id }}");
+	const selector = document.getElementById("city-selector");
+	const buttonsContainer = document.getElementById("modal-buttons-container");
+  
+	if (localStorage.getItem("modalClosed-{{ section.id }}")) {
+	  modal.classList.add("hidden");
+	}
+  
+	selector.addEventListener("change", function () {
+	  if (this.value === "tolosa") {
+		closeBannerModal();
+	  } else if (this.value === "madrid") {
+		buttonsContainer.style.display = "flex";
+	  } else {
+		buttonsContainer.style.display = "none";
+	  }
+	});
+  });
+  
 </script>
 
 {% schema %}
@@ -163,6 +255,12 @@
 	  "id": "enable_modal",
 	  "label": "Activar banner modal",
 	  "default": true
+	},
+	{
+	  "type": "text",
+	  "id": "modal_heading",
+	  "label": "Encabezado del modal",
+	  "default": "Selecciona tu ciudad"
 	},
 	{
 	  "type": "image_picker",
@@ -200,6 +298,42 @@
 	  "step": 1,
 	  "default": 4,
 	  "unit": "px"
+	},
+	{
+	  "type": "range",
+	  "id": "close_top",
+	  "label": "Posición superior del botón de cierre (%)",
+	  "min": 0,
+	  "max": 100,
+	  "step": 1,
+	  "default": 5
+	},
+	{
+	  "type": "range",
+	  "id": "close_left",
+	  "label": "Posición izquierda del botón de cierre (%)",
+	  "min": 0,
+	  "max": 100,
+	  "step": 1,
+	  "default": 90
+	},
+	{
+	  "type": "range",
+	  "id": "close_width",
+	  "label": "Ancho del botón de cierre (%)",
+	  "min": 1,
+	  "max": 100,
+	  "step": 1,
+	  "default": 5
+	},
+	{
+	  "type": "range",
+	  "id": "close_height",
+	  "label": "Alto del botón de cierre (%)",
+	  "min": 1,
+	  "max": 100,
+	  "step": 1,
+	  "default": 5
 	}
   ],
   "blocks": [
@@ -222,6 +356,42 @@
 		  "type": "url",
 		  "id": "link",
 		  "label": "Enlace del botón"
+		},
+		{
+		  "type": "range",
+		  "id": "top",
+		  "label": "Posición superior (%)",
+		  "min": 0,
+		  "max": 100,
+		  "step": 1,
+		  "default": 0
+		},
+		{
+		  "type": "range",
+		  "id": "left",
+		  "label": "Posición izquierda (%)",
+		  "min": 0,
+		  "max": 100,
+		  "step": 1,
+		  "default": 0
+		},
+		{
+		  "type": "range",
+		  "id": "width",
+		  "label": "Ancho",
+		  "min": 1,
+		  "max": 100,
+		  "step": 1,
+		  "default": 20
+		},
+		{
+		  "type": "range",
+		  "id": "height",
+		  "label": "Alto",
+		  "min": 1,
+		  "max": 100,
+		  "step": 1,
+		  "default": 10
 		}
 	  ]
 	}
