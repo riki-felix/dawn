@@ -60,18 +60,28 @@
       "blocks": {
         "button_mYGFGh": {
           "type": "button",
+          "name": "Cava Baja",
           "settings": {
             "text": "",
             "label": "Ir a Cava Baja",
-            "link": "https://cavabaja.juliandetolosa.com/"
+            "link": "https://cavabaja.juliandetolosa.com/",
+            "top": 50,
+            "left": 43,
+            "width": 30,
+            "height": 30
           }
         },
         "button_NPFmNx": {
           "type": "button",
+          "name": "Ibiza",
           "settings": {
             "text": "",
             "label": "Ir a Calle Ibiza",
-            "link": "https://ibiza.juliandetolosa.com/"
+            "link": "https://ibiza.juliandetolosa.com/",
+            "top": 54,
+            "left": 46,
+            "width": 30,
+            "height": 30
           }
         }
       },
@@ -82,11 +92,16 @@
       "name": "Banner de acceso",
       "settings": {
         "enable_modal": true,
+        "modal_heading": "¿Dónde quieres comer?",
         "header_image": "shopify://shop_images/mapa-spain_casa-julian.png",
-        "close_button_label": "QUÉDATE EN TOLOSA",
+        "close_button_label": "Tolosa",
         "color_scheme": "scheme-4",
-        "overlay_opacity": 80,
-        "overlay_blur": 8
+        "overlay_opacity": 90,
+        "overlay_blur": 8,
+        "close_top": 11,
+        "close_left": 53,
+        "close_width": 5,
+        "close_height": 5
       }
     }
   },
