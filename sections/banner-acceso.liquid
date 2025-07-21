@@ -39,11 +39,12 @@
   }
 
   .modal-banner__image {
-	max-width: 100%;
 	height: auto;
 	margin-bottom: 1rem;
 	border-radius: 0.25rem;
-	border-bottom: var(--page-border);
+	
+	max-height: 50.0rem;
+	width: auto;
   }
 
   .modal-banner__buttons {
@@ -98,15 +99,12 @@
   .modal-banner__image-wrapper {
 	position: relative;
 	width: 100%;
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: var(--page-border);
   }
-  
-  .modal-banner__image-wrapper img {
-	width: 100%;
-	height: auto;
-	display: block;
-  }
-  
+    
   .modal-banner__hotspot {
 	position: absolute;
 	background-color: rgba(186,152,64, 0.3);
@@ -123,6 +121,11 @@
 	  padding: 1rem 2rem;
 	  font-family: var(--font-body-family);
 	  font-size: 2.0rem;
+  }
+  .modal-banner__selector {
+	  text-align: center;
+	  padding: 2.4rem 0;
+	  h2 {}
   }
 </style>
 
@@ -144,7 +147,6 @@
 		alt="Modal image"
 		class="modal-banner__image"
 		loading="lazy"
-		style="width: 100%; height: auto;"
 	  >
 	{% endif %}
 
@@ -167,15 +169,15 @@
 	  </a>
 	{% endfor %}
   </div>
-  <div class="modal-banner__selector" style="padding: 2rem; text-align: center;">
+  <div class="modal-banner__selector">
 	{% if section.settings.modal_heading != blank %}
-	  <h2 style="margin-bottom: 1rem;">{{ section.settings.modal_heading }}</h2>
+	  <h2>{{ section.settings.modal_heading }}</h2>
 	{% endif %}
   
 	<select id="city-selector" class="city-selector">
-	  <option value="">Elige ciudad</option>
-	  <option value="tolosa">País Vasco (Tolosa)</option>
-	  <option value="madrid">Madrid</option>
+	  <option value="">{{ 'city_selector.choose' | t }}</option>
+	  <option value="tolosa">{{ 'city_selector.tolosa' | t }}</option>
+	  <option value="madrid">{{ 'city_selector.madrid' | t }}</option>
 	</select>
   </div>
   <div id="modal-buttons-container" style="display: none;">

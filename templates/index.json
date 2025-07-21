@@ -54,13 +54,13 @@
           "type": "heading",
           "settings": {
             "heading": "CARTA",
-            "heading_size": "h2"
+            "heading_size": "hxl"
           }
         },
         "richtext_a64cq7": {
           "type": "richtext",
           "settings": {
-            "text": "<p>JAMÓN IBÉRICO\t<strong>32 </strong></p><p>CECINA\t<strong>36</strong></p><p>TXULETA TARTAR  <strong>30</strong></p><p>CHARCUTERÍA\t<strong>34</strong></p><p>PUERRO\t<strong>18</strong></p><p>ESPÁRRAGO\t<strong>18</strong></p><p>……………………………………………………………</p><p>TXULETA\t<strong>90</strong>/kg</p><p>TXULETA SELECCIÓN\t<strong>100</strong>/kg</p><p>PIMIENTOS DEL PIQUILLO\t<strong>16</strong></p><p>ENSALADA <strong>4</strong></p><p>……………………………………………………………</p><p>FLAN <strong>8</strong></p><p>TARTA DE QUESO <strong>9 </strong></p><p>QUESOS <strong>20</strong></p><p>FRESAS Y YOGUR <strong>8</strong></p>",
+            "text": "<p><strong>JAMÓN IBÉRICO\t32 </strong></p><p><strong>CECINA\t36</strong></p><p><strong>TXULETA TARTAR  30</strong></p><p><strong>CHARCUTERÍA\t34</strong></p><p><strong>PUERRO\t18</strong></p><p><strong>ESPÁRRAGO\t18</strong></p><p>-</p><p><strong>TXULETA\t90/kg</strong></p><p><strong>TXULETA SELECCIÓN\t100/kg</strong></p><p><strong>PIMIENTOS DEL PIQUILLO\t16</strong></p><p><strong>ENSALADA 4</strong></p><p>-</p><p><strong>FLAN 8</strong></p><p><strong>TARTA DE QUESO 9 </strong></p><p><strong>QUESOS 20</strong></p><p><strong>FRESAS Y YOGUR 8</strong></p>",
             "text_style": "body"
           }
         }
@@ -74,7 +74,7 @@
         "image": "shopify://shop_images/DSCF0157.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
-        "image_behavior": "ambient",
+        "image_behavior": "none",
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": true,
@@ -94,7 +94,7 @@
         "heading_9tgp4W": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Tolosa<br/>País Vasco<br/>1951</p>",
+            "heading": "<p>Tolosa.<br/>País Vasco.<br/>1951.</p>",
             "heading_size": "hxl"
           }
         },
@@ -365,7 +365,6 @@
         "column_mt884h": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Union.svg",
             "title": "",
             "text": "<h5>NIÑOS</h5><p>Por motivos de espacio, no aceptamos carritos de bebé.</p><p>··············</p><p>No contamos con menú infantil.</p>",
             "link_label": "",
@@ -375,7 +374,6 @@
         "column_7WVbfg": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_16.svg",
             "title": "",
             "text": "<h5>GRUPOS</h5><p>Para reservas de 7 o más comensales funcionamos con un menú cerrado. Para más información pónganse en contacto con nosotros.</p>",
             "link_label": "",
@@ -385,7 +383,6 @@
         "column_iWPgjM": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_20.svg",
             "title": "",
             "text": "<h5>MENÚ TRADICIÓN</h5><p>En el caso de disponer de un MENÚ TRADICIÓN pónganse en contacto con nosotros.</p>",
             "link_label": "",
@@ -395,7 +392,6 @@
         "column_Gny4UB": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_19.svg",
             "title": "",
             "text": "<h5>CARTA</h5><p>No se ofrecen platos que no estén incluidos en la carta.</p>",
             "link_label": "",
@@ -405,7 +401,6 @@
         "column_CnLRdL": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_28.svg",
             "title": "",
             "text": "<h5>Nº de COMENSALES</h5><p>Hay que indicar el número total de comensales al hacer la reserva (niños incluidos) de lo contrario nos reservamos el derecho de admisión.</p>",
             "link_label": "",
@@ -415,7 +410,6 @@
         "column_iCWqLE": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_18.svg",
             "title": "",
             "text": "<h5>ANTELACIÓN MÁXIMA</h5><p>Solo se podrán hacer reservas con un máximo de 6 meses de antelación.</p>",
             "link_label": "",
@@ -425,7 +419,6 @@
         "column_VRDtNG": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_29.svg",
             "title": "",
             "text": "<h5>VEGANOS</h5><p>No contamos con opciones veganas.</p>",
             "link_label": "",
@@ -435,7 +428,6 @@
         "column_xEdUNy": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/iconos-web_casa-julian_Mesa_de_trabajo_1_copia_15.svg",
             "title": "",
             "text": "<h5>MASCOTAS</h5><p>No aceptamos mascotas.</p>",
             "link_label": "",
@@ -466,7 +458,7 @@
         "background_style": "none",
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "margin_top": 0,
         "margin_bottom": 0,
         "padding_top": 24,
@@ -523,7 +515,7 @@
           "type": "column",
           "settings": {
             "title": "TRABAJOS Y PROYECTOS",
-            "text": "<h5>¿Quieres formar parte de nuestro equipo o estás interesado en llevar a cabo algún proyecto con nosotros?</h5><h5>ENVÍANOS TU CV O PROPUESTA  RELLENANDO EL SIGUIENTE FORMULARIO.</h5>",
+            "text": "<h5>¿Quieres formar parte de nuestro equipo o estás interesado en llevar a cabo algún proyecto con nosotros?<br/><br/></h5><h5>ENVÍANOS TU CV O PROPUESTA  RELLENANDO EL SIGUIENTE FORMULARIO.</h5>",
             "link_label": "",
             "link": ""
           }
