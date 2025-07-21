@@ -40,10 +40,8 @@
 
   .modal-banner__image {
 	height: auto;
-	margin-bottom: 1rem;
 	border-radius: 0.25rem;
-	
-	max-height: 50.0rem;
+	max-height: 40.0rem;
 	width: auto;
   }
 
@@ -175,9 +173,9 @@
 	{% endif %}
   
 	<select id="city-selector" class="city-selector">
-	  <option value="">{{ 'city_selector.choose' | t }}</option>
-	  <option value="tolosa">{{ 'city_selector.tolosa' | t }}</option>
-	  <option value="madrid">{{ 'city_selector.madrid' | t }}</option>
+	  <option value="">{{ section.settings.select_label }}</option>
+	  <option value="tolosa">{{ section.settings.main_option }}</option>
+	  <option value="madrid">{{ section.settings.secondary_option }}</option>
 	</select>
   </div>
   <div id="modal-buttons-container" style="display: none;">
@@ -203,7 +201,6 @@
 		height: {{ section.settings.close_height }}%;
 	  "
 	>
-	  {{ section.settings.close_button_label }}
 	</button>
   </div>
 </div>
@@ -271,9 +268,21 @@
 	},
 	{
 	  "type": "text",
-	  "id": "close_button_label",
-	  "label": "Texto del botón de cierre",
-	  "default": "Cerrar"
+	  "id": "select_label",
+	  "label": "Texto del selector",
+	  "default": "Elige restaurante"
+	},
+	{
+	  "type": "text",
+	  "id": "main_option",
+	  "label": "Opción Principal",
+	  "default": "Tolosa"
+	},
+	{
+	  "type": "text",
+	  "id": "secondary_option",
+	  "label": "Opción Secundaria",
+	  "default": "Madrid"
 	},
 	{
 	  "type": "color_scheme",
