@@ -86,7 +86,9 @@
         "enable_modal": true,
         "modal_heading": "¿Dónde quieres comer?",
         "header_image": "shopify://shop_images/mapa-spain-completo_casa-julian_68ec3a2c-ebce-4c1f-b26f-ce975df08def.png",
-        "close_button_label": "",
+        "select_label": "Elige restaurante",
+        "main_option": "Tolosa",
+        "secondary_option": "Madrida",
         "color_scheme": "scheme-4",
         "overlay_opacity": 90,
         "overlay_blur": 8
