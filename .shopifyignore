@@ -1,0 +1,21 @@
+# Evita sobreescribir las configuraciones visuales del cliente
+config/settings_data.json
+
+# Archivos del sistema o editor
+.DS_Store
+node_modules/
+.vscode/
+*.log
+*.tmp
+.env
+dist/
+build/
+
+# Archivos temporales o de desarrollo que no deben subirse
+*.map
+*.bak
+*.swp
+
+# Archivos de preview o de documentación
+README.md
+LICENSE
