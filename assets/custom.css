@@ -1,3 +1,6 @@
+html {
+	scroll-behavior: smooth;
+}
 .header--has-menu {
 	overflow: hidden;
 }
@@ -378,7 +381,7 @@ h5, .h5 {
 }
 
 variant-selects {
-	margin: 0;;
+	margin: 0;
 	padding: 1.6rem var(--page-width-margin);
 	border-top: var(--page-border);	
 	.product-form__input {
@@ -419,4 +422,8 @@ variant-selects {
 
 .input[typ="date"] {
 	text-align: right;
+}
+
+.language-selector {
+	z-index: 999;
 }

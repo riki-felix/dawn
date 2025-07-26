@@ -1,5 +1,8 @@
 {
   "general": {
+    "labels": {
+      "closed": "Cerrado"
+    },
     "password_page": {
       "login_form_heading": "Entrar a la tienda usando contraseña:",
       "login_password_button": "Entrar usando contraseña",
@@ -536,5 +539,14 @@
       "expanded": "Formulario del destinatario de la tarjeta de regalo expandido",
       "collapsed": "Formulario del destinatario de tarjeta de regalo contraído"
     }
+  },
+  "abbr_days": {
+    "monday": "LUN",
+    "tuesday": "MAR",
+    "wednesday": "MIÉ",
+    "thursday": "JUE",
+    "friday": "VIE",
+    "saturday": "SÁB",
+    "sunday": "DOM"
   }
 }

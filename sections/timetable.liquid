@@ -44,37 +44,38 @@
 		  <h3>{{ section.settings.schedule_title }}</h3>
 	  </div>
 	  <div class="schedule-grid">
-		{% assign day_order = "lunes,martes,miercoles,jueves,viernes,sabado,domingo" | split: "," %}
-		{% assign day_labels = "LUN,MAR,MIÉ,JUE,VIE,SÁB,DOM" | split: "," %}
+		{% assign day_order = "monday,tuesday,wednesday,thursday,friday,saturday,sunday" | split: "," %}
 		
-		  {% for i in (0..6) %}
-			{% assign day_type = day_order[i] %}
-			{% assign day_label = day_labels[i] %}
-			{% assign block = null %}
-			{% for b in section.blocks %}
-			  {% if b.type == day_type %}
-				{% assign block = b %}
-			  {% endif %}
-			{% endfor %}
-		
-			<div class="schedule-day">
-			  <div class="day-label">{{ day_label }}</div>
-			  <div class="day-hours">
-				{% if block %}
-				  {% if block.settings.closed %}
-					<span class="closed">Cerrado</span>
-				  {% else %}
-					<span>{{ block.settings.time_slot_1 }}</span>
-					{% if block.settings.time_slot_2 != blank %}
-					  <span>{{ block.settings.time_slot_2 }}</span>
-					{% endif %}
-				  {% endif %}
-				{% else %}
-				  <div>—</div>
-				{% endif %}
-			  </div>
-			</div>
+		{% for i in (0..6) %}
+		  {% assign day_type = day_order[i] %}
+		 {% assign day_label_key = 'abbr_days.' | append: day_type %}
+		  {% assign day_label = day_label_key | t %}
+		  {% assign block = null %}
+	  
+		  {% for b in section.blocks %}
+			{% if b.type == day_type %}
+			  {% assign block = b %}
+			{% endif %}
 		  {% endfor %}
+	  
+		  <div class="schedule-day">
+			<div class="day-label">{{ day_label }}</div>
+			<div class="day-hours">
+			  {% if block %}
+				{% if block.settings.closed %}
+				  <span class="closed">{{ 'general.labels.closed' | t | default: 'Cerrado' }}</span>
+				{% else %}
+				  <span>{{ block.settings.time_slot_1 }}</span>
+				  {% if block.settings.time_slot_2 != blank %}
+					<span>{{ block.settings.time_slot_2 }}</span>
+				  {% endif %}
+				{% endif %}
+			  {% else %}
+				<div>—</div>
+			  {% endif %}
+			</div>
+		  </div>
+		{% endfor %}
 	  </div>
 	</div>
   </div>
@@ -144,7 +145,7 @@
   ],
   "blocks": [
 	{
-	  "type": "lunes",
+	  "type": "monday",
 	  "name": "Lunes",
 	  "limit": 1,
 	  "settings": [
@@ -174,7 +175,7 @@
 	  ]
 	},
 	{
-	  "type": "martes",
+	  "type": "tuesday",
 	  "name": "Martes",
 	  "limit": 1,
 	  "settings": [
@@ -204,7 +205,7 @@
 	  ]
 	},
 	{
-	  "type": "miercoles",
+	  "type": "wednesday",
 	  "name": "Miércoles",
 	  "limit": 1,
 	  "settings": [
@@ -234,7 +235,7 @@
 	  ]
 	},
 	{
-	  "type": "jueves",
+	  "type": "thursday",
 	  "name": "Jueves",
 	  "limit": 1,
 	  "settings": [
@@ -264,7 +265,7 @@
 	  ]
 	},
 	{
-	  "type": "viernes",
+	  "type": "friday",
 	  "name": "Viernes",
 	  "limit": 1,
 	  "settings": [
@@ -294,7 +295,7 @@
 	  ]
 	},
 	{
-	  "type": "sabado",
+	  "type": "saturday",
 	  "name": "Sábado",
 	  "limit": 1,
 	  "settings": [
@@ -324,7 +325,7 @@
 	  ]
 	},
 	{
-	  "type": "domingo",
+	  "type": "sunday",
 	  "name": "Domingo",
 	  "limit": 1,
 	  "settings": [

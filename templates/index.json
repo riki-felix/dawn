@@ -54,13 +54,13 @@
           "type": "heading",
           "settings": {
             "heading": "CARTA",
-            "heading_size": "hxl"
+            "heading_size": "hxxl"
           }
         },
         "richtext_a64cq7": {
           "type": "richtext",
           "settings": {
-            "text": "<p><strong>JAMÓN IBÉRICO\t32 </strong></p><p><strong>CECINA\t36</strong></p><p><strong>TXULETA TARTAR  30</strong></p><p><strong>CHARCUTERÍA\t34</strong></p><p><strong>PUERRO\t18</strong></p><p><strong>ESPÁRRAGO\t18</strong></p><p>-</p><p><strong>TXULETA\t90/kg</strong></p><p><strong>TXULETA SELECCIÓN\t100/kg</strong></p><p><strong>PIMIENTOS DEL PIQUILLO\t16</strong></p><p><strong>ENSALADA 4</strong></p><p>-</p><p><strong>FLAN 8</strong></p><p><strong>TARTA DE QUESO 9 </strong></p><p><strong>QUESOS 20</strong></p><p><strong>FRESAS Y YOGUR 8</strong></p>",
+            "text": "<p><strong><br/>JAMÓN IBÉRICO      32 </strong></p><p><strong>CECINA      34</strong></p><p><strong>CHARCUTERÍA      34</strong></p><p><strong>TXULETA TARTAR      30</strong></p><p><strong>PUERRO\t18</strong></p><p><strong>ESPÁRRAGO\t18</strong></p><p>-</p><p><strong>TXULETA      90/kg</strong></p><p><strong>PIMIENTOS DEL PIQUILLO      16</strong></p><p><strong>ENSALADA      4</strong></p><p>-</p><p><strong>FLAN      8</strong></p><p><strong>TARTA DE QUESO      9 </strong></p><p><strong>QUESOS      20</strong></p><p><strong>FRESAS Y YOGUR      8<br/></strong></p>",
             "text_style": "body"
           }
         }

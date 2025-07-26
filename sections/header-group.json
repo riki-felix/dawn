@@ -81,6 +81,7 @@
         "button_mYGFGh",
         "button_NPFmNx"
       ],
+      "disabled": true,
       "name": "Banner de acceso",
       "settings": {
         "enable_modal": true,
@@ -88,7 +89,7 @@
         "header_image": "shopify://shop_images/mapa-spain-completo_casa-julian_68ec3a2c-ebce-4c1f-b26f-ce975df08def.png",
         "select_label": "Elige restaurante",
         "main_option": "Tolosa",
-        "secondary_option": "Madrida",
+        "secondary_option": "Madrid",
         "color_scheme": "scheme-4",
         "overlay_opacity": 90,
         "overlay_blur": 8
