@@ -1,6 +1,7 @@
 html {
 	scroll-behavior: smooth;
 }
+
 .header--has-menu {
 	overflow: hidden;
 }
