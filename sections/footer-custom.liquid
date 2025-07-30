@@ -26,6 +26,49 @@
     }
   }
 {%- endstyle -%}
+{% if section.settings.enable_scroll_up %}
+  <style>
+    #scroll-up-btn {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      background: rgb(var(--color-background-contrast));
+      color: rgb(var(--color-background));
+      border: none;
+      border-radius: 50%;
+      padding: 0;
+      cursor: pointer;
+      z-index: 9999;
+      transition: opacity 0.3s ease;
+      width: 3.2rem;
+      height: 3.2rem;
+      font-size: 2rem;
+      margin: 0 auto;
+    }
+    #scroll-up-btn.show {
+      display: block;
+    }
+  </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const scrollUpBtn = document.getElementById("scroll-up-btn");
+    
+          window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+              scrollUpBtn.classList.add("show");
+            } else {
+              scrollUpBtn.classList.remove("show");
+            }
+          });
+    
+          scrollUpBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        });
+      </script>
+    {% endif %}
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- liquid
@@ -128,7 +171,9 @@
                       {%- if settings.brand_description != blank -%}
                         <div class="rte">{{ settings.brand_description }}</div>
                       {%- endif -%}
-                      
+                      {%- if block.settings.show_social and has_social_icons -%}
+                        {%- render 'social-icons', class: 'footer__list-social' -%}
+                      {%- endif -%}
                     </div>
                   {%- when 'image' -%}
                     <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
@@ -319,6 +364,9 @@
       </div>
     </div>
   </div>
+  {% if section.settings.enable_scroll_up %}
+    <button id="scroll-up-btn" aria-label="Volver arriba">⬆︎</button>
+  {% endif %}
 </footer>
 
 {% schema %}
@@ -450,6 +498,12 @@
     {
       "type": "header",
       "content": "t:sections.footer.settings.header__9.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_scroll_up",
+      "label": "Mostrar botón para volver arriba",
+      "default": true
     },
     {
       "type": "checkbox",

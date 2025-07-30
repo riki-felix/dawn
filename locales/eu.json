@@ -4449,5 +4449,14 @@
     "update_country": "Eguneratu herrialdea/eskualdea",
     "popular_countries_regions": "Herrialde edo eskualde ezagunak",
     "country_results_count": "{{ count }} herrialde edo eskualde aurkitu dira"
+  },
+  "abbr_days": {
+    "monday": "LUN",
+    "tuesday": "MAR",
+    "wednesday": "MIÉ",
+    "thursday": "JUE",
+    "friday": "VIE",
+    "saturday": "SÁB",
+    "sunday": "DOM"
   }
 }

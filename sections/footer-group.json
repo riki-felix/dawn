@@ -14,8 +14,8 @@
     "timetable_ELCKGp": {
       "type": "timetable",
       "blocks": {
-        "lunes_7XPWFW": {
-          "type": "lunes",
+        "monday_gidbk7": {
+          "type": "monday",
           "settings": {
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
@@ -23,8 +23,8 @@
             "color_scheme": ""
           }
         },
-        "martes_E6mFmF": {
-          "type": "martes",
+        "tuesday_FqMX3H": {
+          "type": "tuesday",
           "settings": {
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
@@ -32,8 +32,8 @@
             "color_scheme": ""
           }
         },
-        "miercoles_UgfCJj": {
-          "type": "miercoles",
+        "wednesday_PxByBU": {
+          "type": "wednesday",
           "settings": {
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
@@ -41,8 +41,8 @@
             "color_scheme": ""
           }
         },
-        "jueves_Jgaqb6": {
-          "type": "jueves",
+        "thursday_LV6b7B": {
+          "type": "thursday",
           "settings": {
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
@@ -50,8 +50,8 @@
             "color_scheme": ""
           }
         },
-        "viernes_GyHwVp": {
-          "type": "viernes",
+        "friday_Ai8RRH": {
+          "type": "friday",
           "settings": {
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
@@ -59,8 +59,8 @@
             "color_scheme": ""
           }
         },
-        "sabado_Lp4Bpf": {
-          "type": "sabado",
+        "saturday_fiLj4P": {
+          "type": "saturday",
           "settings": {
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
@@ -68,8 +68,8 @@
             "color_scheme": ""
           }
         },
-        "domingo_9T9iqk": {
-          "type": "domingo",
+        "sunday_c4WRpz": {
+          "type": "sunday",
           "settings": {
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
@@ -79,13 +79,13 @@
         }
       },
       "block_order": [
-        "lunes_7XPWFW",
-        "martes_E6mFmF",
-        "miercoles_UgfCJj",
-        "jueves_Jgaqb6",
-        "viernes_GyHwVp",
-        "sabado_Lp4Bpf",
-        "domingo_9T9iqk"
+        "monday_gidbk7",
+        "tuesday_FqMX3H",
+        "wednesday_PxByBU",
+        "thursday_LV6b7B",
+        "friday_Ai8RRH",
+        "saturday_fiLj4P",
+        "sunday_c4WRpz"
       ],
       "settings": {
         "margin_top": 40,
@@ -165,7 +165,7 @@
         "enable_follow_on_shop": false,
         "show_social": false,
         "enable_country_selector": false,
-        "enable_language_selector": true,
+        "enable_language_selector": false,
         "payment_enable": false,
         "show_policy": true,
         "margin_top": 100,

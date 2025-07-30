@@ -45,28 +45,30 @@
 	#shopify-section-{{ section.id }} {
 		padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
 		padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+		background-color: transparent;
 		{% if section.settings.position == 'relative' %}
 		--button-floating-align: {{ section.settings.relative_alignment }};
 		{% endif %}
 		.button-floating__container {
+			width: calc(100% - 2.4rem);
+			background-color: transparent;
 			gap: 2rem;
-			padding: 1rem 2rem;
 			border-radius: 6px;
 			overflow: hidden;
-			background-color: rgba(0,0,0,0.5);
-			width: calc(100% - 2.4rem);
 			display: grid;
 			grid-template-columns: 1fr;
 			align-items: center;
-			justify-content: center;
 			overflow: visible;
-			max-width: 100.0rem;
 			gap: 0.8rem;
 			.button-floating {
 				font-size: 2rem;
 				text-align: center;
+				padding: 1.5rem 2.5rem;
+				min-width: calc(10rem + var(--buttons-border-width) * 2);
+				min-height: calc(3rem + var(--buttons-border-width) * 2);
 			}
 			.main-buttons {
+				padding: 1.6rem;
 				grid-row: 1/2;
 				display: flex;
 				flex-flow: row wrap;
@@ -74,10 +76,13 @@
 				justify-content: center;
 				grid-column: span 2;
 				gap: 1.6rem;
+				background-color: rgba(0,0,0,0.15);
+				width: auto;
+			border-radius: 6px;
+
 			}
 		}
 		.main-list-social {
-			justify-self: start;
 			grid-row: 2/3;
 		}
 		.main-list-social .list-social__link {
@@ -101,6 +106,7 @@
 			padding-left: 1rem;
 			min-height: 3rem;
 			height: auto;
+			border-radius: 3px;
 		}
 		.localization-selector.link {
 			color: rgb(var(--color-background));
@@ -136,15 +142,6 @@
 <div
   class="button-floating__container{% if section.settings.position == 'fixed' %} button-floating--fixed button-floating--{{ desktop_position }} button-floating--mobile-{{ mobile_position }}{% else %}
 button-floating--relative{% endif %} color-{{ section.settings.color_scheme }}">
-	{%- liquid
-		assign has_social_icons = true
-		if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
-		  assign has_social_icons = false
-		endif
-	-%}
-	{%- if has_social_icons -%}
-		{%- render 'social-icons', class: 'main-list-social' -%}
-	{%- endif -%}
 	<div class="main-buttons">
 	{% for i in (1..2) %}
 		{% assign btn_text_key = 'button_text_' | append: i %}
@@ -166,15 +163,6 @@ button-floating--relative{% endif %} color-{{ section.settings.color_scheme }}">
 		{% endif %}
 	{% endfor %}
 </div>
-  {%- if localization.available_languages.size > 1 -%}
-	<localization-form>
-	  {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
-		<div class="color-scheme-1">
-		  {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
-		</div>
-	  {%- endform -%}
-	</localization-form>
-  {%- endif -%}
 </div>
 
 {% schema %}

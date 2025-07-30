@@ -952,6 +952,15 @@
           "many": "{{count}} minutes ago"
         }
       }
+    },
+    "abbr_days": {
+      "monday": "LUN",
+      "tuesday": "MAR",
+      "wednesday": "MIÉ",
+      "thursday": "JUE",
+      "friday": "VIE",
+      "saturday": "SÁB",
+      "sunday": "DOM"
     }
   }
 }

@@ -469,7 +469,7 @@
       "type": "custom-liquid",
       "name": "The Fork",
       "settings": {
-        "custom_liquid": "<iframe class=\"page-width color-{{ section.settings.color_scheme }}\" src=\"https://widget.thefork.com/es/27605b34-4520-4f04-b566-f85e89f0cd64?utm\" style=\"background-color:unset; width: 100%; max-width:800px; display: flex; min-height:840px; margin: 0 auto; overflow: auto;border:none;\"scroll=\"yes\"></iframe>",
+        "custom_liquid": "<iframe id=\"reservas\" class=\"page-width color-{{ section.settings.color_scheme }}\" src=\"https://widget.thefork.com/es/27605b34-4520-4f04-b566-f85e89f0cd64?utm\" style=\"background-color:unset; width: 100%; max-width:800px; display: flex; min-height:840px; margin: 0 auto; overflow: auto;border:none;\"scroll=\"yes\"></iframe>",
         "color_scheme": "scheme-3",
         "padding_top": 40,
         "padding_bottom": 40
@@ -619,7 +619,7 @@
         "padding_bottom": 80,
         "color_scheme": "scheme-d2f450c7-7d99-409d-8b49-9866d047f277",
         "button_text_1": "RESERVA",
-        "button_url_1": "shopify://pages/reservas",
+        "button_url_1": "#reservas",
         "button_style_1": "fill",
         "button_new_tab_1": false,
         "button_text_2": "REGALA",
