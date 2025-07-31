@@ -1,6 +1,3 @@
-# Evita sobreescribir las configuraciones visuales del cliente
-config/settings_data.json
-
 # Archivos del sistema o editor
 .DS_Store
 node_modules/

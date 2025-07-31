@@ -9,12 +9,24 @@
   .footer {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
   }
-
+  .footer__content-bottom {
+    border: none;
+  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | round: 0 }}px;
   }
-
+  .footer__localization {
+    padding: 0;
+  }
+  footer .footer__content-bottom .footer__copyright {
+    text-align: right;
+  }
+  footer .footer__content-bottom .footer__copyright .policies {
+    a:hover {
+      color: rgb(var(--color-button));
+    }
+  }
   @media screen and (min-width: 750px) {
     .footer {
       margin-top: {{ section.settings.margin_top }}px;
