@@ -238,10 +238,52 @@
 </div>
 
 <script>
+  function setLanguageCookie(locale) {
+	document.cookie = `locale=${locale};path=/;max-age=31536000`;
+  }
+
+  function redirectToLocale(locale) {
+	const path = window.location.pathname;
+	const segments = path.split('/');
+	const supportedLocales = ['en', 'fr', 'eu'];
+
+	// Añadimos marca de idioma seleccionado
+	localStorage.setItem('languageSelected', 'true');
+
+	if (Shopify.locale !== locale) {
+	  if (supportedLocales.includes(locale)) {
+		if (!supportedLocales.includes(segments[1])) {
+		  location.href = `/${locale}${path}`;
+		} else {
+		  segments[1] = locale;
+		  location.href = segments.join('/');
+		}
+	  } else {
+		// eliminar prefijo de idioma
+		if (supportedLocales.includes(segments[1])) {
+		  segments.splice(1, 1);
+		  location.href = segments.join('/') || '/';
+		}
+	  }
+	}
+  }
+
   function closeBannerModal() {
 	const modal = document.getElementById("modal-banner-{{ section.id }}");
 	modal.classList.add("hidden");
 	localStorage.setItem("modalClosed-{{ section.id }}", "true");
+  }
+
+  function setupLanguageListeners() {
+	const langButtons = document.querySelectorAll('[data-value]');
+	langButtons.forEach(el => {
+	  el.addEventListener('click', e => {
+		e.preventDefault();
+		const lang = el.dataset.value;
+		setLanguageCookie(lang);
+		redirectToLocale(lang);
+	  });
+	});
   }
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -253,16 +295,10 @@
 
 	if (localStorage.getItem("modalClosed-{{ section.id }}")) {
 	  modal.classList.add("hidden");
+	  return;
 	}
 
-	document.querySelectorAll('[data-value]').forEach(el => {
-	  el.addEventListener('click', e => {
-		e.preventDefault();
-		const lang = el.dataset.value;
-		setLanguageCookie(lang);
-		redirectToLocale(lang);
-	  });
-	});
+	setupLanguageListeners();
 
 	citySelector.addEventListener("change", function () {
 	  if (this.value === "tolosa") {
@@ -274,15 +310,17 @@
 	  }
 	});
 
-	const locale = document.cookie.match(/(?:^|; )locale=([^;]+)/);
-	if (locale) {
+	// Si ya se seleccionó idioma antes, saltamos paso 1
+	const localeCookie = document.cookie.match(/(?:^|; )locale=([^;]+)/);
+	const languageWasSelected = localStorage.getItem('languageSelected');
+
+	if (localeCookie && languageWasSelected) {
 	  langStep.style.display = 'none';
 	  cityStep.style.display = 'block';
 	}
   });
 </script>
 
-{%- render 'language-localization' -%}
 
 {% schema %}
 {
