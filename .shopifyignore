@@ -1,12 +1,12 @@
 # Archivos del sistema o editor
 .DS_Store
-node_modules/
-.vscode/
+node_modules/*
+.vscode/*
 *.log
 *.tmp
 .env
-dist/
-build/
+dist/*
+build/*
 
 # Archivos temporales o de desarrollo que no deben subirse
 *.map
