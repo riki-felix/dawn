@@ -26,8 +26,8 @@
         "tuesday_FqMX3H": {
           "type": "tuesday",
           "settings": {
-            "time_slot_1": "13:00 → 15:30",
-            "time_slot_2": "20:00 → 22:30",
+            "time_slot_1": "13:00 → 15:15",
+            "time_slot_2": "",
             "closed": false,
             "color_scheme": ""
           }
@@ -35,8 +35,8 @@
         "wednesday_PxByBU": {
           "type": "wednesday",
           "settings": {
-            "time_slot_1": "13:00 → 15:30",
-            "time_slot_2": "20:00 → 22:30",
+            "time_slot_1": "13:00 → 15:15",
+            "time_slot_2": "",
             "closed": false,
             "color_scheme": ""
           }
@@ -44,8 +44,8 @@
         "thursday_LV6b7B": {
           "type": "thursday",
           "settings": {
-            "time_slot_1": "13:00 → 15:30",
-            "time_slot_2": "20:00 → 22:30",
+            "time_slot_1": "13:00 → 15:15",
+            "time_slot_2": "",
             "closed": false,
             "color_scheme": ""
           }
@@ -53,8 +53,8 @@
         "friday_Ai8RRH": {
           "type": "friday",
           "settings": {
-            "time_slot_1": "13:00 → 15:30",
-            "time_slot_2": "20:00 → 22:30",
+            "time_slot_1": "13:00 → 15:15",
+            "time_slot_2": "20:00 → 22:00",
             "closed": false,
             "color_scheme": ""
           }
@@ -62,8 +62,8 @@
         "saturday_fiLj4P": {
           "type": "saturday",
           "settings": {
-            "time_slot_1": "13:00 → 15:30",
-            "time_slot_2": "20:00 → 22:30",
+            "time_slot_1": "13:00 → 15:15",
+            "time_slot_2": "20:00 → 22:00",
             "closed": false,
             "color_scheme": ""
           }
@@ -71,8 +71,8 @@
         "sunday_c4WRpz": {
           "type": "sunday",
           "settings": {
-            "time_slot_1": "13:00 → 15:30",
-            "time_slot_2": "20:00 → 22:30",
+            "time_slot_1": "13:00 → 15:15",
+            "time_slot_2": "",
             "closed": false,
             "color_scheme": ""
           }

@@ -176,7 +176,6 @@
 
 	<!-- Paso 1: idioma -->
 	<div class="modal-banner__selector" id="language-step">
-	  <h2>{{ section.settings.language_heading | default: 'Selecciona tu idioma' }}</h2>
 	  <div class="modal-banner__languages">
 		<ul role="list">
 		  {%- for language in localization.available_languages -%}
@@ -185,7 +184,7 @@
 				href="#"
 				hreflang="{{ language.iso_code }}"
 				lang="{{ language.iso_code }}"
-				{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %}
+				{% if language.iso_code == localization.language.iso_code %} aria-current="false"{% endif %}
 				data-value="{{ language.iso_code }}"
 			  >
 				{{ language.endonym_name | capitalize }}
@@ -246,10 +245,9 @@
 	const path = window.location.pathname;
 	const segments = path.split('/');
 	const supportedLocales = ['en', 'fr', 'eu'];
-
-	// Añadimos marca de idioma seleccionado
-	localStorage.setItem('languageSelected', 'true');
-
+  
+	if (!locale) return;
+  
 	if (Shopify.locale !== locale) {
 	  if (supportedLocales.includes(locale)) {
 		if (!supportedLocales.includes(segments[1])) {
@@ -259,7 +257,6 @@
 		  location.href = segments.join('/');
 		}
 	  } else {
-		// eliminar prefijo de idioma
 		if (supportedLocales.includes(segments[1])) {
 		  segments.splice(1, 1);
 		  location.href = segments.join('/') || '/';
@@ -280,8 +277,14 @@
 	  el.addEventListener('click', e => {
 		e.preventDefault();
 		const lang = el.dataset.value;
+  
+		if (!lang) return;
+  
 		setLanguageCookie(lang);
-		redirectToLocale(lang);
+		localStorage.setItem('languageSelected', lang);
+  
+		document.getElementById("language-step").style.display = "none";
+		document.getElementById("city-step").style.display = "block";
 	  });
 	});
   }
@@ -301,9 +304,13 @@
 	setupLanguageListeners();
 
 	citySelector.addEventListener("change", function () {
-	  if (this.value === "tolosa") {
+	  const selectedCity = this.value;
+	  const lang = localStorage.getItem('languageSelected');
+	
+	  if (selectedCity === "tolosa") {
+		redirectToLocale(lang);
 		closeBannerModal();
-	  } else if (this.value === "madrid") {
+	  } else if (selectedCity === "madrid") {
 		buttonsContainer.style.display = "flex";
 	  } else {
 		buttonsContainer.style.display = "none";
@@ -313,6 +320,10 @@
 	// Si ya se seleccionó idioma antes, saltamos paso 1
 	const localeCookie = document.cookie.match(/(?:^|; )locale=([^;]+)/);
 	const languageWasSelected = localStorage.getItem('languageSelected');
+	if (languageWasSelected) {
+	  langStep.style.display = 'none';
+	  cityStep.style.display = 'block';
+	}
 
 	if (localeCookie && languageWasSelected) {
 	  langStep.style.display = 'none';

@@ -8,6 +8,23 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "Audio",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_audio",
+        "label": "Activar audio de fondo",
+        "default": true
+      },
+      {
+        "type": "url",
+        "id": "audio_file",
+        "label": "Archivo de audio (.ogg)",
+        "info": "Sube un archivo de audio comprimido, preferiblemente en formato .ogg"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {

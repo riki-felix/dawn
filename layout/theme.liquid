@@ -389,5 +389,52 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+  {% if settings.enable_audio and settings.audio_file != blank %}
+    <div id="audio-controller">
+      <audio id="background-audio" autoplay muted loop>
+        <source src="{{ settings.audio_file }}" type="audio/ogg">
+        Tu navegador no soporta audio.
+      </audio>
+  
+      <button id="audio-toggle" aria-label="Silenciar audio">
+        🔊
+      </button>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const audio = document.getElementById('background-audio');
+        let activated = false;
+    
+        function activateAudio() {
+          if (!activated && audio) {
+            audio.muted = false;
+            audio.play().catch(() => {}); // silencioso por seguridad
+            activated = true;
+            window.removeEventListener('scroll', activateAudio);
+          }
+        }
+    
+        window.addEventListener('scroll', activateAudio, { once: true });
+      });
+    
+    
+      document.addEventListener('DOMContentLoaded', function () {
+        const audio = document.getElementById('background-audio');
+        const toggleBtn = document.getElementById('audio-toggle');
+    
+        if (audio && toggleBtn) {
+          // Estado inicial
+          let muted = false;
+    
+          toggleBtn.addEventListener('click', function () {
+            muted = !muted;
+            audio.muted = muted;
+            toggleBtn.textContent = muted ? '🔇' : '🔊';
+            toggleBtn.setAttribute('aria-label', muted ? 'Activar sonido' : 'Silenciar audio');
+          });
+        }
+      });
+    </script>
+  {% endif %}
   </body>
 </html>

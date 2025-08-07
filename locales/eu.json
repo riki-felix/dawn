@@ -4451,12 +4451,12 @@
     "country_results_count": "{{ count }} herrialde edo eskualde aurkitu dira"
   },
   "abbr_days": {
-    "monday": "LUN",
-    "tuesday": "MAR",
-    "wednesday": "MIÉ",
-    "thursday": "JUE",
-    "friday": "VIE",
-    "saturday": "SÁB",
-    "sunday": "DOM"
+    "monday": "AL",
+    "tuesday": "AR",
+    "wednesday": "AZ",
+    "thursday": "OG",
+    "friday": "OR",
+    "saturday": "LR",
+    "sunday": "IG"
   }
 }

@@ -21,6 +21,7 @@
       "blocks": {
         "heading_gxtaKh": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "MENÚ TRADICIÓN",
             "heading_size": "h2"
@@ -64,10 +65,22 @@
           "type": "title",
           "settings": {}
         },
-        "caption": {
+        "icon_with_text_XkKTGF": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "silhouette",
+            "heading_1": "2 PAX",
+            "icon_2": "return",
+            "heading_2": "",
+            "icon_3": "truck",
+            "heading_3": ""
+          }
+        },
+        "text_dTfkji": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text": "",
             "text_style": "subtitle"
           }
         },
@@ -150,7 +163,8 @@
       },
       "block_order": [
         "title",
-        "caption",
+        "icon_with_text_XkKTGF",
+        "text_dTfkji",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -179,58 +193,74 @@
         "padding_bottom": 100
       }
     },
-    "multicolumn_custom_PPDaEF": {
-      "type": "multicolumn-custom",
+    "collapsible_content_PrNbDf": {
+      "type": "collapsible-content",
       "blocks": {
-        "column_xgPKBx": {
-          "type": "column",
+        "collapsible_row_NgYehr": {
+          "type": "collapsible_row",
           "settings": {
-            "title": "RESERVA",
-            "text": "<p>UTILIZA EL CÓDIGO DE LA TARJETA REGALO PARA REALIZAR TU RESERVA Y PARA CANJEARLO EL DÍA DE TU VISITA.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "RESERVA",
+            "icon": "check_mark",
+            "row_content": "<p><br/>LA COMPRA DEL MENÚ NO VIENE ASOCIADA A UNA RESERVA. ESTA HAY QUE REALIZARLA DE MANERA INDEPENDIENTE. <br/><br/>UTILIZA EL CÓDIGO DE LA TARJETA REGALO PARA REALIZAR TU RESERVA Y PARA CANJEARLO EL DÍA DE TU VISITA.<br/></p>",
+            "page": ""
           }
         },
-        "column_yKDU7i": {
-          "type": "column",
+        "collapsible_row_et8qVN": {
+          "type": "collapsible_row",
           "settings": {
-            "title": "CADUCIDAD",
-            "text": "<p>REALIZA TU RESERVA DENTRO DE EL PERIODO DE 6 MESES DESDE LA FECHA DE COMPRA.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "CADUCIDAD",
+            "icon": "stopwatch",
+            "row_content": "<p><br/>REALIZA TU RESERVA DENTRO DEL PERIODO DE 6 MESES DESDE LA FECHA DE COMPRA.<br/><br/>SI TENÉIS DISPONIBILIDAD LIMITADA OS RECOMENDAMOS RESERVAR CON MUCHA ANTELACIÓN, YA QUE LOS FINES DE SEMANA Y FESTIVOS SE SUELEN LLENAR BASTANTE PRONTO.<br/></p>",
+            "page": ""
           }
         },
-        "column_BqjnMR": {
-          "type": "column",
+        "collapsible_row_3CF4x9": {
+          "type": "collapsible_row",
           "settings": {
-            "title": "CAMBIOS",
-            "text": "<p>ESTE REGALO NO ADMITE CAMBIOS NI VARIACIONES EN EL MENÚ. EN CASO DE INTOLERANCIAS, AVÍSANOS AL REALIZAR TU RESERVA.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "CAMBIOS",
+            "icon": "lock",
+            "row_content": "<p><br/>ESTE REGALO NO ADMITE CAMBIOS NI VARIACIONES EN EL MENÚ. EN CASO DE ALERGIAS Y/O INTOLERANCIAS, AVÍSANOS AL REALIZAR TU RESERVA.<br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cX6Gmr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "NÚMERO DE COMENSALES",
+            "icon": "silhouette",
+            "row_content": "<p><br/>EL MENÚ ESTÁ DISEÑADO PARA 2 PERSONAS. NO PODRÁN DISFRUTAR DE UN ÚNICO MENÚ MÁS DE 2 COMENSALES. <br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jJG4d4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "UBICACIÓN",
+            "icon": "map_pin",
+            "row_content": "<p><br/>EL MENÚ TRADICIÓN SOLO SE PODRÁ CANJEAR EN EL RESTAURANTE DE TOLOSA, PAÍS VASCO.<br/></p>",
+            "page": ""
           }
         }
       },
       "block_order": [
-        "column_xgPKBx",
-        "column_yKDU7i",
-        "column_BqjnMR"
+        "collapsible_row_NgYehr",
+        "collapsible_row_et8qVN",
+        "collapsible_row_3CF4x9",
+        "collapsible_row_cX6Gmr",
+        "collapsible_row_jJG4d4"
       ],
-      "name": "Custom Multicolumn",
+      "name": "t:sections.collapsible_content.presets.name",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
+        "caption": "",
+        "heading": "PREGUNTAS FRECUENTES",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "row",
+        "container_color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
         "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "margin_top": 0,
-        "margin_bottom": 0,
+        "desktop_layout": "image_second",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -259,7 +289,7 @@
     "headline_Gi3BCE",
     "image_banner_custom_Dya3WG",
     "main",
-    "multicolumn_custom_PPDaEF",
+    "collapsible_content_PrNbDf",
     "related-products"
   ]
 }

@@ -1,5 +1,6 @@
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
 {{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
+{{ 'custom-collapsible-content.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -15,7 +16,7 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+<div class="color-{{ section.settings.color_scheme }} gradient section-columns page-width">
   <div class="collapsible-content collapsible-{{ section.settings.layout }}-layout isolate{% if section.settings.layout == 'section' %} page-width{% elsif section.settings.layout == 'none' %} content-container content-container--full-width{% endif %}">
     <div class="collapsible-content__wrapper section-{{ section.id }}-padding{% if section.settings.layout == 'section' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}">
       <div class="{% if section.settings.image == blank %}collapsible-content-wrapper-narrow{% else %}page-width{% endif %}">
@@ -70,6 +71,7 @@
           {% endif %}
           <div class="grid__item">
             {%- for block in section.blocks -%}
+              {% if block.type == 'collapsible_row' %}
               <div
                 class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
                 {{ block.shopify_attributes }}
@@ -82,7 +84,7 @@
                 >
                   <summary id="Summary-{{ block.id }}-{{ section.id }}">
                     {% render 'icon-accordion', icon: block.settings.icon %}
-                    <h3 class="accordion__title inline-richtext h4">
+                    <h3 class="accordion__title inline-richtext">
                       {{ block.settings.heading | default: block.settings.page.title | escape }}
                     </h3>
                     {{- 'icon-caret.svg' | inline_asset_content -}}
@@ -98,12 +100,19 @@
                   </div>
                 </details>
               </div>
+              {%- endif -%}
             {%- endfor -%}
           </div>
         </div>
       </div>
     </div>
   </div>
+  {% assign custom_block = section.blocks | where: "type", "custom_liquid" | first %}
+  {% if custom_block and custom_block.settings.custom_liquid != blank %}
+    <div class="custom-iframe-container">
+      {{ custom_block.settings.custom_liquid }}
+    </div>
+  {% endif %}
 </div>
 
 {% schema %}
@@ -306,6 +315,46 @@
               "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__1.label"
             },
             {
+              "value": "cj-kids",
+              "label": "Niños CJ"
+            },
+            {
+              "value": "cj-abc",
+              "label": "ABC CJ"
+            },
+            {
+              "value": "cj-calendar",
+              "label": "Calendar CJ"
+            },
+            {
+              "value": "cj-dish",
+              "label": "Plato CJ"
+            },
+            {
+              "value": "cj-gift",
+              "label": "Regalo CJ"
+            },
+            {
+              "value": "cj-menu",
+              "label": "Menu CJ"
+            },
+            {
+              "value": "cj-people",
+              "label": "Personas CJ"
+            },
+            {
+              "value": "cj-pets",
+              "label": "Mascotas CJ"
+            },
+            {
+              "value": "cj-table",
+              "label": "Mesa CJ"
+            },
+            {
+              "value": "cj-vegan",
+              "label": "Veganes CJ"
+            },
+            {
               "value": "apple",
               "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__2.label"
             },
@@ -492,11 +541,23 @@
           "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.page.label"
         }
       ]
+    },
+    {
+      "type": "custom_liquid",
+      "name": "Custom Liquid block",
+      "settings": [
+        {
+        "type": "liquid",
+        "id": "custom_liquid",
+        "label": "t:sections.custom-liquid.presets.name"
+        }
+      ]
     }
   ],
   "presets": [
     {
       "name": "t:sections.collapsible_content.presets.name",
+      "category": "Casa Julian",
       "blocks": [
         {
           "type": "collapsible_row"

@@ -171,7 +171,7 @@
           "type": "column",
           "settings": {
             "title": "COCHE",
-            "text": "<p>Ven con tiempo. Suele ser complicado aparcar, sobre todo los fines de semana. Ten en cuenta que la mayoría del aparcamiento de Tolosa es bajo OTA.</p>",
+            "text": "<p>Ven con tiempo. Suele ser complicado aparcar, sobre todo los fines de semana. Ten en cuenta que la mayoría del aparcamiento de Tolosa es de pago.</p>",
             "link_label": "",
             "link": ""
           }
@@ -189,7 +189,7 @@
           "type": "column",
           "settings": {
             "title": "TREN",
-            "text": "<p>El tren tiene dos paradas en Tolosa. Bájate en la estación \"Tolosa Centro\".</p>",
+            "text": "<p>El tren tiene dos paradas en Tolosa. Bájate en \"Tolosa Centro\".</p>",
             "link_label": "Ver horarios",
             "link": "https://www.renfe.com/es/es/cercanias/cercanias-san-sebastian/horarios"
           }
@@ -198,7 +198,7 @@
           "type": "column",
           "settings": {
             "title": "TAXI",
-            "text": "<p>Para venir en taxi desde Donosti tendrás que dirigirte a una parada o bien llamar por teléfono.</p>",
+            "text": "<p>Para venir en taxi desde Donosti tendrás que dirigirte a una parada o bien llamar.</p>",
             "link_label": "Ver teléfonos",
             "link": "https://www.donostia.eus/ataria/es/web/info/taxia"
           }
@@ -236,26 +236,17 @@
         "column_fQbQdE": {
           "type": "column",
           "settings": {
-            "title": "AUTOBÚS",
-            "text": "<p>Si la velada es nocturna, ten en cuenta que los últimos pasan relativamente pronto. </p>",
-            "link_label": "Ver horarios",
-            "link": "https://cdn.shopify.com/s/files/1/0938/2454/9204/files/BU08_Tolosa_Donostia_Zuzenekoa_Directo_11062025.pdf?v=1749650970"
-          }
-        },
-        "column_YLpyxH": {
-          "type": "column",
-          "settings": {
-            "title": "TREN",
-            "text": "<p>Vincula un texto con una imagen para atraer la atención hacia tu producto, colección o artículo de blog seleccionados. Agrega detalles sobre disponibilidad y estilo, o incluso ofrece una reseña.</p>",
+            "title": "AUTOBÚS Y TREN",
+            "text": "<p>Si vienes a cenar, ten en cuenta que los últimos autobuses y trenes pasan relativamente pronto. Consulta los horarios.</p>",
             "link_label": "",
-            "link": ""
+            "link": "https://cdn.shopify.com/s/files/1/0938/2454/9204/files/BU08_Tolosa_Donostia_Zuzenekoa_Directo_11062025.pdf?v=1749650970"
           }
         },
         "column_HPNRzK": {
           "type": "column",
           "settings": {
             "title": "TAXI",
-            "text": "<p>En el caso de necesitar un taxi para volver, te podemos ayudar contactando al taxista. Para ello, necesitaremos que nos lo hagas saber una vez llegues al asador.</p>",
+            "text": "<p>En el caso de necesitar un taxi para volver, te podemos ayudar. Para ello, necesitaremos que nos lo hagas saber una vez llegues al asador.</p>",
             "link_label": "",
             "link": ""
           }
@@ -263,7 +254,6 @@
       },
       "block_order": [
         "column_fQbQdE",
-        "column_YLpyxH",
         "column_HPNRzK"
       ],
       "name": "VOLVER",
@@ -274,7 +264,7 @@
         "image_ratio": "circle",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 3,
+        "columns_desktop": 2,
         "column_alignment": "left",
         "background_style": "none",
         "color_scheme": "scheme-1",
@@ -292,7 +282,7 @@
         "text_YfGkiA": {
           "type": "text",
           "settings": {
-            "text": "<p>Parkings, trenes y autobuses. Todos los puntos de interés en un mismo mapa.</p>",
+            "text": "<p>Parkings, trenes y autobuses. <br/>Todo en un mismo mapa.</p>",
             "text_style": "subtitle"
           }
         },
@@ -359,110 +349,106 @@
         "padding_bottom": 0
       }
     },
-    "multicolumn_custom_eCpAgF": {
-      "type": "multicolumn-custom",
+    "collapsible_content_7E7ETe": {
+      "type": "collapsible-content",
       "blocks": {
-        "column_mt884h": {
-          "type": "column",
+        "collapsible_row_hRPP4F": {
+          "type": "collapsible_row",
           "settings": {
-            "title": "",
-            "text": "<h5>NIÑOS</h5><p>Por motivos de espacio, no aceptamos carritos de bebé.</p><p>··············</p><p>No contamos con menú infantil.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "CANCELACIONES Y MODIFICACIONES",
+            "icon": "lock",
+            "row_content": "<p><strong><br/>POLÍTICA DE CANCELACIÓN<br/></strong><span style=\"text-decoration:underline\"><br/></span>En el caso de cancelar la reserva con menos de 24 horas de antelación, se aplicará un cargo de 45€ por comensal.<br/><br/><br/><strong>POLÍTICA DE MODIFICACIÓN<br/></strong><br/>Las disminuciones en el número de comensales pueden verse sometidas a cargos adicionales. <br/></p>",
+            "page": ""
           }
         },
-        "column_7WVbfg": {
-          "type": "column",
+        "collapsible_row_3J9LCw": {
+          "type": "collapsible_row",
           "settings": {
-            "title": "",
-            "text": "<h5>GRUPOS</h5><p>Para reservas de 7 o más comensales funcionamos con un menú cerrado. Para más información pónganse en contacto con nosotros.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "ANTELACIÓN MÁXIMA",
+            "icon": "stopwatch",
+            "row_content": "<p><br/>Solo se podrán hacer reservas con un máximo de 6 meses de antelación.<br/></p>",
+            "page": ""
           }
         },
-        "column_iWPgjM": {
-          "type": "column",
+        "collapsible_row_N7mreY": {
+          "type": "collapsible_row",
           "settings": {
-            "title": "",
-            "text": "<h5>MENÚ TRADICIÓN</h5><p>En el caso de disponer de un MENÚ TRADICIÓN pónganse en contacto con nosotros.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "MENÚ TRADICIÓN",
+            "icon": "price_tag",
+            "row_content": "<p><br/>En el caso de disponer de un MENÚ TRADICIÓN ponte en contacto con nosotros.<br/><br/>Recuerda comprobar la fecha de caducidad.<br/></p>",
+            "page": ""
           }
         },
-        "column_Gny4UB": {
-          "type": "column",
+        "collapsible_row_e3hQqM": {
+          "type": "collapsible_row",
           "settings": {
-            "title": "",
-            "text": "<h5>CARTA</h5><p>No se ofrecen platos que no estén incluidos en la carta.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "GRUPOS",
+            "icon": "silhouette",
+            "row_content": "<p><br/>Para reservas de 7 comensales en adelante trabajamos con un menú cerrado. Para más información ponte en contacto con nosotros.<br/></p>",
+            "page": ""
           }
         },
-        "column_CnLRdL": {
-          "type": "column",
+        "collapsible_row_A3bUgr": {
+          "type": "collapsible_row",
           "settings": {
-            "title": "",
-            "text": "<h5>Nº de COMENSALES</h5><p>Hay que indicar el número total de comensales al hacer la reserva (niños incluidos) de lo contrario nos reservamos el derecho de admisión.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "NIÑOS",
+            "icon": "carrito",
+            "row_content": "<p><br/>Por motivos de espacio no aceptamos carritos de bebé. Tampoco contamos con menú infantil. <br/><br/>A la hora de hacer la reserva, hay que indicar el número total de comensales, incluyendo a los niños, de lo contrario nos reservamos el derecho de admisión.<br/></p>",
+            "page": ""
           }
         },
-        "column_iCWqLE": {
-          "type": "column",
+        "collapsible_row_Y4yYNR": {
+          "type": "collapsible_row",
           "settings": {
-            "title": "",
-            "text": "<h5>ANTELACIÓN MÁXIMA</h5><p>Solo se podrán hacer reservas con un máximo de 6 meses de antelación.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "CARTA",
+            "icon": "serving_dish",
+            "row_content": "<p><br/>No se ofrecen platos que no estén incluidos en carta.<br/></p>",
+            "page": ""
           }
         },
-        "column_VRDtNG": {
-          "type": "column",
+        "collapsible_row_qA6yrf": {
+          "type": "collapsible_row",
           "settings": {
-            "title": "",
-            "text": "<h5>VEGANOS</h5><p>No contamos con opciones veganas.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "VEGANOS",
+            "icon": "leaf",
+            "row_content": "<p><br/>No contamos con opciones veganas.<br/></p>",
+            "page": ""
           }
         },
-        "column_xEdUNy": {
-          "type": "column",
+        "collapsible_row_mKa9pE": {
+          "type": "collapsible_row",
           "settings": {
-            "title": "",
-            "text": "<h5>MASCOTAS</h5><p>No aceptamos mascotas.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "MASCOTAS",
+            "icon": "paw_print",
+            "row_content": "<p><br/>No aceptamos mascotas.<br/></p>",
+            "page": ""
           }
         }
       },
       "block_order": [
-        "column_mt884h",
-        "column_7WVbfg",
-        "column_iWPgjM",
-        "column_Gny4UB",
-        "column_CnLRdL",
-        "column_iCWqLE",
-        "column_VRDtNG",
-        "column_xEdUNy"
+        "collapsible_row_hRPP4F",
+        "collapsible_row_3J9LCw",
+        "collapsible_row_N7mreY",
+        "collapsible_row_e3hQqM",
+        "collapsible_row_A3bUgr",
+        "collapsible_row_Y4yYNR",
+        "collapsible_row_qA6yrf",
+        "collapsible_row_mKa9pE"
       ],
-      "name": "CONDICIONES RESERVA",
+      "name": "t:sections.collapsible_content.presets.name",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
+        "caption": "",
+        "heading": "CONDICIONES",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "scheme-1",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
         "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 24,
-        "padding_bottom": 24
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "custom_liquid_eqVWiQ": {
@@ -639,7 +625,7 @@
     "multicolumn_custom_FQcAU3",
     "image_with_text_gcx4za",
     "image_banner_custom_JiGKY6",
-    "multicolumn_custom_eCpAgF",
+    "collapsible_content_7E7ETe",
     "custom_liquid_eqVWiQ",
     "image_banner_custom_r6VG7a",
     "multicolumn_custom_G7ELzR",

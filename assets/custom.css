@@ -428,3 +428,17 @@ variant-selects {
 .language-selector {
 	z-index: 999;
 }
+
+#audio-controller {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+#audio-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}

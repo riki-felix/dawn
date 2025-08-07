@@ -55,13 +55,14 @@
       cursor: pointer;
       z-index: 9999;
       transition: opacity 0.3s ease;
-      width: 3.2rem;
-      height: 3.2rem;
-      font-size: 2rem;
+      width: 4.0rem;
+      height: 4.0rem;
       margin: 0 auto;
+      justify-content: center;
+      align-items: center;
     }
     #scroll-up-btn.show {
-      display: block;
+      display: flex;
     }
     @media screen and (min-width: 750px) {
       #scroll-up-btn {
@@ -386,7 +387,12 @@
     </div>
   </div>
   {% if section.settings.enable_scroll_up %}
-    <button id="scroll-up-btn" aria-label="Volver arriba">⬆︎</button>
+    <button id="scroll-up-btn" aria-label="Volver arriba">
+      <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.85216 0.671931C6.96121 0.633445 7.08103 0.633445 7.19008 0.671931C7.31411 0.715883 7.41895 0.835121 7.6279 1.07375L13.4675 7.74388C13.8328 8.16109 14.0159 8.36978 14.0209 8.54655C14.0252 8.70005 13.9571 8.84729 13.8368 8.94449C13.6982 9.05612 13.4189 9.05583 12.8612 9.05583H11.4057V16.8501C11.4057 17.1274 11.4055 17.266 11.3509 17.372C11.3028 17.4652 11.2258 17.5413 11.1315 17.5888C11.0243 17.6427 10.8839 17.6431 10.6035 17.6431H3.43771C3.15686 17.6431 3.01607 17.6429 2.9088 17.5888C2.81456 17.5413 2.73841 17.4651 2.69038 17.372C2.63575 17.266 2.63552 17.1274 2.63552 16.8501V9.05583H1.18101C0.623381 9.05583 0.344098 9.05606 0.205451 8.94449C0.0851652 8.84729 0.0170167 8.70005 0.0213095 8.54655C0.0263502 8.36983 0.208614 8.16086 0.573733 7.74388L6.41433 1.07375C6.62331 0.835091 6.72809 0.715848 6.85216 0.671931Z" fill="#1A1A1A"/>
+      </svg>
+
+    </button>
   {% endif %}
 </footer>
 
