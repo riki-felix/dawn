@@ -30,6 +30,10 @@
   #shopify-section-{{ section.id }} {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+    .banner--mobile-bottom .banner__media, .banner--stacked:not(.banner--mobile-bottom) .banner__media {
+      position: absolute;
+      height: 100%;
+    }  
   }
   .section-{{ section.id }}-padding  {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -44,9 +48,12 @@
     right: 0;
   }
   .banner__box {
-    max-width: 35.0rem;
-    margin-top: -10.0rem;
-    width:100%;
+    max-width: 70.0rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: calc(100% - 4rem);
+    margin-left: auto;
+    margin-right: auto;
     background-image: url(https://cdn.shopify.com/s/files/1/0938/2454/9204/files/paper_cj_5cfdf346-3b68-45f0-90ff-bcb4bcf0a42e.jpg?v=1751555285);
   }
     @media screen and (min-width: 750px) {
@@ -572,6 +579,7 @@
   "presets": [
     {
       "name": "Custom banner",
+      "category": "Casa Julian",
       "blocks": [
         {
           "type": "heading"

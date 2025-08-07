@@ -68,6 +68,7 @@
   flex-flow: row nowrap;
   padding: 0.8rem var(--page-width-margin);
   border-top: var(--page-border);
+  gap: 1rem;
   &:first-child {
     border-top: 0;
   }

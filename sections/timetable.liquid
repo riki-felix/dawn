@@ -63,7 +63,7 @@
 			<div class="day-hours">
 			  {% if block %}
 				{% if block.settings.closed %}
-				  <span class="closed">{{ 'general.labels.closed' | t | default: 'Cerrado' }}</span>
+				  <span class="closed">{{ block.settings.closed_text }}</span>
 				{% else %}
 				  <span>{{ block.settings.time_slot_1 }}</span>
 				  {% if block.settings.time_slot_2 != blank %}
@@ -167,6 +167,12 @@
 		  "label": "Cerrado",
 		  "default": false
 		},
+		{
+		  "type": "text",
+		  "id": "closed_text",
+		  "label": "Texto cierre",
+		  "default": "Cerrado"
+		},
 	{
 	  "type": "color_scheme",
 	  "id": "color_scheme",
@@ -196,6 +202,12 @@
 		  "id": "closed",
 		  "label": "Cerrado",
 		  "default": false
+		},
+		{
+		  "type": "text",
+		  "id": "closed_text",
+		  "label": "Texto cierre",
+		  "default": "Cerrado"
 		},
 	{
 	  "type": "color_scheme",
@@ -227,6 +239,12 @@
 		  "label": "Cerrado",
 		  "default": false
 		},
+		{
+		  "type": "text",
+		  "id": "closed_text",
+		  "label": "Texto cierre",
+		  "default": "Cerrado"
+		},
 	{
 	  "type": "color_scheme",
 	  "id": "color_scheme",
@@ -256,6 +274,12 @@
 		  "id": "closed",
 		  "label": "Cerrado",
 		  "default": false
+		},
+		{
+		  "type": "text",
+		  "id": "closed_text",
+		  "label": "Texto cierre",
+		  "default": "Cerrado"
 		},
 	{
 	  "type": "color_scheme",
@@ -287,6 +311,12 @@
 		  "label": "Cerrado",
 		  "default": false
 		},
+		{
+		  "type": "text",
+		  "id": "closed_text",
+		  "label": "Texto cierre",
+		  "default": "Cerrado"
+		},
 	{
 	  "type": "color_scheme",
 	  "id": "color_scheme",
@@ -317,6 +347,12 @@
 		  "label": "Cerrado",
 		  "default": false
 		},
+		{
+		  "type": "text",
+		  "id": "closed_text",
+		  "label": "Texto cierre",
+		  "default": "Cerrado"
+		},
 	{
 	  "type": "color_scheme",
 	  "id": "color_scheme",
@@ -346,6 +382,12 @@
 		  "id": "closed",
 		  "label": "Cerrado",
 		  "default": false
+		},
+		{
+		  "type": "text",
+		  "id": "closed_text",
+		  "label": "Texto cierre",
+		  "default": "Cerrado"
 		},
 	{
 	  "type": "color_scheme",

@@ -94,7 +94,7 @@
         "heading_9tgp4W": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Tolosa.<br/>País Vasco.<br/>1951.</p>",
+            "heading": "<p>Tolosa.<br/>País&nbsp;Vasco.<br/>1951.</p>",
             "heading_size": "hxl"
           }
         },
@@ -291,6 +291,7 @@
           "settings": {
             "button_label": "VER EN GOOGLE MAPS",
             "button_link": "https://maps.app.goo.gl/Xx5RtsbxfKF73JMU7",
+            "button_link_external": false,
             "button_style_secondary": true
           }
         }
@@ -347,6 +348,75 @@
         "margin_bottom": 0,
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_collapsible_content_ALqpFg": {
+      "type": "custom-collapsible-content",
+      "blocks": {
+        "collapsible_row_3kGMRB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "cj-kids",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_Ni9jcA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_q3htEY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_afBJCE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fila desplegable",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "custom_liquid_7jrBwf": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<iframe id=\"reservas\" class=\"page-width color-{{ section.settings.color_scheme }}\" src=\"https://widget.thefork.com/es/27605b34-4520-4f04-b566-f85e89f0cd64?utm\" style=\"background-color:unset; width: 100%; max-width:800px; display: flex; min-height:840px; margin: 0 auto; overflow: auto;border:none;\"scroll=\"yes\"></iframe>"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_3kGMRB",
+        "collapsible_row_Ni9jcA",
+        "collapsible_row_q3htEY",
+        "collapsible_row_afBJCE",
+        "custom_liquid_7jrBwf"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "collapsible_content_7E7ETe": {
@@ -435,6 +505,7 @@
         "collapsible_row_qA6yrf",
         "collapsible_row_mKa9pE"
       ],
+      "disabled": true,
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
@@ -453,6 +524,7 @@
     },
     "custom_liquid_eqVWiQ": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "The Fork",
       "settings": {
         "custom_liquid": "<iframe id=\"reservas\" class=\"page-width color-{{ section.settings.color_scheme }}\" src=\"https://widget.thefork.com/es/27605b34-4520-4f04-b566-f85e89f0cd64?utm\" style=\"background-color:unset; width: 100%; max-width:800px; display: flex; min-height:840px; margin: 0 auto; overflow: auto;border:none;\"scroll=\"yes\"></iframe>",
@@ -625,6 +697,7 @@
     "multicolumn_custom_FQcAU3",
     "image_with_text_gcx4za",
     "image_banner_custom_JiGKY6",
+    "custom_collapsible_content_ALqpFg",
     "collapsible_content_7E7ETe",
     "custom_liquid_eqVWiQ",
     "image_banner_custom_r6VG7a",

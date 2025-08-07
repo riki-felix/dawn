@@ -9,6 +9,8 @@
  */
 {
   "current": {
+    "enable_audio": true,
+    "audio_file": "https://cdn.shopify.com/s/files/1/0938/2454/9204/files/audio-loop.wav?v=1754494443",
     "logo": "{{ shop.brand.logo }}",
     "logo_width": 200,
     "favicon": "{{ shop.brand.square_logo }}",
