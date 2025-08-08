@@ -73,7 +73,7 @@
       "settings": {
         "image": "shopify://shop_images/DSCF0157.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",

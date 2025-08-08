@@ -20,6 +20,7 @@
             "time_slot_1": "13:00 → 15:30",
             "time_slot_2": "20:00 → 22:30",
             "closed": true,
+            "closed_text": "Cerrado",
             "color_scheme": ""
           }
         },
@@ -29,6 +30,7 @@
             "time_slot_1": "13:00 → 15:15",
             "time_slot_2": "",
             "closed": false,
+            "closed_text": "Cerrado",
             "color_scheme": ""
           }
         },
@@ -38,6 +40,7 @@
             "time_slot_1": "13:00 → 15:15",
             "time_slot_2": "",
             "closed": false,
+            "closed_text": "Cerrado",
             "color_scheme": ""
           }
         },
@@ -47,6 +50,7 @@
             "time_slot_1": "13:00 → 15:15",
             "time_slot_2": "",
             "closed": false,
+            "closed_text": "Cerrado",
             "color_scheme": ""
           }
         },
@@ -56,6 +60,7 @@
             "time_slot_1": "13:00 → 15:15",
             "time_slot_2": "20:00 → 22:00",
             "closed": false,
+            "closed_text": "Cerrado",
             "color_scheme": ""
           }
         },
@@ -65,6 +70,7 @@
             "time_slot_1": "13:00 → 15:15",
             "time_slot_2": "20:00 → 22:00",
             "closed": false,
+            "closed_text": "Cerrado",
             "color_scheme": ""
           }
         },
@@ -74,6 +80,7 @@
             "time_slot_1": "13:00 → 15:15",
             "time_slot_2": "",
             "closed": false,
+            "closed_text": "Cerrado",
             "color_scheme": ""
           }
         }
