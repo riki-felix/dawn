@@ -70,7 +70,7 @@
           "settings": {
             "layout": "horizontal",
             "icon_1": "silhouette",
-            "heading_1": "2 PAX",
+            "heading_1": "2 PERSONAS",
             "icon_2": "return",
             "heading_2": "",
             "icon_3": "truck",
@@ -193,49 +193,49 @@
         "padding_bottom": 100
       }
     },
-    "collapsible_content_PrNbDf": {
-      "type": "collapsible-content",
+    "custom_collapsible_content_JQnPeB": {
+      "type": "custom-collapsible-content",
       "blocks": {
-        "collapsible_row_NgYehr": {
+        "collapsible_row_36XBQA": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "RESERVA",
+            "heading": "Reserva",
             "icon": "check_mark",
             "row_content": "<p><br/>LA COMPRA DEL MENÚ NO VIENE ASOCIADA A UNA RESERVA. ESTA HAY QUE REALIZARLA DE MANERA INDEPENDIENTE. <br/><br/>UTILIZA EL CÓDIGO DE LA TARJETA REGALO PARA REALIZAR TU RESERVA Y PARA CANJEARLO EL DÍA DE TU VISITA.<br/></p>",
             "page": ""
           }
         },
-        "collapsible_row_et8qVN": {
+        "collapsible_row_9BHLTf": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "CADUCIDAD",
+            "heading": "Caducidad",
             "icon": "stopwatch",
             "row_content": "<p><br/>REALIZA TU RESERVA DENTRO DEL PERIODO DE 6 MESES DESDE LA FECHA DE COMPRA.<br/><br/>SI TENÉIS DISPONIBILIDAD LIMITADA OS RECOMENDAMOS RESERVAR CON MUCHA ANTELACIÓN, YA QUE LOS FINES DE SEMANA Y FESTIVOS SE SUELEN LLENAR BASTANTE PRONTO.<br/></p>",
             "page": ""
           }
         },
-        "collapsible_row_3CF4x9": {
+        "collapsible_row_N4tKX4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "CAMBIOS",
+            "heading": "Cambios y devoluciones",
             "icon": "lock",
-            "row_content": "<p><br/>ESTE REGALO NO ADMITE CAMBIOS NI VARIACIONES EN EL MENÚ. EN CASO DE ALERGIAS Y/O INTOLERANCIAS, AVÍSANOS AL REALIZAR TU RESERVA.<br/></p>",
+            "row_content": "<p><br/>ESTE REGALO NO SE PUEDE DEVOLVER. TAMPOCO SE ADMITEN CAMBIOS NI VARIACIONES EN EL MENÚ. EN CASO DE ALERGIAS Y/O INTOLERANCIAS, AVÍSANOS AL REALIZAR TU RESERVA.<br/></p>",
             "page": ""
           }
         },
-        "collapsible_row_cX6Gmr": {
+        "collapsible_row_YfY9dK": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "NÚMERO DE COMENSALES",
+            "heading": "Número de comensales",
             "icon": "silhouette",
             "row_content": "<p><br/>EL MENÚ ESTÁ DISEÑADO PARA 2 PERSONAS. NO PODRÁN DISFRUTAR DE UN ÚNICO MENÚ MÁS DE 2 COMENSALES. <br/></p>",
             "page": ""
           }
         },
-        "collapsible_row_jJG4d4": {
+        "collapsible_row_D9waqP": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "UBICACIÓN",
+            "heading": "Ubicación",
             "icon": "map_pin",
             "row_content": "<p><br/>EL MENÚ TRADICIÓN SOLO SE PODRÁ CANJEAR EN EL RESTAURANTE DE TOLOSA, PAÍS VASCO.<br/></p>",
             "page": ""
@@ -243,21 +243,21 @@
         }
       },
       "block_order": [
-        "collapsible_row_NgYehr",
-        "collapsible_row_et8qVN",
-        "collapsible_row_3CF4x9",
-        "collapsible_row_cX6Gmr",
-        "collapsible_row_jJG4d4"
+        "collapsible_row_36XBQA",
+        "collapsible_row_9BHLTf",
+        "collapsible_row_N4tKX4",
+        "collapsible_row_YfY9dK",
+        "collapsible_row_D9waqP"
       ],
-      "name": "t:sections.collapsible_content.presets.name",
+      "name": "Preguntas frecuentes",
       "settings": {
         "caption": "",
-        "heading": "PREGUNTAS FRECUENTES",
+        "heading": "Preguntas frecuentes",
         "heading_size": "h2",
-        "heading_alignment": "center",
-        "layout": "row",
-        "container_color_scheme": "scheme-4",
-        "color_scheme": "scheme-1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
@@ -289,7 +289,7 @@
     "headline_Gi3BCE",
     "image_banner_custom_Dya3WG",
     "main",
-    "collapsible_content_PrNbDf",
+    "custom_collapsible_content_JQnPeB",
     "related-products"
   ]
 }

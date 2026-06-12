@@ -123,14 +123,14 @@
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "",
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": false,
-        "media_fit": "contain",
+        "media_fit": "cover",
         "gallery_layout": "stacked",
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "none",
-        "hide_variants": true,
+        "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 100,
         "padding_bottom": 100
@@ -158,11 +158,10 @@
     "rich_text_qNNMX6": {
       "type": "rich-text",
       "blocks": {
-        "heading_6GqqRP": {
-          "type": "heading",
+        "text_xCiUpC": {
+          "type": "text",
           "settings": {
-            "heading": "MENÚ",
-            "heading_size": "hxxl"
+            "text": ""
           }
         },
         "text_HVpNfg": {
@@ -173,9 +172,10 @@
         }
       },
       "block_order": [
-        "heading_6GqqRP",
+        "text_xCiUpC",
         "text_HVpNfg"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",

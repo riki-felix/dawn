@@ -432,9 +432,9 @@ variant-selects {
 #audio-controller {
   position: fixed;
   z-index: 1000;
-  bottom: 6rem;
+  bottom: 1rem;
   left: unset;
-  right: 9rem;
+  right: 14rem;
   background-color: rgba(var(--color-background),0.75);
   border-radius: 99px;
   width: 4.0rem;
@@ -443,14 +443,25 @@ variant-selects {
   justify-content: center;
   align-items: center;
   flex-flow: row nowrap;
-  
+}
+@media screen and (min-width: 990px) {
+	#audio-controller {
+		overflow: unset;
+		right: 9rem;
+		bottom: 6rem;
+	}
 }
 
 #audio-toggle {
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 0;
   cursor: pointer;
+  display: block;
+  width:22px;
+  height:21px;
+  padding:0;
+  margin:0;
 }
 
 #audio-toggle svg {

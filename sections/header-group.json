@@ -17,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "¡Estamos de vacaciones! Volvemos el 9 de septiembre.",
             "link": ""
           }
         }
@@ -81,6 +81,7 @@
         "button_mYGFGh",
         "button_NPFmNx"
       ],
+      "disabled": true,
       "name": "Banner de acceso",
       "settings": {
         "enable_modal": true,

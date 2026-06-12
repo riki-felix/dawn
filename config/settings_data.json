@@ -10,7 +10,7 @@
 {
   "current": {
     "enable_audio": true,
-    "audio_file": "https://cdn.shopify.com/s/files/1/0938/2454/9204/files/audio-loop.wav?v=1754494443",
+    "audio_file": "https://cdn.shopify.com/s/files/1/0938/2454/9204/files/audio-loop_cj_1ed5f6b8-5245-4f20-96c4-cb9b1e19d9ab.ogg?v=1754637023",
     "logo": "{{ shop.brand.logo }}",
     "logo_width": 200,
     "favicon": "{{ shop.brand.square_logo }}",
@@ -206,6 +206,28 @@
           "button_label": "{{ shop.brand.colors.primary[0].foreground }}",
           "secondary_button_label": "{{ shop.brand.colors.secondary[0].foreground }}",
           "shadow": "rgba(0,0,0,0)"
+        }
+      },
+      "scheme-dcc1b274-aeaa-4e88-8761-0f99144e616a": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "{{ shop.brand.colors.primary[0].foreground }}",
+          "button": "{{ shop.brand.colors.secondary[1].background }}",
+          "button_label": "{{ shop.brand.colors.primary[0].background }}",
+          "secondary_button_label": "{{ shop.brand.colors.secondary[0].foreground }}",
+          "shadow": "{{ shop.brand.colors.primary[0].foreground }}"
+        }
+      },
+      "scheme-fd65678b-a28b-49fa-8528-3a610525ece9": {
+        "settings": {
+          "background": "rgba(0,0,0,0)",
+          "background_gradient": "",
+          "text": "{{ shop.brand.colors.primary[0].background }}",
+          "button": "{{ shop.brand.colors.secondary[1].background }}",
+          "button_label": "{{ shop.brand.colors.primary[0].background }}",
+          "secondary_button_label": "{{ shop.brand.colors.primary[0].background }}",
+          "shadow": "{{ shop.brand.colors.primary[0].foreground }}"
         }
       }
     }

@@ -17,7 +17,7 @@
         "monday_gidbk7": {
           "type": "monday",
           "settings": {
-            "time_slot_1": "13:00 → 15:30",
+            "time_slot_1": "12:30 → 15:30",
             "time_slot_2": "20:00 → 22:30",
             "closed": true,
             "closed_text": "Cerrado",
@@ -27,7 +27,7 @@
         "tuesday_FqMX3H": {
           "type": "tuesday",
           "settings": {
-            "time_slot_1": "13:00 → 15:15",
+            "time_slot_1": "12:30 → 15:15",
             "time_slot_2": "",
             "closed": false,
             "closed_text": "Cerrado",
@@ -37,7 +37,7 @@
         "wednesday_PxByBU": {
           "type": "wednesday",
           "settings": {
-            "time_slot_1": "13:00 → 15:15",
+            "time_slot_1": "12:30 → 15:15",
             "time_slot_2": "",
             "closed": false,
             "closed_text": "Cerrado",
@@ -47,7 +47,7 @@
         "thursday_LV6b7B": {
           "type": "thursday",
           "settings": {
-            "time_slot_1": "13:00 → 15:15",
+            "time_slot_1": "12:30 → 15:15",
             "time_slot_2": "",
             "closed": false,
             "closed_text": "Cerrado",
@@ -57,7 +57,7 @@
         "friday_Ai8RRH": {
           "type": "friday",
           "settings": {
-            "time_slot_1": "13:00 → 15:15",
+            "time_slot_1": "12:30 → 15:15",
             "time_slot_2": "20:00 → 22:00",
             "closed": false,
             "closed_text": "Cerrado",
@@ -67,7 +67,7 @@
         "saturday_fiLj4P": {
           "type": "saturday",
           "settings": {
-            "time_slot_1": "13:00 → 15:15",
+            "time_slot_1": "12:30 → 15:15",
             "time_slot_2": "20:00 → 22:00",
             "closed": false,
             "closed_text": "Cerrado",
@@ -77,7 +77,7 @@
         "sunday_c4WRpz": {
           "type": "sunday",
           "settings": {
-            "time_slot_1": "13:00 → 15:15",
+            "time_slot_1": "12:30 → 15:15",
             "time_slot_2": "",
             "closed": false,
             "closed_text": "Cerrado",
@@ -98,16 +98,16 @@
         "margin_top": 40,
         "padding_top": 0,
         "padding_bottom": 0,
-        "address_block": "<p>Santa Klara Kalea 6,<br/>Tolosa, Gipuzkoa, 20400<br/><a href=\"mailto:reservas@casajulianmg.com\">reservas@casajulianmg.com</a><br/>943 671 417</p>",
+        "address_block": "<p><br/>Santa Klara Kalea 6,<br/>20400 Tolosa, Gipuzkoa, País Vasco.</p>",
         "address_title": "DIRECCIÓN",
         "schedule_title": "HORARIOS",
         "color_scheme": "scheme-1"
       }
     },
-    "reviews_WDz6i7": {
+    "reviews_Rb7AMA": {
       "type": "reviews",
       "blocks": {
-        "review_zE3T4t": {
+        "review_yfdzCJ": {
           "type": "review",
           "settings": {
             "review_image": "shopify://shop_images/1_worldsbest101.png",
@@ -116,7 +116,7 @@
             "media": ""
           }
         },
-        "review_nEh4Vy": {
+        "review_pXUy8X": {
           "type": "review",
           "settings": {
             "review_image": "shopify://shop_images/tapas_df380346-4144-44fd-984d-5e24ab8fa582.png",
@@ -125,7 +125,7 @@
             "media": ""
           }
         },
-        "review_exr7PL": {
+        "review_TDeLAC": {
           "type": "review",
           "settings": {
             "review_image": "shopify://shop_images/3_2soles.png",
@@ -134,7 +134,7 @@
             "media": ""
           }
         },
-        "review_DRzrrb": {
+        "review_jWxhgB": {
           "type": "review",
           "settings": {
             "review_image": "shopify://shop_images/2_forbes.png",
@@ -145,15 +145,59 @@
         }
       },
       "block_order": [
-        "review_zE3T4t",
-        "review_nEh4Vy",
-        "review_exr7PL",
-        "review_DRzrrb"
+        "review_yfdzCJ",
+        "review_pXUy8X",
+        "review_TDeLAC",
+        "review_jWxhgB"
       ],
       "settings": {
         "title": "",
         "heading_size": "h2",
         "color_scheme": "",
+        "enable_slider": false,
+        "enable_autoplay": false,
+        "autoplay_interval": 5000,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_9A7AQ6": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n.custom-gastrobikain {\n      padding-top: 0;\n      padding-bottom: 0;\npadding-left:1rem;\npadding-right:1rem;\n      margin-left: 0.8rem;\n      margin-right: 0.8rem;\n    }\n  @media screen and (min-width: 750px) {\n    .custom-gastrobikain {\n      padding-top: 0;\n      padding-bottom: 0;\n      margin-left: 4rem;\n      margin-right: 4rem;\n    }\n@media screen and (min-width: 1400px) {\n    .custom-gastrobikain {\n      padding-top: 0;\n      padding-bottom: 0;\n      margin-left: auto;\n      margin-right: auto;\n    }\n  }\n</style>\n\n<div>\n  <div class=\"page-width custom-gastrobikain\"\n       style=\"color:rgb(22,21,20);\n              padding:1rem 0;\n              background-color:#fff;\n              border-left: 3px solid rgb(var(--color-foreground));\n              border-right: 3px solid rgb(var(--color-foreground));\">\n    <p style=\"margin:0;font-family:sans-serif;font-size:13px;text-align:center\">\n      2024ko GASTROBIKAIN PROGRAMA - PROGRAMA GASTROBIKAIN 2024\n    </p>\n    <p style=\"margin:0;font-family:sans-serif;font-size:13px;text-align:center\">\n      Proiektuaren finantzazio iturria: - Proyecto financiado por:\n    </p>\n  </div>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "reviews_WDz6i7": {
+      "type": "reviews",
+      "blocks": {
+        "review_DRzrrb": {
+          "type": "review",
+          "settings": {
+            "review_image": "shopify://shop_images/ej_logo.jpg",
+            "review_text": "",
+            "author": "",
+            "media": ""
+          }
+        }
+      },
+      "block_order": [
+        "review_DRzrrb"
+      ],
+      "custom_css": [
+        ".review-block__image {max-width: 400px !important;}",
+        "#Slider-sections--25837449642324__reviews_WDz6i7 {grid-template-columns: 1fr;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h5",
+        "color_scheme": "scheme-dcc1b274-aeaa-4e88-8761-0f99144e616a",
         "enable_slider": false,
         "enable_autoplay": false,
         "autoplay_interval": 5000,
@@ -184,6 +228,8 @@
   },
   "order": [
     "timetable_ELCKGp",
+    "reviews_Rb7AMA",
+    "custom_liquid_9A7AQ6",
     "reviews_WDz6i7",
     "footer"
   ]
