@@ -1,0 +1,3 @@
+[environments.development]
+store = "casajulian.myshopify.com"
+theme = "194208760148"
